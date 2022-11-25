@@ -1,36 +1,74 @@
 import React from 'react'
+import {
+    Box,
+    Container,
+    Row,
+    Column,
+    FooterLink,
+    Heading,
+} from "./FooterStyles";
 
 export const Footer = () => {
     return (
-        <footer>
-            <div className="footer-container">
-                <div className="footer-column">
-                    <h3>Información</h3>
-                    <ul>
-                        <li><a href="#">Sobre nosotros</a></li>
-                        <li><a href="#">Contacto</a></li>
-                        <li><a href="#">Preguntas frecuentes</a></li>
+        <Box>
+            <h1 style={{
+                color: "yellow",
+                textAlign: "center",
+                marginTop: "-50px"
+            }}>
+                Pipetzza los reyes de las pizzas 👑 
+            </h1>
+            <Container>
+                <Row>
+                    <Column>
+                        <Heading>Soporte</Heading>
+                        <FooterLink href="#">Contacto</FooterLink>
+                        <FooterLink href="#">Preguntas frecuentes</FooterLink>
+                    </Column>
 
-                    </ul>
-                </div>
-                <div className="footer-column">
-                    <h3>Redes sociales</h3>
-                    <ul>
-                        <li><a href="#">Facebook</a></li>
-                        <li><a href="#">Instagram</a></li>
-                        <li><a href="#">Twitter</a></li>
-                    </ul>
-                </div>
-                <div className="footer-column">
-                    <h3>Legal</h3>
-                    <ul>
-                        <li><a href="#">Terminos y condiciones</a></li>
-                        <li><a href="#">Politicas de privacidad</a></li>
-                        <li><a href="#">Politicas de cookies</a></li>
-                    </ul>
-                </div>
-            </div>
-        </footer>
-        
+                    <Column>
+                        <Heading>Conócenos</Heading>
+                        <FooterLink href="#">Zona de Delivery</FooterLink>
+                        <FooterLink href="#">Informacion legal</FooterLink>
+                        <FooterLink href="#">Terminos y condicciones</FooterLink>
+                    </Column>
+                    
+                    <Column>
+                        <Heading>Redes sociales</Heading>
+                        <FooterLink href="#">
+                            <i className="fab fa-facebook-f">
+                                <span style={{ marginLeft: "10px" }}>
+                                    Facebook
+                                </span>
+                            </i>
+                        </FooterLink>
+                        <FooterLink href="#">
+                            <i className="fab fa-instagram">
+                                <span style={{ marginLeft: "10px" }}>
+                                    Instagram
+                                </span>
+                            </i>
+                        </FooterLink>
+                        <FooterLink href="#">
+                            <i className="fab fa-twitter">
+                                <span style={{ marginLeft: "10px" }}>
+                                    Twitter
+                                </span>
+                            </i>
+                        </FooterLink>
+                        <FooterLink href="#">
+                            <i className="fab fa-youtube">
+                                <span style={{ marginLeft: "10px" }}>
+                                    Youtube
+                                </span>
+                            </i>
+                        </FooterLink>
+                    </Column>
+                </Row>
+                <center>
+                    <h5>Copyright © Pipetzza - 2022 Todos los derechos reservados</h5>
+                </center>
+            </Container>
+        </Box>
     )
 }

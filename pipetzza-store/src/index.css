@@ -1,4 +1,6 @@
 
+
+
 *{
   margin: 0;
   padding: 0;
@@ -52,7 +54,7 @@ a:link {
 }
 
 a:visited {
-  color: pink;
+  color: white;
   background-color: transparent;
   text-decoration: none;
 }
@@ -125,7 +127,43 @@ header ul li a {
   background-color: #ECA442;
 }
 
+/* -------------Footer -------------*/
 
+.footer{
+  width: 100%;
+  min-height: 100px;
+  max-width: 1530px;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  position: -webkit-sticky;
+  box-sizing: border-box;
+  background-color: #CA2521;
+  box-shadow: 0 10px 10px #61120e;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.footer ul {
+  display: flex;
+  padding: 0;
+  margin: 0;
+}
+
+.footer ul li {
+  padding: 0 1rem;
+}
+
+.footer ul li a {
+  font-weight: bold;
+}
+
+
+
+/* ----------------- MAIN -------------------*/
 
 /* -------------MEDIA for Responsive -------------*/
 @media only screen and (max-width: 1000px) {
