@@ -16,9 +16,11 @@ export const Header = () => {
           <a href="#">Menu</a>
         </li>
         <li>
-          <a href="#">Crear tu pizza</a>
+          <a href="#" >Crear tu pizza</a>
         </li>
-
+        <li>
+          <a href="#">Sucursales</a>
+        </li>
         <div className='cart'>
           <box-icon name='cart' type='solid' color='#fff'>
           </box-icon>

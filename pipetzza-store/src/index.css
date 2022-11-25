@@ -26,7 +26,8 @@ code {
 
 /* ----------------- HEADER -------------------*/
 header {
-  width: 97%;
+  
+  width: 100%;
   min-height: 100px;
   max-width: 1530px;
   overflow: hidden;
@@ -34,10 +35,14 @@ header {
   justify-content: space-around;
   align-items: center;
   flex-wrap: wrap;
-  position: sticky;
+  position: -webkit-sticky;
   box-sizing: border-box;
   background-color: #CA2521;
-  box-shadow: 0 10px 10px #08a05c50;
+  box-shadow: 0 10px 10px #61120e;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  
 }
 
 a {
