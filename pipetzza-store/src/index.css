@@ -34,14 +34,14 @@ header {
   justify-content: space-around;
   align-items: center;
   flex-wrap: wrap;
-  position: fixed;
+  position: sticky;
   box-sizing: border-box;
   background-color: #CA2521;
   box-shadow: 0 10px 10px #08a05c50;
 }
 
 a {
-  color: black;
+  color: white;
   text-decoration: none;
   text-transform: uppercase;
 }
@@ -102,7 +102,7 @@ header ul li a {
 
 
 
-/* -------------MEDIA -------------*/
+/* -------------MEDIA for Responsive -------------*/
 @media only screen and (max-width: 1000px) {
   .carrito__item {
     width: 92%;

@@ -7,7 +7,7 @@ export const Header = () => {
       
       <a href="#"> 
         <div className='logo'>
-          <img src={Logo} alt="logo" width="150" />
+          <box-icon name='pizza' type='solid' animation='spin' color='#fff' width="2000px" ></box-icon>
         </div>
       </a>
 
