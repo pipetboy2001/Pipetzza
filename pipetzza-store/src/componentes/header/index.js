@@ -1,5 +1,5 @@
 import React from 'react'
-import {Logo} from "../../images/logo.jpeg"
+import {Logo} from "../../images/logo192.png"
 
 export const Header = () => {
   return (
