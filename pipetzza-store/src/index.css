@@ -45,14 +45,34 @@ header {
   
 }
 
-a {
+a:link {
   color: white;
+  background-color: transparent;
   text-decoration: none;
-  text-transform: uppercase;
+}
+
+a:visited {
+  color: pink;
+  background-color: transparent;
+  text-decoration: none;
 }
 
 a:hover {
-  color: #08a05c;
+  color: blueviolet;
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+a:active {
+  color: yellow;
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+a:link {
+  color: blanchedalmond;
+  background-color: transparent;
+  text-decoration: none;
 }
 
 .menu {

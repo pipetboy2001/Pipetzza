@@ -11,9 +11,6 @@ function App() {
     <div className="App">
       <Header />
       <HeroSlider />
-
-
-
       <h2>"Ofertas tiempo limitado! [no mas de tres]" </h2>
       <ProductoLista />
     </div>

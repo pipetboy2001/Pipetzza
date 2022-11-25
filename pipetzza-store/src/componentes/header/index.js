@@ -8,6 +8,8 @@ export const Header = () => {
       <a href="#"> 
         <div className='logo'>
           <box-icon name='pizza' type='solid' animation='spin' color='#fff' width="2000px" ></box-icon>
+          <img src={Logo} alt="Pipetzza" />
+
         </div>
       </a>
 
