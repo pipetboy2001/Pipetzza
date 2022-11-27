@@ -8,7 +8,7 @@ const HeroSlider = () => {
                 <Carousel.Item interval={1000}>
                     <img
                         className="d-block w-100"
-                        src="https://images.pexels.com/photos/333850/pexels-photo-333850.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+                        src="https://picsum.photos/468/150"
                         alt="First slide"
                     />
                     <Carousel.Caption>
@@ -19,7 +19,7 @@ const HeroSlider = () => {
                 <Carousel.Item interval={500}>
                     <img
                         className="d-block w-100"
-                        src="https://images.pexels.com/photos/1480688/pexels-photo-1480688.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+                        src="https://picsum.photos/468/150"
                         alt="Second slide"
                     />
                     <Carousel.Caption>
@@ -30,7 +30,7 @@ const HeroSlider = () => {
                 <Carousel.Item>
                     <img
                         className="d-block w-100"
-                        src="https://images.pexels.com/photos/1480687/pexels-photo-1480687.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+                        src="https://picsum.photos/468/150"
                         alt="Third slide"
                     />
                     <Carousel.Caption>
@@ -41,7 +41,7 @@ const HeroSlider = () => {
                 <Carousel.Item>
                     <img
                         className="d-block w-100"
-                        src="https://images.pexels.com/photos/1480689/pexels-photo-1480689.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+                        src="https://picsum.photos/468/150"
                         alt="Third slide"
                     />
                     <Carousel.Caption>

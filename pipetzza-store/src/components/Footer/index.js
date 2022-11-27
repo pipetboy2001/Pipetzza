@@ -14,9 +14,8 @@ export const Footer = () => {
             <h1 style={{
                 color: "yellow",
                 textAlign: "center",
-                marginTop: "-50px"
             }}>
-                Pipetzza los reyes de las pizzas 👑 
+                Pipetzza los reyes de las pizzas 👑
             </h1>
             <Container>
                 <Row>
@@ -32,7 +31,7 @@ export const Footer = () => {
                         <FooterLink href="#">Informacion legal</FooterLink>
                         <FooterLink href="#">Terminos y condicciones</FooterLink>
                     </Column>
-                    
+
                     <Column>
                         <Heading>Redes sociales</Heading>
                         <FooterLink href="#">
