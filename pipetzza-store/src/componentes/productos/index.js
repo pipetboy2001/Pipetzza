@@ -8,7 +8,7 @@ export const ProductoLista = () => {
         <div className='producto'>
           <a href="#">
             <div className='producto_img'>
-              <img src="https://picsum.photos/200/300" alt="img01" />
+              <img src="https://picsum.photos/300/300" alt="img01" />
             </div>
           </a>
           <div className='producto_footer'>
@@ -29,7 +29,7 @@ export const ProductoLista = () => {
         <div className='producto'>
           <a href="#">
             <div className='producto_img'>
-              <img src="https://picsum.photos/200/300" alt="img01" />
+              <img src="https://picsum.photos/300/300" alt="img01" />
             </div>
           </a>
           <div className='producto_footer'>
@@ -50,7 +50,7 @@ export const ProductoLista = () => {
         <div className='producto'>
           <a href="#">
             <div className='producto_img'>
-              <img src="https://picsum.photos/200/300" alt="img01" />
+              <img src="https://picsum.photos/300/300" alt="img01" />
             </div>
           </a>
           <div className='producto_footer'>
