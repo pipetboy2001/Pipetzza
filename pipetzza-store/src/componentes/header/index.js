@@ -1,11 +1,12 @@
 import React from 'react'
 import {Logo} from "../../images/logo192.png"
 
+
 export const Header = () => {
   return (
     <header>
       
-      <a href="#"> 
+      <a href="/"> 
         <div className='logo'>
           <box-icon name='pizza' type='solid' animation='spin' color='#fff' width="2000px" ></box-icon>
           <img src={Logo} alt="Pipetzza" />
@@ -15,7 +16,7 @@ export const Header = () => {
 
       <ul>
         <li>
-          <a href="#">Menu</a>
+          <a href="/menu">Menu</a>
         </li>
         <li>
           <a href="#" >Crear tu pizza</a>
