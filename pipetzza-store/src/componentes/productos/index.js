@@ -1,18 +1,76 @@
 import React from 'react'
+import { img } from '../../images/img01.jpg'
 
 export const ProductoLista = () => {
   return (
     <>
-    <h1 className='title'>productos</h1>
-    <div className='productos'>
-      <div className='producto'>
-        <img src='https://picsum.photos/200/300' alt='producto' />
-        <h3>Producto 1</h3>
-        <p>Descripcion del producto</p>
-        <p>$ 100</p>
-        <button>Agregar al carrito</button>
+      <div className='productos'>
+        <div className='producto'>
+          <a href="#">
+            <div className='producto_img'>
+              <img src="https://picsum.photos/200/300" alt="img01" />
+            </div>
+          </a>
+          <div className='producto_footer'>
+            <h1> Pizza</h1>
+            <p> rica pizza </p>
+            <p className='price'> $4500</p>
+          </div>
+          <div className='bottom'>
+            <button className='btn'>
+              Add to Cart
+            </button>
+            <div>
+              <a href="#" className='btn'>View More</a>
+            </div>
+          </div>
         </div>
-    </div>
+
+        <div className='producto'>
+          <a href="#">
+            <div className='producto_img'>
+              <img src="https://picsum.photos/200/300" alt="img01" />
+            </div>
+          </a>
+          <div className='producto_footer'>
+            <h1> Pizza</h1>
+            <p> rica pizza </p>
+            <p className='price'> $4500</p>
+          </div>
+          <div className='bottom'>
+            <button className='btn'>
+              Add to Cart
+            </button>
+            <div>
+              <a href="#" className='btn'>View More</a>
+            </div>
+          </div>
+        </div>
+
+        <div className='producto'>
+          <a href="#">
+            <div className='producto_img'>
+              <img src="https://picsum.photos/200/300" alt="img01" />
+            </div>
+          </a>
+          <div className='producto_footer'>
+            <h1> Pizza</h1>
+            <p> rica pizza </p>
+            <p className='price'> $4500</p>
+          </div>
+          <div className='bottom'>
+            <button className='btn'>
+              Add to Cart
+            </button>
+            <div>
+              <a href="#" className='btn'>View More</a>
+            </div>
+          </div>
+        </div>
+
+
+
+      </div>
     </>
   )
 }
