@@ -17,7 +17,7 @@ code {
     width: 100%;
     min-height: 100vh;
     margin: auto;
-    box-shadow: 0 2px 6px #08a05ca4;;
+    box-shadow: 0 2px 6px #1a171c;;
     padding: 0 15px;
     box-sizing: border-box;
 
@@ -30,7 +30,7 @@ code {
 }
 .inicio h1{
     font-size: 2.5rem;
-    color: #08a05c;
+    color: #ca2627;
 }
 .inicio img{
     width: 100%;
@@ -164,15 +164,12 @@ header ul li a {
     margin-right: 100px;
 }
 
-/* ----------------- MAIN -------------------*/
-
-
 
 /*----------- PRODUCTOS ------------*/
 .produ{
     font-size: 2.4rem;
     padding: 10rem 0 0 0;
-    color: #08a05c;
+    color: #ca2627;
 }
 .productos{
     padding: 5rem 3rem;
@@ -232,7 +229,7 @@ header ul li a {
     border-radius: 5px;
 }
 .bottom button{
-    background-color: #3033d3;
+    background-color: #0a8020;
     max-width: 250px;
     width: 100%;
     margin: 0 auto;
@@ -240,6 +237,7 @@ header ul li a {
     color: white;
     font-weight: 600;
 }
+
 .bottom div{
     background-color:#08a05c;
     display: grid;
@@ -338,7 +336,7 @@ header ul li a {
     font-size: 2rem;
     font-weight: bold;
     text-align: start;
-    margin-left: -17rem ;
+    margin-left: 1rem ;
 }
 .carrito__item box-icon{
     fill:#08a05c;
@@ -469,8 +467,6 @@ header ul li a {
     color: #30333a;
 }
 
-
-
 /* ------------- RELACIONADO --------- */
 .relacionados{
     text-align: center;
@@ -486,7 +482,6 @@ header ul li a {
     font-family: Helvetica, sans-serif
     ;
 }
-
 
 /* -------------MEDIA -------------*/
 @media only screen and (max-width: 1000px){

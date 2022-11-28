@@ -3,7 +3,7 @@ const data = {
   items: [
     {
       id: 1,
-      title: "Nike LD Waffle Sacai Black Nylon",
+      title: "pizza de limon",
       price: 401,
       image: require('./images/img01.jpg'),
       category: "nike",

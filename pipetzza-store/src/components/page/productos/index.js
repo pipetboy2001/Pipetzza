@@ -7,7 +7,7 @@ export const ProductosList = () => {
 	const [productos] = value.productos;
     return (
 			<>
-			<h1 className="produ">PRODUCTOS</h1>
+			<h1 className="produ">Catálogo de pizzas</h1>
         <div className="productos">
             {
 							productos.map(producto =>(

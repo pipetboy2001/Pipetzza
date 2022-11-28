@@ -1,12 +1,9 @@
-import React, { useContext} from "react";
+import React, { useContext } from "react";
 import { DataContext } from "context/DataProvider";
 import { Link } from "react-router-dom";
-import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
-import Form from 'react-bootstrap/Form';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import NavDropdown from 'react-bootstrap/NavDropdown';
 
 
 export const Header = () => {
@@ -15,17 +12,17 @@ export const Header = () => {
   const [menu, setMenu] = value.menu;
 
 
-  const toogleMenu = () =>{
+  const toogleMenu = () => {
     setMenu(!menu)
   }
- 
+
 
   return (
     <header>
       <div className="menu">
-      <box-icon name="menu"></box-icon>
+        <box-icon name="menu"></box-icon>
       </div>
-      
+
       <Navbar bg="red" expand="lg" sticky="top">
         <Container fluid >
           <div>
@@ -35,7 +32,7 @@ export const Header = () => {
               </div>
             </Link>
           </div>
-          
+
           <Navbar.Toggle aria-controls="navbarScroll" />
           <Navbar.Collapse id="navbarScroll">
             <Nav className="me-auto my-2 my-lg-0" style={{ maxHeight: '100px' }} navbarScroll>
