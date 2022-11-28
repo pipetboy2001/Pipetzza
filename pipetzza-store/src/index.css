@@ -135,6 +135,38 @@ header ul li a {
     background-color: #ECA442;
 }
 
+.Navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem;
+    background-color: #CA2521;
+    box-shadow: 0 10px 10px #61120e;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+.Navbar .img {
+    float: right;
+        
+}
+
+.linked{
+    align-items: right;
+    margin-right: 30px;
+
+}
+
+.imgLogo{
+    width: 150;
+    align-items: left;
+    margin-right: 100px;
+}
+
+/* ----------------- MAIN -------------------*/
+
+
 
 /*----------- PRODUCTOS ------------*/
 .produ{

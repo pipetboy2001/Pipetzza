@@ -1,5 +1,6 @@
 import React from 'react'
-import { Header } from "./components/Header";
+import { Header }  from "./components/Header";
+
 import { Carrito } from "./components/Carrito";
 import { Footer } from './components/Footer/index';
 import {DataProvider} from './context/DataProvider';
