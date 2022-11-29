@@ -9,8 +9,6 @@ export const ProductosList = () => {
 	const [productos] = value.productos;
     return (
 			<>
-			
-
 			<center>
 				<h1 className="produ">Catálogo de pizzas</h1>
 				<h1>Tipo de pedido</h1>
@@ -32,6 +30,7 @@ export const ProductosList = () => {
 									key={producto.id}
 									title={producto.title}
 									image={producto.image}
+									description={producto.description}
 									category={producto.category}
 									price={producto.price}
 									id={producto.id}

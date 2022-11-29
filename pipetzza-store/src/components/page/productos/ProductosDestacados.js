@@ -40,16 +40,11 @@ export const ProductosDestacados = () => {
   return (
     <>
     <br></br>
-    <Container className='ContainerDeleveryOrSucursal'>
-        <center>
-          <Button variant="light" size="lg">Delevery</Button>
-          <Button variant="dark" size="lg">Retirar en sucursal</Button>
-        </center>
-    </Container>
-
 
     <h2 className="relacionados">Parte de nuesto menu</h2>
+    <div className="productos">
       <Button variant="danger" size="lg" >Ver Menu</Button>
+      </div>
     <div className="productos">
         
       {
@@ -60,7 +55,8 @@ export const ProductosDestacados = () => {
           key={producto.id}
           title={producto.title}
           image={producto.image}
-          category={producto.category}
+          description={producto.description}
+          // category={producto.category}
           price={producto.price}
           id={producto.id}
           />

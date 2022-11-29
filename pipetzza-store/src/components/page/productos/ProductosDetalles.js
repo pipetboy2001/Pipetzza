@@ -87,6 +87,7 @@ export const ProductosDetalles = () => {
           key={producto.id}
           title={producto.title}
           image={producto.image}
+          description={producto.description}
           category={producto.category}
           price={producto.price}
           id={producto.id}
