@@ -1,38 +1,43 @@
-*{
+* {
     padding: 0;
     margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+        'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+        sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+        monospace;
 }
-.App{
+
+.App {
     max-width: 1555px;
     width: 100%;
     min-height: 100vh;
     margin: auto;
-    box-shadow: 0 2px 6px #1a171c;;
+    box-shadow: 0 2px 6px #1a171c;
+    ;
     padding: 0 15px;
     box-sizing: border-box;
 
 }
+
 /*-----------------INICIO-------------------*/
-.inicio{
+.inicio {
     width: 100%;
     margin: 0 auto;
-    padding-top: 9rem ;
+    padding-top: 9rem;
 }
-.inicio h1{
+
+.inicio h1 {
     font-size: 2.5rem;
     color: #ca2627;
 }
-.inicio img{
+
+.inicio img {
     width: 100%;
 }
 
@@ -55,7 +60,9 @@ header {
     top: 0;
     z-index: 1;
 
-}a:link {
+}
+
+a:link {
     color: white;
     background-color: transparent;
     text-decoration: none;
@@ -149,16 +156,16 @@ header ul li a {
 
 .Navbar .img {
     float: right;
-        
+
 }
 
-.linked{
+.linked {
     align-items: right;
     margin-right: 30px;
 
 }
 
-.imgLogo{
+.imgLogo {
     width: 150;
     align-items: left;
     margin-right: 100px;
@@ -166,20 +173,22 @@ header ul li a {
 
 
 /*----------- PRODUCTOS ------------*/
-.produ{
+.produ {
     font-size: 2.4rem;
     padding: 10rem 0 0 0;
     color: #ca2627;
 }
-.productos{
+
+.productos {
     padding: 5rem 3rem;
     margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr));
     gap: 3rem 1rem;
-    box-sizing: border-box ;
-} 
-.producto{
+    box-sizing: border-box;
+}
+
+.producto {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -188,47 +197,55 @@ header ul li a {
     cursor: pointer;
     border-radius: 5px;
 }
-.producto:hover{
+
+.producto:hover {
     border: 6px solid #08a05c57;
     ;
 }
-.producto__img img{
+
+.producto__img img {
     width: 310px;
 }
-.producto__footer{
+
+.producto__footer {
     padding: 1rem;
 }
-.producto__footer h1{
+
+.producto__footer h1 {
     font-weight: 600;
     font-size: 1.5rem;
     color: #1a202c;
-    font-family: Helvetica, sans-serif
-    ;
+    font-family: Helvetica, sans-serif;
 }
-.producto__footer p{
+
+.producto__footer p {
     font-weight: 700;
     color: rgba(0, 0, 0, 0.555);
     text-transform: uppercase;
     font-size: 18px;
 }
-.producto__footer .price{
+
+.producto__footer .price {
     font-size: 2rem;
     color: #1a202c;
 }
-.productos .bottom{
+
+.productos .bottom {
     width: 100%;
     height: 45px;
     display: grid;
     grid-template-columns: 2fr 1fr;
     gap: 1rem 2rem;
 }
-.bottom .btn{
+
+.bottom .btn {
     border: none;
     outline: 0;
     cursor: pointer;
     border-radius: 5px;
 }
-.bottom button{
+
+.bottom button {
     background-color: #0a8020;
     max-width: 250px;
     width: 100%;
@@ -238,23 +255,26 @@ header ul li a {
     font-weight: 600;
 }
 
-.bottom div{
-    background-color:#08a05c;
+.bottom div {
+    background-color: #08a05c;
     display: grid;
     align-items: center;
     text-align: center;
     margin-left: -2rem;
     border-radius: 5px;
 }
-.bottom div a{
+
+.bottom div a {
     color: white;
     font-weight: 700;
 }
-.bottom div a:hover{
+
+.bottom div a:hover {
     color: white;
 }
+
 /*-----------------CARRITO -----------*/
-.carritos{
+.carritos {
     position: fixed;
     top: 0;
     left: 0;
@@ -266,7 +286,8 @@ header ul li a {
     padding-bottom: 5rem;
     visibility: hidden;
 }
-.carrito{
+
+.carrito {
     position: fixed;
     top: 50%;
     left: 50%;
@@ -281,20 +302,23 @@ header ul li a {
     opacity: 0;
     visibility: hidden;
 }
-.carrito h2{
+
+.carrito h2 {
     text-align: center;
     font-size: 2rem;
 }
-.carritos.show{
+
+.carritos.show {
     visibility: visible;
 }
 
-.carrito.show{
+.carrito.show {
     transform: translate(-50%, -50%) scale(1.1);
     opacity: 1;
     visibility: visible;
 }
-.carrito__close box-icon{
+
+.carrito__close box-icon {
     display: inline-block;
     width: 50px;
     height: 50px;
@@ -302,14 +326,17 @@ header ul li a {
     transform: all 300ms ease-in-out;
     margin: 3rem 0 0 2rem
 }
+
 .carrito__close box-icon:hover {
     fill: crimson;
 }
-.carrito__center{
+
+.carrito__center {
     width: 98%;
     margin: 0 auto;
 }
-.carrito__item{
+
+.carrito__item {
     display: grid;
     grid-template-columns: 1fr 2fr 1fr 1fr;
     width: 80%;
@@ -317,54 +344,64 @@ header ul li a {
     box-shadow: 0 1px 10px saddlebrown;
     border-radius: 5px;
 }
-.carrito__item div{
+
+.carrito__item div {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-.carrito__item img{
+
+.carrito__item img {
     width: 10rem;
 }
-.carrito__item h3{
+
+.carrito__item h3 {
     margin-top: 1.5rem;
     font-family: Helvetica, sans-serif;
     font-weight: 600;
     font-size: 1.5rem;
 }
-.carrito__item .price{
+
+.carrito__item .price {
     color: #1a202c;
     font-size: 2rem;
     font-weight: bold;
     text-align: start;
-    margin-left: 1rem ;
+    margin-left: 1rem;
 }
-.carrito__item box-icon{
-    fill:#08a05c;
+
+.carrito__item box-icon {
+    fill: #08a05c;
     width: 40px;
     height: 40px;
     cursor: pointer;
     margin-top: .3rem;
 }
-.carrito__item .cantidad{
+
+.carrito__item .cantidad {
     font-size: 2rem;
     font-weight: bold;
 }
-.carrito__item .remove__item box-icon{
+
+.carrito__item .remove__item box-icon {
     width: 60px;
     height: 80px;
-    fill:  crimson;
+    fill: crimson;
     margin-top: 2rem;
 }
-.carrito__footer{
+
+.carrito__footer {
     text-align: center;
     margin-bottom: 3rem;
 }
-.carrito__footer h3{
+
+.carrito__footer h3 {
     font-size: 2rem;
     font-weight: 700;
     letter-spacing: 1px;
 }
-.carrito__footer .btn{
+
+.carrito__footer .btn {
     display: inline-block;
     padding: .3rem 1rem;
     font-size: 1.2rem;
@@ -373,32 +410,37 @@ header ul li a {
     outline: 0;
     cursor: pointer;
 }
-.carrito__footer .btn:hover{
+
+.carrito__footer .btn:hover {
     background-color: #0f5c39;
     color: white;
 }
+
 /*--------------DETALLES --------------*/
-.detalles{
+.detalles {
     display: flex;
     flex-direction: column;
     width: 100%;
     padding: 13rem 1rem 0 1rem;
     box-sizing: border-box;
 }
-.detalles h2{
+
+.detalles h2 {
     font-size: 3.5rem;
     width: 100%;
     max-width: 1000px;
     margin: 0 auto;
-    font-family:Helvetica, sans-serif;
+    font-family: Helvetica, sans-serif;
     color: #1a202c;
 }
-.detalles .price{
+
+.detalles .price {
     font-size: 2.5rem;
     font-weight: 700;
     color: #08a05c;
 }
-.detalles button{
+
+.detalles button {
     max-width: 300px;
     margin: 1rem 0 0 0;
     padding: 1rem 1rem;
@@ -411,49 +453,58 @@ header ul li a {
     border-radius: 8px;
     cursor: pointer;
 }
-.detalles .grid{
+
+.detalles .grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 2rem 1rem;
     max-width: 350px;
 }
-.detalles .grid > .nuevo, .tamano{
+
+.detalles .grid>.nuevo,
+.tamano {
     padding: 1rem 2rem;
     border-radius: 8px;
     font-size: 2rem;
     font-weight: 600;
     color: white;
-   
+
 }
-.detalles .grid .nuevo{
-    background-color:#08a05c;
-    
+
+.detalles .grid .nuevo {
+    background-color: #08a05c;
+
 }
-.detalles .grid .tamano{
-    background-color:#f1365b;
+
+.detalles .grid .tamano {
+    background-color: #f1365b;
     display: flex;
 }
-.detalles .grid .tamano select{
+
+.detalles .grid .tamano select {
     border: none;
     outline: 0;
     font-size: 2rem;
-    background-color:#f1365b;
+    background-color: #f1365b;
     color: white;
     cursor: pointer;
 }
-.detalles img{
+
+.detalles img {
     min-height: 300px;
     object-fit: contain;
-    margin-top:  -7rem;
+    margin-top: -7rem;
     z-index: -1;
 }
-.detalles input{
+
+.detalles input {
     max-width: 700px;
     margin: 0 auto;
     width: 100%;
     margin-bottom: 2rem;
 }
-.detalles .description{
+
+.detalles .description {
     font-size: 1.1rem;
     max-width: 1300px;
     width: 100%;
@@ -462,13 +513,14 @@ header ul li a {
     margin: 0 auto;
     font-weight: 500;
 }
-.detalles .description b{
+
+.detalles .description b {
     font-size: 1.4rem;
     color: #30333a;
 }
 
 /* ------------- RELACIONADO --------- */
-.relacionados{
+.relacionados {
     text-align: center;
     background-color: #2e2e2e;
     color: white;
@@ -479,93 +531,110 @@ header ul li a {
     font-size: 18px;
     letter-spacing: 3px;
     text-transform: uppercase;
-    font-family: Helvetica, sans-serif
-    ;
+    font-family: Helvetica, sans-serif;
 }
 
 /* -------------MEDIA -------------*/
-@media only screen and (max-width: 1000px){
-    .carrito__item{
+@media only screen and (max-width: 1000px) {
+    .carrito__item {
         width: 92%;
     }
 }
-@media only screen and (max-width: 888px){ 
-    .detalles input{
+
+@media only screen and (max-width: 888px) {
+    .detalles input {
         margin-top: -6rem;
     }
 }
-@media only screen and (max-width: 700px){
-    .carrito{
+
+@media only screen and (max-width: 700px) {
+    .carrito {
         width: 100%;
         height: 100%;
         padding: 1rem;
     }
-    .carrito__item h3{
+
+    .carrito__item h3 {
         font-size: 1.3rem;
     }
-    .detalles h2{
+
+    .detalles h2 {
         font-size: 3rem;
     }
-    
+
 }
-@media only screen and (max-width: 663px){ 
-    .detalles input{
+
+@media only screen and (max-width: 663px) {
+    .detalles input {
         margin-top: -8rem;
     }
 }
 
-@media only screen and (max-width: 570px){
-    header ul{
+@media only screen and (max-width: 570px) {
+    header ul {
         display: none;
     }
-    .productos{
+
+    .productos {
         padding: 0;
     }
-    .detalles h2{
+
+    .detalles h2 {
         font-size: 2.5rem;
     }
-    .detalles input{
-        margin-top: 0rem ;
+
+    .detalles input {
+        margin-top: 0rem;
     }
-    .detalles img{
+
+    .detalles img {
         object-fit: cover;
         width: 100%;
         height: 100%;
         margin: -1rem auto;
     }
 }
-@media only screen and (max-width: 450px){
-    .carrito__item h3{
+
+@media only screen and (max-width: 450px) {
+    .carrito__item h3 {
         font-size: .8rem;
-       
+
     }
-    .carrito__item .remove__item{
-    width: 20px;
-    height: 20px;
+
+    .carrito__item .remove__item {
+        width: 20px;
+        height: 20px;
     }
-    .carrito__item box-icon{
-    width: 25px;
-    height: 25px;
+
+    .carrito__item box-icon {
+        width: 25px;
+        height: 25px;
     }
-    .detalles h2{
-        font-size:2rem;
-        padding-top: 10rem ;
+
+    .detalles h2 {
+        font-size: 2rem;
+        padding-top: 10rem;
     }
-    .detalles .grid > .nuevo, .tamano{
-    padding: 1rem 1rem;
-    border-radius: 8px;
-    font-size: 1.2rem;
-    font-weight: 600;
-    color: white;
+
+    .detalles .grid>.nuevo,
+    .tamano {
+        padding: 1rem 1rem;
+        border-radius: 8px;
+        font-size: 1.2rem;
+        font-weight: 600;
+        color: white;
     }
-    .detalles .grid .tamano select{
+
+    .detalles .grid .tamano select {
         font-size: 1.2rem;
     }
-    .detalles img{
+
+    .detalles img {
         width: 300px;
         width: 100%;
     }
-    .detalles{
+
+    .detalles {
         padding: 1rem 0;
     }
 }
@@ -609,7 +678,8 @@ header ul li a {
 .carousel {
     width: 100%;
     height: 100%;
-    position: relative;
+    position: -webkit-sticky;
+    position: sticky;
     overflow: hidden;
     display: flex;
     align-items: center;

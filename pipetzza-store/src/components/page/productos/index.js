@@ -30,10 +30,6 @@ export const ProductosList = () => {
 			<ProductosOnlyRefresco />
 			<h2>Añade tus salsas favoritas</h2>
 			<ProductosOnlySalsa />
-
-
-
-
 		</>
 	)
 }

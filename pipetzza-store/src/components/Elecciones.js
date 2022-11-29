@@ -128,8 +128,8 @@ export const Elecciones = () => {
             <MDBCheckbox name='flexCheck' value='' id='flexCheckDefault' label='champiñones' />
           </div>
           </div>
-
-
+          <br></br>
+          <button type="button" class="btn btn-primary">Crear pedido</button>
         </div>
       </div>
     </Container>
