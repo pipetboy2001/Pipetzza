@@ -1,14 +1,18 @@
-import React, {useContext} from 'react'
+import React, { useContext } from 'react'
 import { DataContext } from "context/DataProvider";
 import { ProductoItem } from "./ProductoItem";
 import ToggleButtonGroup from 'react-bootstrap/ToggleButtonGroup';
 import ToggleButton from 'react-bootstrap/ToggleButton';
 
+import { ProductosOnlyPizza } from './ProductosOnlyPizza';
+import { ProductosOnlyRefresco } from './ProductosOnlyRefresco';
+import { ProductosOnlySalsa } from './ProductosOnlySalsa';
+
 export const ProductosList = () => {
 	const value = useContext(DataContext)
 	const [productos] = value.productos;
-    return (
-			<>
+	return (
+		<>
 			<center>
 				<h1 className="produ">Catálogo de pizzas</h1>
 				<h1>Tipo de pedido</h1>
@@ -21,23 +25,15 @@ export const ProductosList = () => {
 					</ToggleButton>
 				</ToggleButtonGroup>
 			</center>
+			<ProductosOnlyPizza />
+			<h2>Añade algo para tomar 🥤</h2>
+			<ProductosOnlyRefresco />
+			<h2>Añade tus salsas favoritas</h2>
+			<ProductosOnlySalsa />
 
 
-        <div className="productos">
-            {
-							productos.map(producto =>(
-								<ProductoItem 
-									key={producto.id}
-									title={producto.title}
-									image={producto.image}
-									description={producto.description}
-									category={producto.category}
-									price={producto.price}
-									id={producto.id}
-								/>
-							))
-						}					
-        </div>
-				</>
-    )
+
+
+		</>
+	)
 }

@@ -111,6 +111,50 @@ const data = {
       img2: ".jpg?auto=format,compress&q=90&updated_at=1606321824&w=1000",
       cantidad: 1
     },
+    {
+      id: 11,
+      title: "Salsa BBQ",
+      price: 285,
+      description: "Salsa",
+      image: "https://stockx-360.imgix.net/Nike-Dunk-Low-Off-White-University-Red/Images/Nike-Dunk-Low-Off-White-University-Red/Lv2/img01.jpg?auto=format,compress&q=90&updated_at=1606321824&w=1000",
+      category: "Salsa",
+      img1: "https://stockx-360.imgix.net/Nike-Dunk-Low-Off-White-University-Red/Images/Nike-Dunk-Low-Off-White-University-Red/Lv2/img",
+      img2: ".jpg?auto=format,compress&q=90&updated_at=1606321824&w=1000",
+      cantidad: 1
+    },
+    {
+      id: 12,
+      title: "Salsa Garlic",
+      price: 285,
+      description: "Salsa",
+      image: "https://stockx-360.imgix.net/Nike-Dunk-Low-Off-White-University-Red/Images/Nike-Dunk-Low-Off-White-University-Red/Lv2/img01.jpg?auto=format,compress&q=90&updated_at=1606321824&w=1000",
+      category: "Salsa",
+      img1: "https://stockx-360.imgix.net/Nike-Dunk-Low-Off-White-University-Red/Images/Nike-Dunk-Low-Off-White-University-Red/Lv2/img",
+      img2: ".jpg?auto=format,compress&q=90&updated_at=1606321824&w=1000",
+      cantidad: 1
+    },
+    {
+      id: 13,
+      title: " Salsa Picante",
+      price: 285,
+      description: "Salsa",
+      image: "https://stockx-360.imgix.net/Nike-Dunk-Low-Off-White-University-Red/Images/Nike-Dunk-Low-Off-White-University-Red/Lv2/img01.jpg?auto=format,compress&q=90&updated_at=1606321824&w=1000",
+      category: "Salsa",
+      img1: "https://stockx-360.imgix.net/Nike-Dunk-Low-Off-White-University-Red/Images/Nike-Dunk-Low-Off-White-University-Red/Lv2/img",
+      img2: ".jpg?auto=format,compress&q=90&updated_at=1606321824&w=1000",
+      cantidad: 1
+    },
+    {
+      id: 14,
+      title: "Salsa Tomate",
+      price: 285,
+      description: "Salsa",
+      image: "https://stockx-360.imgix.net/Nike-Dunk-Low-Off-White-University-Red/Images/Nike-Dunk-Low-Off-White-University-Red/Lv2/img01.jpg?auto=format,compress&q=90&updated_at=1606321824&w=1000",
+      category: "Salsa",
+      img1: "https://stockx-360.imgix.net/Nike-Dunk-Low-Off-White-University-Red/Images/Nike-Dunk-Low-Off-White-University-Red/Lv2/img",
+      img2: ".jpg?auto=format,compress&q=90&updated_at=1606321824&w=1000",
+      cantidad: 1
+    },
   ],
 };
 
