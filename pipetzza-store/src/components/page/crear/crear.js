@@ -1,5 +1,7 @@
 import React from 'react'
 import { Elecciones } from 'components/Elecciones.js';
+import { ProductosOnlyRefresco } from '../productos/ProductosOnlyRefresco';
+import { ProductosOnlySalsa } from '../productos/ProductosOnlySalsa';
 
 export const Crear = () => {
   return (
@@ -8,8 +10,9 @@ export const Crear = () => {
 
       <Elecciones />
       <h2>Añade algo para tomar 🥤</h2>
-
-      <h2>Adjunta salsas a tu pedido</h2>
+      <ProductosOnlyRefresco />
+      <h2>Añade tus salsas favoritas</h2>
+      <ProductosOnlySalsa />
       
     </>
 

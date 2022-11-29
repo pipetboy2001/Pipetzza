@@ -39,7 +39,7 @@ export const Header = () => {
               <center>
                 <Link to="/Menu" className="linked">Menu</Link>
                 <Link to="/Crear" className="linked">Crea tu pizza</Link>
-                <Link to="/Sucursales" className="linked">Sucursales</Link>
+                {/* <Link to="/Sucursales" className="linked">Sucursales</Link> */}
               </center>
             </Nav>
           </Navbar.Collapse>

@@ -49,7 +49,7 @@ export const ProductosDestacados = () => {
         
       {
         productos.map((producto)=>{
-          if((item < 3) ){
+          if ((item < 3) && ("pizza" === producto.category) ){
             item++;
           return <ProductoItem 
           key={producto.id}
