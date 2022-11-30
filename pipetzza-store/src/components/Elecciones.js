@@ -13,7 +13,7 @@ export const Elecciones = () => {
           <div class="col-9">
             <center>
               <h1>Tipo de pedido</h1>
-              <ToggleButtonGroup type="radio" name="options" defaultValue={1}>
+              <ToggleButtonGroup  type="radio" name="options" defaultValue={1}>
                 <ToggleButton id="tbg-radio-1" value={1}>
                   delivery (pre-checked)
                 </ToggleButton>

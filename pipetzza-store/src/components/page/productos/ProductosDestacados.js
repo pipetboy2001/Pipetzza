@@ -40,7 +40,7 @@ export const ProductosDestacados = () => {
   return (
     <>
       <div class="d-grid gap-2">
-        <button type="button" class="btn btn-danger btn-rounded">Ver Menu</button>
+        <button type="button" class="btn btn-danger btn-lg btn-rounded">Ver Menu</button>
       </div>
 
       <div className="productos">

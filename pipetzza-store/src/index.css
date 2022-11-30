@@ -149,6 +149,7 @@ header ul li a {
     padding: 0 1rem;
     background-color: #CA2521;
     box-shadow: 0 10px 10px #61120e;
+    position: -webkit-sticky;
     position: sticky;
     top: 0;
     z-index: 1;
@@ -684,6 +685,8 @@ header ul li a {
     display: flex;
     align-items: center;
     justify-content: center;
+    border-top-left-radius: 1%;
+    border-top-right-radius: 1%;
 }
 
 .carousel__container {
