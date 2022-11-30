@@ -4,6 +4,8 @@ import { useParams } from "react-router-dom";
 import { ProductoItem } from "./ProductoItem";
 import Button from 'react-bootstrap/Button';
 import { Container } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
+
 
 export const ProductosDestacados = () => {
   const value = useContext(DataContext);
@@ -39,9 +41,13 @@ export const ProductosDestacados = () => {
 
   return (
     <>
-      <div class="d-grid gap-2">
-        <button type="button" class="btn btn-danger btn-lg btn-rounded">Ver Menu</button>
-      </div>
+     
+      <Link to="/menu">
+        <div class="d-grid gap-2">
+          <button type="button" class="btn btn-danger btn-lg btn-rounded">Ver Menu</button>
+        </div>
+      </Link>
+      
 
       <div className="productos">
         {
