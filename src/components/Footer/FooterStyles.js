@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const Box = styled.div`
 padding: 60px 0;
-background: #c9e265;
+background: #9baf4e;
 bottom: 0;
 width: 100%;
 border-top: 1px solid #E7E7E7;
@@ -22,7 +22,7 @@ export const Container = styled.div`
 	max-width: 1000px;
 	margin: 0 auto;
 	border-radius: 30px;
-	background: #c9e265;
+	background: #404820;
 `
 
 export const Column = styled.div`

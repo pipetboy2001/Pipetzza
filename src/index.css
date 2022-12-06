@@ -125,6 +125,7 @@ header ul li a {
 
 }
 
+/*Boton de cantidad*/
 .cart span {
     position: absolute;
     top: -1rem;
@@ -134,12 +135,12 @@ header ul li a {
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #cfff71;
+    color: #c9e265;
     padding: 0rem;
     font-size: 1.5rem;
     font-weight: 700;
     border-radius: 50%;
-    background-color: #ECA442;
+    background-color: red;
 }
 
 .Navbar {
@@ -392,6 +393,7 @@ header ul li a {
 .carrito__item .cantidad {
     font-size: 2rem;
     font-weight: bold;
+    margin: 0 1rem;
 }
       
 .carrito__item .remove__item box-icon {
