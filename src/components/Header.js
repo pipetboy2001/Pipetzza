@@ -4,6 +4,8 @@ import { Link } from "react-router-dom";
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
+import { BiFoodMenu } from "react-icons/bi";
+import { FaPizzaSlice } from "react-icons/fa"
 
 
 export const Header = () => {
@@ -37,8 +39,9 @@ export const Header = () => {
           <Navbar.Collapse id="navbarScroll">
             <Nav className="me-auto my-2 my-lg-0" style={{ maxHeight: '100px' }} navbarScroll>
               <center>
-                <Link to="/Menu" className="linked">Menu</Link>
-                <Link to="/Crear" className="linked">Crea tu pizza</Link>
+                <Link to="/Menu" className="linked">Menu <BiFoodMenu /> 
+                </Link>
+                <Link to="/Crear" className="linked">Crea tu pizza <FaPizzaSlice />  </Link>
                 {/* <Link to="/Sucursales" className="linked">Sucursales</Link> */}
               </center>
             </Nav>

@@ -1,5 +1,4 @@
 import React from 'react'
-import { Elecciones } from 'components/Elecciones.js';
 
 export const Pago = () => {
     return (

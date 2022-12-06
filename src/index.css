@@ -180,8 +180,15 @@ header ul li a {
 /*----------- PRODUCTOS ------------*/
 .produ {
     font-size: 2.4rem;
-    padding: 10rem 0 0 0;
-    color: #c9e265;
+    padding: 5rem 0 0 0;
+    color: Red;
+}
+
+
+
+.tipePedido{
+    font-size: 2.4rem;
+    color: #fd7724;
 }
 
 .productos {
@@ -775,30 +782,7 @@ header ul li a {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(3, 1fr);
-    grid-column-gap: 0px;
-    grid-row-gap: 0px;
+    grid-column-gap: -4px;
+    grid-row-gap: -2px;
 }
 
-.div1 {
-    grid-area: 1 / 1 / 2 / 2;
-}
-
-.div2 {
-    grid-area: 1 / 2 / 2 / 3;
-}
-
-.div3 {
-    grid-area: 2 / 1 / 3 / 2;
-}
-
-.div4 {
-    grid-area: 2 / 2 / 3 / 3;
-}
-
-.div5 {
-    grid-area: 3 / 1 / 4 / 2;
-}
-
-.div6 {
-    grid-area: 3 / 2 / 4 / 3;
-}
