@@ -54,8 +54,8 @@ header {
     flex-wrap: wrap;
     position: -webkit-sticky;
     box-sizing: border-box;
-    background-color: #CA2521;
-    box-shadow: 0 10px 10px #61120e;
+    background-color: #fd7724;
+    box-shadow: 0 10px 10px #acc15b;
     position: sticky;
     top: 0;
     z-index: 1;
@@ -75,13 +75,13 @@ a:visited {
 }
 
 a:hover {
-    color: yellow;
+    color: #631605;
     background-color: transparent;
     text-decoration: underline;
 }
 
 a:active {
-    color: yellow;
+    color: #fb2e02;
     background-color: transparent;
     text-decoration: underline;
 }
@@ -134,7 +134,7 @@ header ul li a {
     display: flex;
     align-items: center;
     justify-content: center;
-    color: white;
+    color: #cfff71;
     padding: 0rem;
     font-size: 1.5rem;
     font-weight: 700;
@@ -157,6 +157,8 @@ header ul li a {
 
 .Navbar .img {
     float: right;
+    width: 100%;
+    height: 150%;
 
 }
 
@@ -167,9 +169,10 @@ header ul li a {
 }
 
 .imgLogo {
-    width: 150;
     align-items: left;
     margin-right: 100px;
+    width: 25%;
+    height: 25%;
 }
 
 
@@ -177,7 +180,7 @@ header ul li a {
 .produ {
     font-size: 2.4rem;
     padding: 10rem 0 0 0;
-    color: #ca2627;
+    color: #c9e265;
 }
 
 .productos {
@@ -200,7 +203,8 @@ header ul li a {
 }
 
 .producto:hover {
-    border: 6px solid #08a05c57;
+    /*color de fondo cards*/
+    border: 6px solid #c9e265;
     ;
 }
 
@@ -229,6 +233,7 @@ header ul li a {
 .producto__footer .price {
     font-size: 2rem;
     color: #1a202c;
+    font-weight: 600;
 }
 
 .productos .bottom {
@@ -251,13 +256,18 @@ header ul li a {
     max-width: 250px;
     width: 100%;
     margin: 0 auto;
+    padding: -1rem;
     font-size: 1.5rem;
+    /*color texto*/
     color: white;
     font-weight: 600;
+    align-items: center;
+    margin-right: auto;
+    border-radius: 5px;
 }
 
 .bottom div {
-    background-color: #08a05c;
+    background-color: #031022;
     display: grid;
     align-items: center;
     text-align: center;
@@ -266,12 +276,12 @@ header ul li a {
 }
 
 .bottom div a {
-    color: white;
+    color: blue;
     font-weight: 700;
 }
 
 .bottom div a:hover {
-    color: white;
+    color: red;
 }
 
 /*-----------------CARRITO -----------*/
@@ -383,7 +393,7 @@ header ul li a {
     font-size: 2rem;
     font-weight: bold;
 }
-
+      
 .carrito__item .remove__item box-icon {
     width: 60px;
     height: 80px;

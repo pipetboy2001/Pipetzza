@@ -28,7 +28,7 @@ export const Header = () => {
           <div>
             <Link to="/">
               <div className="logo">
-                <img src="https://picsum.photos/100/60" alt="Nike" width="150" className="imgLogo" />
+                <img src="https://i.imgur.com/D1GXxkt.png" className="imgLogo" />
               </div>
             </Link>
           </div>

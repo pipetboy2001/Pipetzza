@@ -12,10 +12,10 @@ export const Footer = () => {
     return (
         <Box>
             <h1 style={{
-                color: "yellow",
+                color: "red",
                 textAlign: "center",
             }}>
-                Pipetzza los reyes de las pizzas 👑
+                🍕 Pipetzza Pizzeria 🍕
             </h1>
             <Container>
                 <Row>
@@ -65,7 +65,10 @@ export const Footer = () => {
                     </Column>
                 </Row>
                 <center>
-                    <h5>Copyright © Pipetzza - 2022 Todos los derechos reservados</h5>
+                    <h5 style={{
+                        color: "#fd7724",
+                        textAlign: "center",
+                    }}>Copyright © Pipetzza - 2022 Todos los derechos reservados</h5>
                 </center>
             </Container>
         </Box>

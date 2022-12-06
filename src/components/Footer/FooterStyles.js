@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const Box = styled.div`
 padding: 60px 0;
-background: #A5A79A;
+background: #c9e265;
 bottom: 0;
 width: 100%;
 border-top: 1px solid #E7E7E7;
@@ -21,9 +21,8 @@ export const Container = styled.div`
 	justify-content: center;
 	max-width: 1000px;
 	margin: 0 auto;
-	border-radius: 10px;
-	background: #A5A79A;
-	/* background: red; */
+	border-radius: 30px;
+	background: #c9e265;
 `
 
 export const Column = styled.div`
@@ -55,7 +54,7 @@ text-decoration: none;
 
 
 &:hover {
-	color: yellow;
+	color: red;
 	transition: 200ms ease-in;
 }
 `;
