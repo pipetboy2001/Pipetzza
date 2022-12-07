@@ -15,6 +15,13 @@ export const Pago = () => {
     const [pago, setPago] = React.useState("Tarjeta")
     const [propina, setPropina] = React.useState("Nada")
 
+    const PagoProcesado = () => {
+        // mostrar por pantalla pago listo
+        alert("Pago procesado")
+        
+
+        }
+
     return (
         <>
             <div className="container">
@@ -58,14 +65,9 @@ export const Pago = () => {
                     </div>
                 </div>
                 <div className='Confirmaccion'>
-                    <Link to="/confirmacion">
-                        <button type="button" class="btn btn-succes btn-lg btn-block">              PAGAR                 </button>
-                    </Link>
+                    <button  class="btn btn-succes btn-lg btn-block" type="button" onClick={PagoProcesado}>Pagar</button>
                 </div>
             </div>
-
-
-
         </>
 
     )
