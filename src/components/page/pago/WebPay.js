@@ -4,7 +4,7 @@ export const WebPay = () => {
   return (
     <div className="container">
         <div className="row">
-            <div className="col-md-4 col-md-offset-4">
+            <div >
                 <div className="panel panel-default">
                     <div className="panel-heading">
                         <div className="row">
@@ -80,6 +80,7 @@ export const WebPay = () => {
                                             <input type="text" className="form-control" name="cardName" placeholder="Confirmar Contraseña"/>
                                             <span className="input-group-addon"><span className="fa fa-user"></span></span>
                                         </div>
+                                        <br></br>
                                     </div>
                                 </div>
                             </div>

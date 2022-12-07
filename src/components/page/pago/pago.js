@@ -7,57 +7,62 @@ import { Link } from "react-router-dom"
 import { FaCcVisa, FaCcMastercard, FaCcPaypal } from "react-icons/fa"
 // components
 import { Tarjeta } from "./Tarjeta"
-import {Efectivo} from "./Efectivo"
-import {WebPay} from "./WebPay"
+import { Efectivo } from "./Efectivo"
+import { WebPay } from "./WebPay"
 
 export const Pago = () => {
     // para escojer que pasaria si
     const [pago, setPago] = React.useState("Tarjeta")
-    const [propina,setPropina] = React.useState("Nada")
+    const [propina, setPropina] = React.useState("Nada")
 
     return (
         <>
-        <h2>Escoja tipo de pago</h2>
-        <Form.Group controlId="exampleForm.ControlSelect1">
-            <Form.Label>Example select</Form.Label>
-            <Form.Control as="select" onChange={(e) => setPago(e.target.value)}>
-                <option>Tarjeta</option>
-                <option>Efectivo</option>
-                <option>WebPay</option>
-            </Form.Control>
-        </Form.Group>
-        {pago === "Tarjeta" && <Tarjeta />}
-        {pago === "Efectivo" && <Efectivo />}
-        {pago === "WebPay" && <WebPay />}
+            <div className="container">
+                <br></br>
+                <center><h1>Pago 💸</h1></center>
+                <div class="angry-grid">
+                    <div id="item-0">
+                        {/* Tipo de pago */}
+                        <Form>
+                            <Form.Group controlId="exampleForm.ControlSelect1">
+                                <Form.Label>Forma de pago</Form.Label>
+                                <Form.Control as="select" onChange={(e) => setPago(e.target.value)}>
+                                    <option>Tarjeta</option>
+                                    <option>Efectivo</option>
+                                    <option>WebPay</option>
+                                </Form.Control>
+                            </Form.Group>
+                        </Form>
+                        <div className="row">
+                            {pago === "Tarjeta" && <Tarjeta />}
+                            {pago === "Efectivo" && <Efectivo />}
+                            {pago === "WebPay" && <WebPay />}
+                        </div>
+                    </div>
 
-
-        <h2>Desea añadir propina?</h2>
-        <Form.Group controlId="exampleForm.ControlSelect1">
-            <Form.Label>Example select</Form.Label>
-            <Form.Control as="select" onChange={(e) => setPropina(e.target.value)}>
-                <option>Nada</option>
-                <option>10%</option>
-                <option>15%</option>
-                <option>20%</option>
-            </Form.Control>
-        </Form.Group>
-        {propina === "Nada" && <p>No añadir propina</p>}
-        {propina === "10%" && <p>Añadir 10% de propina</p>}
-        {propina === "15%" && <p>Añadir 15% de propina</p>}
-        {propina === "20%" && <p>Añadir 20% de propina</p>}
-
-
-        
-
-        <Link to="/checkout">
-            <Button variant="primary" type="submit">
-                Continuar
-            </Button>
-        </Link>
-
-        
-
-
+                    <div id="item-1">
+                        {/* Propina */}
+                        <Form>
+                            <Form.Group controlId="exampleForm.ControlSelect1">
+                                <Form.Label>Propina</Form.Label>
+                                <Form.Control as="select" onChange={(e) => setPropina(e.target.value)}>
+                                    <option>Nada</option>
+                                    <option>10%</option>
+                                    <option>15%</option>
+                                </Form.Control>
+                            </Form.Group>
+                        </Form>
+                        {propina === "Nada" && <h3>Propina: $0</h3>}
+                        {propina === "10%" && <h3>Propina: $10</h3>}
+                        {propina === "15%" && <h3>Propina: $15</h3>}
+                    </div>
+                </div>
+                <div className='Confirmaccion'>
+                    <Link to="/confirmacion">
+                        <button type="button" class="btn btn-succes btn-lg btn-block">              PAGAR                 </button>
+                    </Link>
+                </div>
+            </div>
 
 
 

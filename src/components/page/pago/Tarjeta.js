@@ -1,15 +1,17 @@
 import React from 'react'
 
+// React Icons
+import { FaCcVisa, FaCcMastercard, FaCcPaypal } from "react-icons/fa"
+
 export const Tarjeta = () => {
   return (
 
     <div className="container">
         <div className="row">
-            <div className="col-md-4 col-md-offset-4">
+            <div >
                 <div className="panel panel-default">
                     <div className="panel-heading">
                         <div className="row">
-                            <h3 className="text-center">Pago</h3>
                             <img className="img-responsive cc-img" src="http://www.prepbootstrap.com/Content/images/shared/misc/creditcardicons.png"/>
                         </div>
                     </div>
@@ -29,7 +31,9 @@ export const Tarjeta = () => {
                             <div className="row">
                                 <div className="col-xs-12">
                                     <div className="form-group">
-                                        <label>NÚMERO DE TARJETA</label>
+                                          <label>NÚMERO DE TARJETA <FaCcMastercard />
+                                              <FaCcVisa />
+                                              <FaCcPaypal /> </label> 
                                         <div className="input-group">
                                             <input type="text" className="form-control" name="cardNumber" placeholder="Número de Tarjeta"/>
                                             <span className="input-group-addon"><span className="fa fa-credit-card"></span></span>
