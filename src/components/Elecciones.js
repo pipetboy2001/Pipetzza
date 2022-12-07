@@ -8,16 +8,19 @@ import { GiMeat } from 'react-icons/gi';
 import { GiTomato } from 'react-icons/gi';
 import { GiDoughRoller } from 'react-icons/gi';
 import { TbCheese } from 'react-icons/tb';
+import { MdOutlineDeliveryDining } from 'react-icons/md'
+import { MdLocalDining } from 'react-icons/md'
 
 export const Elecciones = () => {
   return (
     <Container>
       <div class="container" >
+        
         <div class="row">
+          <center>
           <div class="col-9">
-            <center>
-              <h1>Tipo de pedido</h1>
-              <ToggleButtonGroup type="radio" name="options" defaultValue={1}>
+              <h1><MdOutlineDeliveryDining /> Tipo de pedido <MdLocalDining/></h1>
+              <ToggleButtonGroup type="radio" name="options" className='Boton2Elecciones' defaultValue={1}>
                 <ToggleButton id="tbg-radio-1" className='Boton1Elecciones' value={1}>
                   delivery
                 </ToggleButton>
@@ -25,8 +28,8 @@ export const Elecciones = () => {
                   en local
                 </ToggleButton>
               </ToggleButtonGroup>
-            </center>
           </div>
+        </center>
         {/*Menu de elecciones*/ }
         <div class="angry-grid">
           <div id="item-0"> <div class="div2">
@@ -136,7 +139,7 @@ export const Elecciones = () => {
           </div></div>
         </div>
           <br></br>
-          <button type="button" class="btn btn-primary">Crear pedido</button>
+          <button type="button" class="btn btn-succes">Crear pedido</button>
         </div>
 
 
