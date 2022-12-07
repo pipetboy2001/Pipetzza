@@ -28,7 +28,7 @@ export const Pago = () => {
                 <br></br>
                 <center><h1>Pago 💸</h1></center>
                 <div class="angry-grid">
-                    <div id="item-0">
+                    <div id="item-6">
                         {/* Tipo de pago */}
                         <Form>
                             <Form.Group controlId="exampleForm.ControlSelect1">
@@ -47,7 +47,7 @@ export const Pago = () => {
                         </div>
                     </div>
 
-                    <div id="item-1">
+                    <div id="item-7">
                         {/* Propina */}
                         <Form>
                             <Form.Group controlId="exampleForm.ControlSelect1">
