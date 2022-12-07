@@ -5,7 +5,7 @@ const HeroSlider = () => {
     return (
         <>
             <Carousel>
-                <Carousel.Item interval={1000}>
+                <Carousel.Item interval={7000}>
                     <img
                         className="d-block w-100"
                         src="https://i.imgur.com/s3M0Xmd.png"
@@ -13,7 +13,7 @@ const HeroSlider = () => {
                     />
                 </Carousel.Item>
 
-                <Carousel.Item interval={500}>
+                <Carousel.Item interval={7000}>
                     <img
                         className="d-block w-100"
                         src="https://i.imgur.com/i8FjU66.png"
