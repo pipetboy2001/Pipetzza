@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/Pipetzza/static/css/main.db34858c.chunk.css",
+    "main.js": "/Pipetzza/static/js/main.15660f63.chunk.js",
+    "main.js.map": "/Pipetzza/static/js/main.15660f63.chunk.js.map",
+    "runtime-main.js": "/Pipetzza/static/js/runtime-main.eb76b5dd.js",
+    "runtime-main.js.map": "/Pipetzza/static/js/runtime-main.eb76b5dd.js.map",
+    "static/js/2.db9fcd2f.chunk.js": "/Pipetzza/static/js/2.db9fcd2f.chunk.js",
+    "static/js/2.db9fcd2f.chunk.js.map": "/Pipetzza/static/js/2.db9fcd2f.chunk.js.map",
+    "static/js/3.62379904.chunk.js": "/Pipetzza/static/js/3.62379904.chunk.js",
+    "static/js/3.62379904.chunk.js.map": "/Pipetzza/static/js/3.62379904.chunk.js.map",
+    "index.html": "/Pipetzza/index.html",
+    "static/css/main.db34858c.chunk.css.map": "/Pipetzza/static/css/main.db34858c.chunk.css.map",
+    "static/js/2.db9fcd2f.chunk.js.LICENSE.txt": "/Pipetzza/static/js/2.db9fcd2f.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.eb76b5dd.js",
+    "static/js/2.db9fcd2f.chunk.js",
+    "static/css/main.db34858c.chunk.css",
+    "static/js/main.15660f63.chunk.js"
+  ]
+}
