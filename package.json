@@ -1,7 +1,6 @@
 {
   "name": "pipetzza-store",
   "version": "0.1.0",
-  "homepage": "https://pipetboy2001.github.io/Pipetzza",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.8",
@@ -15,14 +14,12 @@
     "react-dom": "^17.0.1",
     "react-icons": "^4.7.1",
     "react-router-dom": "^5.2.0",
-    "react-scripts": "^4.0.3",
+    "react-scripts": "^5.0.1",
     "start": "^5.1.0",
     "styled-components": "^5.3.6",
     "web-vitals": "^0.2.4"
   },
   "scripts": {
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
