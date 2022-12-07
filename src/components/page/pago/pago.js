@@ -5,88 +5,59 @@ import { Form, Button } from "react-bootstrap"
 import { Link } from "react-router-dom"
 // React Icons
 import { FaCcVisa, FaCcMastercard, FaCcPaypal } from "react-icons/fa"
-// Styles
-
-
+// components
+import { Tarjeta } from "./Tarjeta"
+import {Efectivo} from "./Efectivo"
+import {WebPay} from "./WebPay"
 
 export const Pago = () => {
+    // para escojer que pasaria si
+    const [pago, setPago] = React.useState("Tarjeta")
+    const [propina,setPropina] = React.useState("Nada")
 
     return (
         <>
-            <div className="container">
-                <div className="row">   
-                    <div className="col-12 col-md-6">
-                        <div className="card">
-                            <div className="card-body">
-                                <h5 className="card-title">Datos de la tarjeta</h5>
-                                <Form>
-                                    <Form.Group controlId="formBasicEmail">
-                                        <Form.Label>Nombre del titular</Form.Label>
-                                        <Form.Control type="text" placeholder="Nombre" />
-                                    </Form.Group>
-                                    <Form.Group controlId="formBasicPassword">
-                                        <Form.Label>Número de tarjeta</Form.Label>
-                                        <Form.Control type="text" placeholder="Número de tarjeta" />
-                                    </Form.Group>
-                                    <Form.Group controlId="formBasicPassword">
-                                        <Form.Label>Fecha de expiración</Form.Label>
-                                        <Form.Control type="text" placeholder="Fecha de expiración" />
-                                    </Form.Group>
-                                    <Form.Group controlId="formBasicPassword">
-                                        <Form.Label>Código de seguridad</Form.Label>
-                                        <Form.Control type="text" placeholder="Código de seguridad" />
-                                    </Form.Group>   
-                                    <div className="row">
-                                        <div className="col-12 col-md-6">
-                                            <Link to="/pago">
-                                                <Button variant="primary" type="submit">
-                                                    Pagar
-                                                </Button>
-                                            </Link>
-                                        </div>
-                                        <div className="col-12 col-md-6">
-                                            <Link to="/pago">
-                                                <Button variant="primary" type="submit">
-                                                    Cancelar
-                                                </Button>
-                                            </Link>
-                                        </div>
+        <h2>Escoja tipo de pago</h2>
+        <Form.Group controlId="exampleForm.ControlSelect1">
+            <Form.Label>Example select</Form.Label>
+            <Form.Control as="select" onChange={(e) => setPago(e.target.value)}>
+                <option>Tarjeta</option>
+                <option>Efectivo</option>
+                <option>WebPay</option>
+            </Form.Control>
+        </Form.Group>
+        {pago === "Tarjeta" && <Tarjeta />}
+        {pago === "Efectivo" && <Efectivo />}
+        {pago === "WebPay" && <WebPay />}
 
-                                    </div>
-                                </Form>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="col-12 col-md-6">
-                        <div className="card">
-                            <div className="card-body">
-                                <h5 className="card-title">Métodos de pago</h5>
-                                <div className="row">
-                                    <div className="col-12 col-md-6">
-                                        <div className="card">
-                                            <div className="card-body">
-                                                <h5 className="card-title">Tarjeta de crédito</h5>
-                                                <FaCcVisa className="icono" />
-                                                <FaCcMastercard className="icono" />
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className="col-12 col-md-6">
-                                        <div className="card">
 
-                                            <div className="card-body">
-                                                <h5 className="card-title">Paypal</h5>
-                                                <FaCcPaypal className="icono" />
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+        <h2>Desea añadir propina?</h2>
+        <Form.Group controlId="exampleForm.ControlSelect1">
+            <Form.Label>Example select</Form.Label>
+            <Form.Control as="select" onChange={(e) => setPropina(e.target.value)}>
+                <option>Nada</option>
+                <option>10%</option>
+                <option>15%</option>
+                <option>20%</option>
+            </Form.Control>
+        </Form.Group>
+        {propina === "Nada" && <p>No añadir propina</p>}
+        {propina === "10%" && <p>Añadir 10% de propina</p>}
+        {propina === "15%" && <p>Añadir 15% de propina</p>}
+        {propina === "20%" && <p>Añadir 20% de propina</p>}
 
-                </div>
-            </div>
+
+        
+
+        <Link to="/checkout">
+            <Button variant="primary" type="submit">
+                Continuar
+            </Button>
+        </Link>
+
+        
+
+
 
 
 
