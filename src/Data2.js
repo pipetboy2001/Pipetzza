@@ -146,7 +146,26 @@ const data = {
       category: "Salsa",
       cantidad: 1
     },
+    {
+      id: 17,
+      title: "Personalizada",
+      price: 30000,
+      description: [],
+      image: "https://i.imgur.com/0dIk4bV.png",
+      category: "pizza",
+      cantidad: 1
+    },
   ],
+  especial: [],
+  locales: [
+    {
+      id: 18,
+      nombre: "Local maipú",
+      ubicacion: ["Santiago", "Maipú", "Del rey", "2038"],
+      imagen: "",
+    },
+  ],
+
 };
 
 export default data;

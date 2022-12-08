@@ -1,9 +1,16 @@
-import React from 'react'
+import React, { useContext } from 'react'
+//css
 import { Container } from 'react-bootstrap'
+//react-router-dom
+import { Link } from 'react-router-dom'
+
+//datacontext
+import { DataContext } from 'context/DataProvider';
+
+//iconos
 import ToggleButtonGroup from 'react-bootstrap/ToggleButtonGroup';
 import ToggleButton from 'react-bootstrap/ToggleButton';
 import { MDBCheckbox } from 'mdb-react-ui-kit';
-
 import { GiMeat } from 'react-icons/gi';
 import { GiTomato } from 'react-icons/gi';
 import { GiDoughRoller } from 'react-icons/gi';
@@ -12,14 +19,85 @@ import { MdOutlineDeliveryDining } from 'react-icons/md'
 import { MdLocalDining } from 'react-icons/md'
 
 export const Elecciones = () => {
+  const value = useContext(DataContext); // Ocupar las variables globales
+  const addCarrito = value.addCarrito; // Para acceder a la FUNCION addCarrito
+  const [items] = value.productos; // Importar el repositorio de productos
+
+  // El item de id=17 es la pizza personalizada
+  // La idea es agregar dentro de su atributo "ingredientes"
+  // los ingredientes que tenga
+
+  // Datos
+  const ingredientesCarnes = [
+    "carne",
+    "carne mechada",
+    "pepperoni",
+    "salchicha",
+    "jamón",
+    "pollo",
+    "tocino",
+  ];
+  const ingredientesVegetales = [
+    "aceitunas",
+    "choclo",
+    "piña",
+    "cebolla",
+    "pimiento",
+    "tomate",
+    "champiñones",
+  ];
+  const tipoQueso = ["Gouda", "Mozzarella"];
+  const cantidadQueso = ["Normal", "Extra", "Doble"];
+  const tipoMasa = ["Normal", "Delgada"];
+  const tamanoPizza = ["Familiar", "Mediana", "Personal"];
+  
+  // Estados
+  const [ingredientesCarnesEstado, setIngredientesCarnes] = React.useState(
+    ""
+  );
+  const [ingredientesVegetalesEstado, setIngredientesVegetales] = React.useState(
+    ""
+  );
+  const [tipoQuesoEstado, setTipoQuesoEstado] = React.useState("");
+  const [cantidadQuesoEstado, setCantidadQuesoEstado] = React.useState("");
+  const [tipoMasaEstado, setTipoMasaEstado] = React.useState("");
+  const [tamanoPizzaEstado, setTamanoPizzaEstado] = React.useState("");
+
+  // Funcion
+  const crearPizzaPersonalizada = () => {
+    console.log("Creando pizza personalizada...");
+    const salida = [
+      ingredientesCarnesEstado,
+      ingredientesVegetalesEstado,
+      tipoQuesoEstado,
+      cantidadQuesoEstado,
+      tipoMasaEstado,
+      tamanoPizzaEstado,
+    ].map((element) => element + ", ");
+    console.log("Características: ", salida);
+
+    // Obtener objeto pizza personalizada
+    const pizzaPersonalizada = items.filter((element) => {
+      return element.id === 17;
+    })[0]
+
+    // Asignar ingredientes
+    pizzaPersonalizada.ingredientes = salida;
+    console.log("Pizza personalizada: ", pizzaPersonalizada);
+
+    // Agregar al carrito
+    addCarrito(pizzaPersonalizada.id);
+  };
+
+
+
   return (
     <Container>
       <div class="container" >
-        
         <div class="row">
           <center>
-          <div class="col-9">
-              <h1><MdOutlineDeliveryDining /> Tipo de pedido <MdLocalDining/></h1>
+            <div class="col-9">
+              <h1><MdOutlineDeliveryDining /> Tipo de pedido <MdLocalDining /></h1>
               <ToggleButtonGroup type="radio" name="options" className='Boton2Elecciones' defaultValue={1}>
                 <ToggleButton id="tbg-radio-1" className='Boton1Elecciones' value={1}>
                   delivery
@@ -28,122 +106,120 @@ export const Elecciones = () => {
                   en local
                 </ToggleButton>
               </ToggleButtonGroup>
-          </div>
-        </center>
-        {/*Menu de elecciones*/ }
-        <div class="angry-grid">
-          <div id="item-0"> <div class="div2">
+            </div>
+          </center>
+          {/*Menu de elecciones*/}
+          <div class="angry-grid">
+            <div id="item-0"> <div class="div2">
               <h2>Tipo de Masa<GiDoughRoller /></h2>
-            <div class="form-check">
-              <input class="form-check-input" type="radio" name="tipoMasa" id="flexRadioDefault1" />
-              <label class="form-check-label" for="flexRadioDefault1">
-                Normal
-              </label>
+              {tipoMasa.map((element) => (
+                <div>
+                  <label>{element}</label>
+                  <input class="form-check-input" value={element} type={"radio"} name="masa" onChange={(e) => {
+                      setTipoMasaEstado(e.target.value);
+                      console.log("Estado tipo masa: " + e.target.value);
+                    }}
+                  />
+                </div>
+              ))}
             </div>
-            <div class="form-check">
-              <input class="form-check-input" type="radio" name="tipoMasa" id="flexRadioDefault2" checked />
-              <label class="form-check-label" for="flexRadioDefault2">
-                Delgada
-              </label>
             </div>
-            <div class="div3"></div>
-          </div></div>
 
-
-
-          <div id="item-1"><div class="div1">
+            <div id="item-1"><div class="div1">
               <h2>Tamaño de pizza</h2>
-            <div class="form-check">
-              <input class="form-check-input" type="radio" name="TamañoPizza" id="flexRadioDefault1" />
-              <label class="form-check-label" for="flexRadioDefault3">
-                Familiar
-              </label>
+              {tamanoPizza.map((element) => (
+                <div>
+                  <label>{element}</label>
+                  <input class="form-check-input"
+                    value={element}
+                    type={"radio"}
+                    name="tamano"
+                    onChange={(e) => {
+                      setTamanoPizzaEstado(e.target.value);
+                      console.log("Estado tamaño pizza: " + e.target.value);
+                    }}
+                  />
+                </div>
+              ))}
             </div>
-            <div class="form-check">
-              <input class="form-check-input" type="radio" name="TamañoPizza" id="flexRadioDefault2" checked />
-              <label class="form-check-label" for="flexRadioDefault4">
-                Mediana
-              </label>
             </div>
-            <div class="form-check">
-              <input class="form-check-input" type="radio" name="TamañoPizza" id="flexRadioDefault2" checked />
-              <label class="form-check-label" for="flexRadioDefault4">
-                Personal
-              </label>
-            </div>
-          </div>
-          </div>
 
-
-          <div id="item-2"><div class="div3">
-              <h2>Tipo de queso<TbCheese/></h2>
-            <div class="form-check">
-              <input class="form-check-input" type="radio" name="tipoQueso" id="flexRadioDefault1" />
-              <label class="form-check-label" for="flexRadioDefault1">
-                Gouda
-              </label>
+            <div id="item-2"><div class="div3">
+              <h2>Tipo de queso<TbCheese /></h2>
+              {tipoQueso.map((element) => (
+                <div>
+                  <label>{element}</label>
+                  <input class="form-check-input" value={element} type={"radio"} name="queso" onChange={(e) => {
+                      setTipoQuesoEstado(e.target.value);
+                      console.log("Estado tipo queso: " + e.target.value);
+                    }}
+                  />
+                </div>
+              ))}
             </div>
-            <div class="form-check">
-              <input class="form-check-input" type="radio" name="tipoQueso" id="flexRadioDefault2" checked />
-              <label class="form-check-label" for="flexRadioDefault2">
-                mozzarella
-              </label>
             </div>
-          </div></div>
 
-
-          <div id="item-3"><div class="div4">
+            <div id="item-3"><div class="div4">
               <h2>Cantidad de queso</h2>
-            <div class="form-check">
-              <input class="form-check-input" type="radio" name="cantidadQueso" id="flexRadioDefault1" />
-              <label class="form-check-label" for="flexRadioDefault3">
-                Normal
-              </label>
+              {cantidadQueso.map((element) => (
+                <div>
+                  <label>{element}</label>
+                  <input class="form-check-input" value={element} type={"radio"} name="cantidadQueso" onChange={(e) => {
+                      setCantidadQuesoEstado(e.target.value);
+                      console.log("Estado cantidad queso: " + e.target.value);
+                    }}
+                  />
+                </div>
+              ))}
             </div>
-            <div class="form-check">
-              <input class="form-check-input" type="radio" name="cantidadQueso" id="flexRadioDefault2" checked />
-              <label class="form-check-label" for="flexRadioDefault4">
-                Extra
-              </label>
             </div>
-            <div class="form-check">
-              <input class="form-check-input" type="radio" name="cantidadQueso" id="flexRadioDefault2" checked />
-              <label class="form-check-label" for="flexRadioDefault4">
-                Doble
-              </label>
-            </div>
-          </div>
-          </div>
 
-
-          <div id="item-4"><div class="div5">
+            <div id="item-4"><div class="div5">
               <h2>carnes <GiMeat /></h2>
-            <MDBCheckbox name='flexCheck' value='' id='flexCheckDefault' label='carne' />
-            <MDBCheckbox name='flexCheck' value='' id='flexCheckChecked' label='arne mechada' />
-            <MDBCheckbox name='flexCheck' value='' id='flexCheckDefault' label='pepperoni' />
-            <MDBCheckbox name='flexCheck' value='' id='flexCheckChecked' label='salchicha' />
-            <MDBCheckbox name='flexCheck' value='' id='flexCheckDefault' label='jamón' />
-            <MDBCheckbox name='flexCheck' value='' id='flexCheckChecked' label='pollo' />
-            <MDBCheckbox name='flexCheck' value='' id='flexCheckDefault' label='tocino' />
-          </div></div>
+              {ingredientesCarnes.map((element) => (
+                <div>
+                  <label>{element}</label>
+                  <input class="form-check-input"
+                    value={element} 
+                    type={"radio"}
+                    name="cantidadCarne"
+                    onChange={(e) => {
+                      setIngredientesCarnes(e.target.value);
+                      console.log("Ingredientes carnes: " + e.target.value);
+                    }}
+                  />
+                </div>
+              ))}
+            </div></div>
 
-          <div id="item-5"><div class="div6">
-              <h2>vegetales<GiTomato/></h2>
-            <MDBCheckbox name='flexCheck' value='' id='flexCheckDefault' label='aceitunas' />
-            <MDBCheckbox name='flexCheck' value='' id='flexCheckChecked' label='choclo' />
-            <MDBCheckbox name='flexCheck' value='' id='flexCheckDefault' label='piña' />
-            <MDBCheckbox name='flexCheck' value='' id='flexCheckChecked' label='cebolla' />
-            <MDBCheckbox name='flexCheck' value='' id='flexCheckDefault' label='pimiento,' />
-            <MDBCheckbox name='flexCheck' value='' id='flexCheckChecked' label='tomate' />
-            <MDBCheckbox name='flexCheck' value='' id='flexCheckDefault' label='champiñones' />
-          </div></div>
-        </div>
+            <div id="item-5"><div class="div6">
+              <h2>vegetales<GiTomato /></h2>
+              {ingredientesVegetales.map((element) => (
+                <div>
+                  <label>{element}</label>
+                  <input class="form-check-input"
+                    value={element}
+                    type={"radio"}
+                    name="vegetales"
+                    onChange={(e) => {
+                      setIngredientesVegetales(e.target.value);
+                      console.log("Ingredientes vegetales: " + e.target.value);
+                    }}
+                  />
+                </div>
+              ))}
+            </div></div>
+
+          </div>
           <br></br>
-          <button type="button" class="btn btn-succes">Crear pedido</button>
+
+          <button
+            onClick={() => crearPizzaPersonalizada()}
+            type="button" class="btn btn-succes"
+          >
+            Crear pedido
+          </button>
         </div>
-
-
-
       </div>
     </Container>
 

@@ -1,5 +1,5 @@
 import React from 'react'
-import { Elecciones } from 'components/Elecciones.js';
+import { Elecciones }  from 'components/Elecciones'
 import { ProductosOnlyRefresco } from '../productos/ProductosOnlyRefresco';
 import { ProductosOnlySalsa } from '../productos/ProductosOnlySalsa';
 
