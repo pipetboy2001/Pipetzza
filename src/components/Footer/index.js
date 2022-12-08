@@ -8,6 +8,11 @@ import {
     Heading,
 } from "./FooterStyles";
 
+import { BsFacebook } from 'react-icons/bs';
+import { BsInstagram } from 'react-icons/bs';
+import { BsTwitter } from 'react-icons/bs';
+import { BsYoutube } from 'react-icons/bs';
+
 export const Footer = () => {
     return (
         <Box>
@@ -37,28 +42,28 @@ export const Footer = () => {
                         <FooterLink href="#">
                             <i className="fab fa-facebook-f">
                                 <span style={{ marginLeft: "10px" }}>
-                                    Facebook
+                                    <BsFacebook /> Facebook 
                                 </span>
                             </i>
                         </FooterLink>
                         <FooterLink href="#">
                             <i className="fab fa-instagram">
                                 <span style={{ marginLeft: "10px" }}>
-                                    Instagram
+                                    <BsInstagram /> Instagram
                                 </span>
                             </i>
                         </FooterLink>
                         <FooterLink href="#">
                             <i className="fab fa-twitter">
                                 <span style={{ marginLeft: "10px" }}>
-                                    Twitter
+                                    <BsTwitter /> Twitter
                                 </span>
                             </i>
                         </FooterLink>
                         <FooterLink href="#">
                             <i className="fab fa-youtube">
                                 <span style={{ marginLeft: "10px" }}>
-                                    Youtube
+                                    <BsYoutube  /> Youtube
                                 </span>
                             </i>
                         </FooterLink>

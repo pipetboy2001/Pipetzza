@@ -15,8 +15,10 @@ export const ProductosList = () => {
 	return (
 		<>
 			<center>
-				<h1 className="produ">🍕Catálogo de pizzas🍕</h1>
-				<h1 className='tipePedido'>Tipo de pedido 📌</h1>
+				<center>
+					<h1 className="produ">🍕Catálogo de pizzas🍕</h1>
+					<h1 className='tipePedido'>Tipo de pedido 📌</h1>
+				</center>
 				<ToggleButtonGroup type="radio" name="options" defaultValue={1}>
 					<ToggleButton id="tbg-radio-1" value={1}>
 						delivery
@@ -27,9 +29,8 @@ export const ProductosList = () => {
 				</ToggleButtonGroup>
 			</center>
 			<ProductosOnlyPizza />
-
+			<h2>Personaliza tu pizza 🍕</h2>
 			<ProductosOnlyPersonalizada />
-
 			<h2>Añade algo para tomar 🥤</h2>
 			<ProductosOnlyRefresco />
 			<h2>Añade tus salsas favoritas</h2>
