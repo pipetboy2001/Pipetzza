@@ -152,7 +152,7 @@ const data = {
       price: 30000,
       description: [],
       image: "https://i.imgur.com/0dIk4bV.png",
-      category: "pizza",
+      category: "Personalizada",
       cantidad: 1
     },
   ],
