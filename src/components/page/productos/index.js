@@ -17,16 +17,17 @@ export const ProductosList = () => {
 			<center>
 				<center>
 					<h1 className="produ">🍕Catálogo de pizzas🍕</h1>
-					<h1 className='tipePedido'>Tipo de pedido 📌</h1>
+					<h1 className='tipePedido'>📌Tipo de pedido 📌</h1>
 				</center>
-				<ToggleButtonGroup type="radio" name="options" defaultValue={1}>
-					<ToggleButton id="tbg-radio-1" value={1}>
-						delivery
+				<ToggleButtonGroup type="radio" name="options" className='Boton2Elecciones' defaultValue={1}>
+					<ToggleButton id="tbg-radio-1" className='Boton1Elecciones' value={1}>
+						Delivery
 					</ToggleButton>
-					<ToggleButton id="tbg-radio-2" value={2}>
-						Retirar en local
+					<ToggleButton id="tbg-radio-2" className='Boton1Elecciones' value={2}>
+						En Local
 					</ToggleButton>
 				</ToggleButtonGroup>
+
 			</center>
 			<ProductosOnlyPizza />
 			<h2>Personaliza tu pizza 🍕</h2>

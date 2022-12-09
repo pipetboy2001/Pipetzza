@@ -377,7 +377,12 @@ header ul li a {
 }
 
 .carrito__item img {
+    /* tamaño de la imagen */
     width: 10rem;
+    height: 7rem;
+    border-radius: 5px;
+    margin: 2rem 0;
+
 }
 
 .carrito__item h3 {

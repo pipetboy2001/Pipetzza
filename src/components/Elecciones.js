@@ -100,10 +100,10 @@ export const Elecciones = () => {
               <h1><MdOutlineDeliveryDining /> Tipo de pedido <MdLocalDining /></h1>
               <ToggleButtonGroup type="radio" name="options" className='Boton2Elecciones' defaultValue={1}>
                 <ToggleButton id="tbg-radio-1" className='Boton1Elecciones' value={1}>
-                  delivery
+                  Delivery
                 </ToggleButton>
                 <ToggleButton id="tbg-radio-2" className='Boton1Elecciones' value={2}>
-                  en local
+                  En Local
                 </ToggleButton>
               </ToggleButtonGroup>
             </div>

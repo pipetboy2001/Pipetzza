@@ -27,14 +27,14 @@ export const Footer = () => {
                     <Column>
                         <Heading>Soporte</Heading>
                         <FooterLink href="#">Contacto</FooterLink>
-                        <FooterLink href="#">Preguntas frecuentes</FooterLink>
+                        <FooterLink href="#">Preguntas Frecuentes</FooterLink>
                     </Column>
 
                     <Column>
                         <Heading>Conócenos</Heading>
                         <FooterLink href="#">Zona de Delivery</FooterLink>
-                        <FooterLink href="#">Informacion legal</FooterLink>
-                        <FooterLink href="#">Terminos y condicciones</FooterLink>
+                        <FooterLink href="#">Información legal</FooterLink>
+                        <FooterLink href="#">Términos y condiciones</FooterLink>
                     </Column>
 
                     <Column>
