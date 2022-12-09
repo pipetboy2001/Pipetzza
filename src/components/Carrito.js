@@ -105,7 +105,7 @@ export const Carrito = ({ cart, show, closeCart }) => {
 
 					<Link to="/pago">
 						<div class="d-grid gap-2">
-							<button type="button" class="btn btn-lg btn-rounded" >Pagar</button>
+							<button onClick={open = { show }} type="button" class="btn btn-lg btn-rounded" >Pagar</button>
 						</div>
 					</Link>
 
