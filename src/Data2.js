@@ -59,7 +59,7 @@ const data = {
       id: 7,
       title: "Coca Cola",
       price: 1690,
-      description: "Refresco",
+      description: "600 ml",
       image: "https://i.imgur.com/GGDGMVI.png",
       category: "Refresco",
       cantidad: 1
@@ -68,7 +68,7 @@ const data = {
       id: 8,
       title: "Fanta",
       price: 1690,
-      description: "Refresco",
+      description: "600 ml",
       image: "https://i.imgur.com/wzR8Awn.png",
       category: "Refresco",
       cantidad: 1
@@ -77,7 +77,7 @@ const data = {
       id: 9,
       title: "Jugo Watts Durazno",
       price: 1200,
-      description: "Refresco",
+      description: "500 ml",
       image: "https://i.imgur.com/SqKP3KA.png",
       category: "Refresco",
       cantidad: 1
@@ -86,7 +86,7 @@ const data = {
       id: 10,
       title: "Jugo Valle de Piña",
       price: 1200,
-      description: "Refresco",
+      description: "500 ml",
       image: "https://i.imgur.com/K2S4Ilf.png",
       category: "Refresco",
       cantidad: 1
@@ -95,7 +95,7 @@ const data = {
       id: 11,
       title: "Canchantun con Gas",
       price: 1000,
-      description: "Refresco",
+      description: "600 ml",
       image: "https://i.imgur.com/5lsWwYd.png",
       category: "Refresco",
       cantidad: 1
@@ -104,7 +104,7 @@ const data = {
       id: 12,
       title: "Canchantun sin Gas",
       price: 1000,
-      description: "Refresco",
+      description: "600 ml",
       image: "https://i.imgur.com/dMS36DJ.png",
       category: "Refresco",
       cantidad: 1
@@ -114,7 +114,7 @@ const data = {
       id: 13,
       title: "Salsa BBQ",
       price: 600,
-      description: "Salsa",
+      description: "puré de jitomate,salsa picante, azúcar, cebolla",
       image: "https://i.imgur.com/qdhBUQ1.png",
       category: "Salsa",
       cantidad: 1
@@ -123,7 +123,7 @@ const data = {
       id: 14,
       title: "Salsa Garlic",
       price: 600,
-      description: "Salsa",
+      description: "Salsa de Soja,Ketchup,Caldo Vegetal",
       image: "https://i.imgur.com/hBCZd1B.png",
       category: "Salsa",
       cantidad: 1
@@ -132,7 +132,7 @@ const data = {
       id: 15,
       title: " Salsa Picante",
       price: 600,
-      description: "Salsa",
+      description: "Tomate,cebolla,ajo,sal",
       image: "https://i.imgur.com/t9k0Sf8.png",
       category: "Salsa",
       cantidad: 1
@@ -141,16 +141,16 @@ const data = {
       id: 16,
       title: "Salsa Tomate",
       price: 600,
-      description: "Salsa",
+      description: "Tomate,azucar",
       image: "https://i.imgur.com/o6zPNEN.png",
       category: "Salsa",
       cantidad: 1
     },
     {
       id: 17,
-      title: "Personalizada",
+      title: "PERSONALIZADA",
       price: 30000,
-      description: [],
+      description: "Personalizada",
       image: "https://i.imgur.com/0dIk4bV.png",
       category: "Personalizada",
       cantidad: 1

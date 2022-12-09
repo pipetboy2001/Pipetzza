@@ -1,8 +1,10 @@
 import React, { useContext } from "react";
 import { DataContext } from "context/DataProvider";
 import { Link } from 'react-router-dom';
+import { Avatar, Box, Button, Divider, Drawer, Paper, Typography } from "@mui/material";
 
-export const Carrito = () => {
+
+export const Carrito = ({ cart, show, closeCart }) => {
 	const value = useContext(DataContext);
 	const [menu, setMenu] = value.menu;
 	const [carrito, setCarrito] = value.carrito;
@@ -41,12 +43,16 @@ export const Carrito = () => {
 		}
 	}
 
+
+
+
 	const show1 = menu ? "carritos show" : "carrito";
 	const show2 = menu ? "carrito show" : "carrito";
 
 
 
 	return (
+
 		<div className={show1}>
 			<div className={show2}>
 				<div onClick={tooglefalse} className="carrito__close">
@@ -55,16 +61,17 @@ export const Carrito = () => {
 				<h2>Su Carrito</h2>
 				<div className="carrito__center">
 					{
-
-
 						carrito.length === 0 ? <h2 style={{ textAlign: "center", fontSize: "3rem" }}>Carrito Vacio</h2> : <>
 							{
 								carrito.map((producto) => (
 									<div className="carrito__item" key={producto.id}>
 										<img src={producto.image} alt={producto.title} />
 										<div>
-											<h3> {producto.title} </h3>
+											<h4> {producto.title} </h4>
+											<h5>{producto.description}</h5>
 											<p className="price">${producto.price}</p>
+
+
 										</div>
 										<div>
 											<box-icon

@@ -82,7 +82,7 @@ export const Elecciones = () => {
     })[0]
 
     // Asignar ingredientes
-    pizzaPersonalizada.ingredientes = salida;
+    pizzaPersonalizada.description = salida;
     console.log("Pizza personalizada: ", pizzaPersonalizada);
 
     // Agregar al carrito
