@@ -1,6 +1,7 @@
 import React, {useContext} from "react";
 import { Link } from "react-router-dom";
 import { DataContext } from "context/DataProvider";
+import { BsCartPlus } from "react-icons/bs";
 
 export const ProductoItem = ({ title, image, description, category, price, id}) => {
 
@@ -25,7 +26,7 @@ export const ProductoItem = ({ title, image, description, category, price, id}) 
       </div>
       <div className="bottom">
         <center>
-          <button onClick={() => addCarrito(id)} className="btn">Añadir al carrito</button>
+          <button onClick={() => addCarrito(id)} className="btn">Añadir al carrito <BsCartPlus/> </button>
         </center>
       </div>
     </div>

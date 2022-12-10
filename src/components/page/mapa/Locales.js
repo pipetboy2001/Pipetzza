@@ -47,7 +47,7 @@ function RenderMap() {
     return (
         <>
             <div className="map" id="map" >
-                <MapContainer center={{ lat: 51.505, lng: -0.09 }} zoom={12} scrollWheelZoom={false}>>
+                <MapContainer center={{ lat: -33.4876227, lng: -70.7719958 }} zoom={12} scrollWheelZoom={false}>>
                     {/* constribuciones para que muestre el mapa */}
                     <TileLayer
                         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
@@ -85,8 +85,15 @@ function RenderMap() {
 
 export default function Locales() {
     return (
+        <container>
+            <center>
+                <h1>Locales</h1>
+            </center>
+            <div>
+                <RenderMap />
+            </div>
 
-        <RenderMap />
+        </container>
     );
 }
 
