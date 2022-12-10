@@ -6,6 +6,7 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import { BiFoodMenu } from "react-icons/bi";
 import { FaPizzaSlice } from "react-icons/fa"
+import { BsShop } from "react-icons/bs"
 
 
 export const Header = () => {
@@ -42,7 +43,7 @@ export const Header = () => {
                 <Link to="/Menu" className="linked">Menu <BiFoodMenu /> 
                 </Link>
                 <Link to="/Crear" className="linked">Crea tu pizza <FaPizzaSlice />  </Link>
-                {/* <Link to="/Sucursales" className="linked">Sucursales</Link> */}
+                <Link to="/locales" className="linked">Sucursales <BsShop /></Link>
               </center>
             </Nav>
           </Navbar.Collapse>

@@ -5,6 +5,7 @@ import { ProductosList } from "./page/productos";
 import { ProductosDetalles } from "./page/productos/ProductosDetalles";
 import {Crear} from "./page/crear/crear"
 import {Pago} from "./page/pago/pago" 
+import Locales from "./page/mapa/Locales"
 
 export default function Page() {
   return (
@@ -15,6 +16,7 @@ export default function Page() {
         <Route path="/Menu/:id" exact component={ProductosDetalles} />
         <Route path="/Crear" exact component={Crear} />
         <Route path="/Pago" exact component={Pago} />
+        <Route path="/Locales" exact component={Locales} />
 			</Switch>
     </section>
   );
