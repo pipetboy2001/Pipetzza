@@ -97,15 +97,8 @@ export const Elecciones = () => {
         <div class="row">
           <center>
             <div class="col-9">
-              <h1><MdOutlineDeliveryDining /> Tipo de pedido <MdLocalDining /></h1>
-              <ToggleButtonGroup type="radio" name="options" className='Boton2Elecciones' defaultValue={1}>
-                <ToggleButton id="tbg-radio-1" className='Boton1Elecciones' value={1}>
-                  Delivery
-                </ToggleButton>
-                <ToggleButton id="tbg-radio-2" className='Boton1Elecciones' value={2}>
-                  En Local
-                </ToggleButton>
-              </ToggleButtonGroup>
+              <h1 className='H1CREAR'><MdOutlineDeliveryDining />Crea tu pizza a tu gusto <MdLocalDining /></h1>
+              
             </div>
           </center>
           {/*Menu de elecciones*/}

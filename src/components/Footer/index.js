@@ -12,6 +12,7 @@ import { BsFacebook } from 'react-icons/bs';
 import { BsInstagram } from 'react-icons/bs';
 import { BsTwitter } from 'react-icons/bs';
 import { BsYoutube } from 'react-icons/bs';
+import { FiPhoneCall } from 'react-icons/fi'
 
 export const Footer = () => {
     return (
@@ -38,32 +39,32 @@ export const Footer = () => {
                     </Column>
 
                     <Column>
-                        <Heading>Redes sociales</Heading>
+                        <Heading>Contactanos</Heading>
                         <FooterLink href="#">
                             <i className="fab fa-facebook-f">
                                 <span style={{ marginLeft: "10px" }}>
-                                    <BsFacebook /> Facebook 
+                                    <BsFacebook /> PipetzzaPizzeria 
                                 </span>
                             </i>
                         </FooterLink>
                         <FooterLink href="#">
                             <i className="fab fa-instagram">
                                 <span style={{ marginLeft: "10px" }}>
-                                    <BsInstagram /> Instagram
+                                    <BsInstagram /> Pipetzza_Pizzeria
                                 </span>
                             </i>
                         </FooterLink>
                         <FooterLink href="#">
                             <i className="fab fa-twitter">
                                 <span style={{ marginLeft: "10px" }}>
-                                    <BsTwitter /> Twitter
+                                    <BsTwitter /> PipetzzaPizzeria 
                                 </span>
                             </i>
                         </FooterLink>
                         <FooterLink href="#">
                             <i className="fab fa-youtube">
                                 <span style={{ marginLeft: "10px" }}>
-                                    <BsYoutube  /> Youtube
+                                    <FiPhoneCall  /> +569 79148614
                                 </span>
                             </i>
                         </FooterLink>

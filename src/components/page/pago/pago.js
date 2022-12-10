@@ -1,6 +1,8 @@
 import React from 'react'
 // React Bootstrap
 import { Form, Button } from "react-bootstrap"
+import ToggleButtonGroup from 'react-bootstrap/ToggleButtonGroup';
+import ToggleButton from 'react-bootstrap/ToggleButton';
 // React Router
 import { Link } from "react-router-dom"
 // React Icons
@@ -26,7 +28,23 @@ export const Pago = () => {
         <>
             <div className="container">
                 <br></br>
-                <center><h1>Pago 💸</h1></center>
+                <center>
+                    <h1>Pago 💸</h1>
+                    <h1 className='tipePedido'>📌Tipo de pedido 📌</h1>
+                </center>
+                <center>
+                    <ToggleButtonGroup type="radio" name="options" className='Boton2Elecciones' defaultValue={1}>
+                        <ToggleButton id="tbg-radio-1" className='Boton1Elecciones' value={1}>
+                            Delivery
+                        </ToggleButton>
+                        <ToggleButton id="tbg-radio-2" className='Boton1Elecciones' value={2}>
+                            En Local
+                        </ToggleButton>
+                    </ToggleButtonGroup>
+                </center>
+                
+
+
                 <div class="angry-grid">
                     <div id="item-6">
                         {/* Tipo de pago */}

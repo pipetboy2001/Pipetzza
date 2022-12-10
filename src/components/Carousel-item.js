@@ -7,11 +7,21 @@ const HeroSlider = () => {
         <>
             <Carousel>
                 <Carousel.Item interval={7000}>
+                    <Link to="/menu">
+                        <img
+                            className="d-block w-100"
+                            src="https://i.imgur.com/gGEj7mU.png"
+                            alt="Primera publicidad"
+                        />
+                    </Link>
+                </Carousel.Item>
+
+                <Carousel.Item interval={7000}>
                     <Link to="/Crear">
                         <img
                             className="d-block w-100"
                             src="https://i.imgur.com/s3M0Xmd.png"
-                            alt="Primera publicidad"
+                            alt="Crear"
                         />
                     </Link>
                 </Carousel.Item>
