@@ -43,6 +43,18 @@ export const Carrito = ({ cart, show, closeCart }) => {
 		}
 	}
 
+	//vaciar carrito
+	const vaciarCarrito = () => {
+		if (window.confirm("¿Quieres vaciar el carrito?")) {
+			carrito.forEach((item, index) => {
+				item.cantidad = 1;
+				carrito.splice(index, 1)
+			})
+			setCarrito([...carrito])
+		}
+	}
+	
+
 
 
 

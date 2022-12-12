@@ -11,18 +11,42 @@ import { FaCcVisa, FaCcMastercard, FaCcPaypal } from "react-icons/fa"
 import { Tarjeta } from "./Tarjeta"
 import { Efectivo } from "./Efectivo"
 import { WebPay } from "./WebPay"
+import { DataContext } from "context/DataProvider";
+import { useContext } from 'react';
 
 export const Pago = () => {
     // para escojer que pasaria si
     const [pago, setPago] = React.useState("Tarjeta")
     const [propina, setPropina] = React.useState("Nada")
 
+    // para mostrar que fue procesado el pago
     const PagoProcesado = () => {
         // mostrar por pantalla pago listo
-        alert("Pago procesado")
-        
-
+        alert("Pago procesado🤑 Comprobante enviado a su correo")
         }
+
+    //para vaciar el carrito completo
+    const value = useContext(DataContext);
+    const [carrito, setCarrito] = value.carrito;
+    const vaciarCarrito = () => {
+            carrito.forEach((item, index) => {
+                item.cantidad = 1000;
+                carrito.splice(index, 1000)
+            })
+            setCarrito([...carrito])
+        }
+
+
+
+    //para realizar la funcion vaciarCarrito y PagoPorcesado
+    const PagoProcesadoYvaciarCarrito = () => {
+        vaciarCarrito()
+        PagoProcesado()
+    }
+
+    
+
+    
 
     return (
         <>
@@ -43,7 +67,6 @@ export const Pago = () => {
                     </ToggleButtonGroup>
                 </center>
                 
-
 
                 <div class="angry-grid">
                     <div id="item-6">
@@ -82,9 +105,15 @@ export const Pago = () => {
                         {propina === "15%" && <h3>Propina: $15</h3>}
                     </div>
                 </div>
-                <div className='Confirmaccion'>
-                    <button  class="btn btn-succes btn-lg btn-block" type="button" onClick={PagoProcesado}>Pagar</button>
-                </div>
+
+                <center>
+                    <Link to="/">
+                        <div className='Confirmaccion'>
+                            <button class="btn btn-succes btn-lg btn-block" type="button" onClick={PagoProcesadoYvaciarCarrito} >Pagar</button>
+                        </div>
+                    </Link>
+                </center>
+                
             </div>
         </>
 

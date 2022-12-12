@@ -18,7 +18,7 @@ export const Efectivo = () => {
                                     <div className="form-group">
                                         <label>Nombre Completo</label>
                                         <div className="input-group">
-                                            <input type="text" className="form-control" name="cardName" placeholder="Nombre Completo"/>
+                                              <input type="text" className="form-control" name="cardName" placeholder="Nombre Completo" maxlength="40" required />
                                             <span className="input-group-addon"><span className="fa fa-user"></span></span>
                                         </div>
                                     </div>
@@ -30,7 +30,7 @@ export const Efectivo = () => {
                                     <div className="form-group">
                                         <label>Correo Electrónico</label>
                                         <div className="input-group">
-                                            <input type="text" className="form-control" name="cardNumber" placeholder="Correo Electrónico"/>
+                                              <input type="text" className="form-control" name="cardNumber" placeholder="Correo Electrónico" maxlength="40" required />
                                             <span className="input-group-addon"><span className="fa fa-envelope"></span></span>
                                         </div>
                                     </div>
@@ -40,14 +40,13 @@ export const Efectivo = () => {
                                 <div className="col-xs-4 col-md-4">
                                     <div className="form-group">
                                         <label><span className="hidden-xs">Teléfono</span><br/></label>
-                                        <input type="text" className="form-control" name="cardExpiry" placeholder="Teléfono"/>
+                                          <input type="text" className="form-control" name="cardExpiry" placeholder="Teléfono" maxlength="40" required />
                                     </div>
                                 </div>
                                 <div className="col-xs-4 col-md-4 pull-right">
                                     <div className="form-group">
                                         <label>Dirección</label>
-
-                                        <input type="text" className="form-control" name="cardCVC" placeholder="Dirección"/>
+                                          <input type="text" className="form-control" name="cardCVC" placeholder="Dirección" maxlength="40" required />
                                     </div>
                                 </div>
                             </div>

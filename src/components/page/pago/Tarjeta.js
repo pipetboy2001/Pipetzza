@@ -35,7 +35,7 @@ export const Tarjeta = () => {
                                               <FaCcVisa />
                                               <FaCcPaypal /> </label> 
                                         <div className="input-group">
-                                            <input type="text" className="form-control" name="cardNumber" placeholder="Número de Tarjeta"/>
+                                              <input type="text" className="form-control" name="cardNumber" placeholder="Número de Tarjeta" required />
                                             <span className="input-group-addon"><span className="fa fa-credit-card"></span></span>
                                         </div>
                                     </div>
@@ -45,13 +45,13 @@ export const Tarjeta = () => {
                                 <div className="col-xs-4 col-md-4">
                                     <div className="form-group">
                                         <label><span className="hidden-xs">FECHA DE</span><br/>EXPIRACIÓN</label>
-                                        <input type="text" className="form-control" name="cardExpiry" placeholder="MM/YY"/>
+                                          <input type="text" className="form-control" name="cardExpiry" placeholder="MM/YY" required />
                                     </div>
                                 </div>
                                 <div className="col-xs-4 col-md-4 pull-right">
                                     <div className="form-group">
                                         <label>CÓDIGO DE SEGURIDAD</label>
-                                        <input type="text" className="form-control" name="cardCVC" placeholder="CVC"/>
+                                          <input type="text" className="form-control" name="cardCVC" placeholder="CVC" maxlength="3" required />
                                     </div>
                                 </div>
                             </div>
@@ -60,6 +60,17 @@ export const Tarjeta = () => {
                                     <p className="payment-errors"></p>
                                 </div>
                             </div>
+                              <div className="row">
+                                  <div className="col-xs-12">
+                                      <div className="form-group">
+                                          <label>Correo Electrónico</label>
+                                          <div className="input-group">
+                                              <input type="text" className="form-control" name="cardNumber" placeholder="Correo Electrónico" maxlength="40" required />
+                                              <span className="input-group-addon"><span className="fa fa-envelope"></span></span>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
                         </form>
                     </div>
                 </div>
