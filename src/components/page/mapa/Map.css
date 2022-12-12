@@ -1,11 +1,74 @@
 /* map.css */
 .leaflet-container {
-    width: 40rem;
-    height: 25rem;
+    width: 38rem;
+    height: 30rem;
+    border-radius: 10px;
+    margin: 0;
+    padding: 0;
     z-index: 0;
+
 }
 
 /*Centra el mapa en la pantalla*/
 .map {
     display: flex;
+}
+
+/*Grilla*/
+.angry-grid2 {
+    display: grid;
+
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr;
+
+    gap: 0px;
+    height: 100%;
+
+}
+
+/*Grilla*/
+#item-izquierda {
+
+    grid-row-start: 1;
+    grid-column-start: 1;
+
+    grid-row-end: 2;
+    grid-column-end: 2;
+
+}
+
+#item-derecha {
+
+    grid-row-start: 1;
+    grid-column-start: 2;
+
+    grid-row-end: 2;
+    grid-column-end: 3;
+    grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr));
+
+}
+
+.card{
+    background-color: #9baf4e;
+    border-radius: 10px;
+    padding: 1rem;
+    margin: 1rem;
+    color: white;
+    font-size: 10px;
+    font-weight: 10px;
+    text-align: center;
+}
+
+.cards{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(2rem, 2fr));
+    grid-gap: 1rem;
+    margin: 1rem;
+}
+
+.h1{
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-align: center;
+    margin: 1rem;
 }
