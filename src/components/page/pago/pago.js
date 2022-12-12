@@ -55,9 +55,28 @@ export const Pago = () => {
             setTotalPropina(total + (total * 0.2))
         }
     }
+    //para mostrar el total con propina
+    const [mostrarTotalPropina, setMostrarTotalPropina] = React.useState(false)
+    const mostrarTotal = () => {
+        setMostrarTotalPropina(true)
+    }
+    //para mostrar el total sin propina
+    const [mostrarTotalSinPropina, setMostrarTotalSinPropina] = React.useState(false)
+    const mostrarTotalSin = () => {
+        setMostrarTotalSinPropina(true)
+    }
+    //para mostrar el total con propina y el envio
+    const [mostrarTotalPropinaEnvio, setMostrarTotalPropinaEnvio] = React.useState(false)
+    const mostrarTotalEnvio = () => {
+        setMostrarTotalPropinaEnvio(true)
+    }
+    //para mostrar el total sin propina y el envio
+    const [mostrarTotalSinPropinaEnvio, setMostrarTotalSinPropinaEnvio] = React.useState(false)
+    const mostrarTotalSinEnvio = () => {
+        setMostrarTotalSinPropinaEnvio(true)
+    }
 
 
-    //delevery y local
     const [Delivery, setDelivery] = React.useState(true)
     const [EnLocal, setEnLocal] = React.useState(false)
     const sumarDelivery = () => {
@@ -168,6 +187,8 @@ export const Pago = () => {
                             <Button variant="outline-success" onClick={sumarPropina}>Agregar propina</Button>
                         </center>
                         <br></br>
+                        {/* Total */}
+                        <h3>Total: ${total}</h3>
                         {/* Total con propina */}
                         <h3>Total con propina: ${totalPropina}</h3>
                         <br></br>
