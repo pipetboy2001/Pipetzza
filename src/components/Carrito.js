@@ -5,15 +5,18 @@ import { Avatar, Box, Button, Divider, Drawer, Paper, Typography } from "@mui/ma
 
 
 export const Carrito = ({ cart, show, closeCart }) => {
+	//importar variables globales
 	const value = useContext(DataContext);
 	const [menu, setMenu] = value.menu;
 	const [carrito, setCarrito] = value.carrito;
 	const [total] = value.total;
 
+	//funcion para ocultar el carrito
 	const tooglefalse = () => {
 		setMenu(false);
 	};
 
+	//reducir -1
 	const reduce = id => {
 		carrito.forEach(item => {
 			if (item.id === id) {
@@ -22,6 +25,7 @@ export const Carrito = ({ cart, show, closeCart }) => {
 			setCarrito([...carrito])
 		})
 	}
+	//incrementar 
 	const increase = id => {
 		carrito.forEach(item => {
 			if (item.id === id) {
@@ -31,6 +35,7 @@ export const Carrito = ({ cart, show, closeCart }) => {
 		})
 	}
 
+	//eliminar producto
 	const removeProducto = id => {
 		if (window.confirm("¿Quieres suspender el producto?")) {
 			carrito.forEach((item, index) => {
@@ -70,10 +75,10 @@ export const Carrito = ({ cart, show, closeCart }) => {
 				<div onClick={tooglefalse} className="carrito__close">
 					<box-icon name="x"></box-icon>
 				</div>
-				<h2>Su Carrito</h2>
+				<h2>Su Carrito 🛒</h2>
 				<div className="carrito__center">
 					{
-						carrito.length === 0 ? <h2 style={{ textAlign: "center", fontSize: "3rem" }}>Carrito Vacio</h2> : <>
+						carrito.length === 0 ? <h2 style={{ textAlign: "center", fontSize: "3rem" }}>Carrito Vacio 😟</h2> : <>
 							{
 								carrito.map((producto) => (
 									<div className="carrito__item" key={producto.id}>
@@ -112,7 +117,7 @@ export const Carrito = ({ cart, show, closeCart }) => {
 				</div>
 
 				<div className="carrito__footer">
-					<h3>Total: ${total}</h3>
+					<h3>Total: ${total} </h3>
 
 
 					<Link to="/pago">
