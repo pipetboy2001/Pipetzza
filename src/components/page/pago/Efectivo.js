@@ -43,12 +43,7 @@ export const Efectivo = () => {
                                           <input type="text" className="form-control" name="cardExpiry" placeholder="Teléfono" maxlength="40" required />
                                     </div>
                                 </div>
-                                <div className="col-xs-4 col-md-4 pull-right">
-                                    <div className="form-group">
-                                        <label>Dirección</label>
-                                          <input type="text" className="form-control" name="cardCVC" placeholder="Dirección" maxlength="40" required />
-                                    </div>
-                                </div>
+                                
                             </div>
                         </form>
                     </div>

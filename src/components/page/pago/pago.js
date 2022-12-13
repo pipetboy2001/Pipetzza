@@ -47,36 +47,27 @@ export const Pago = () => {
     const sumarPropina = () => {
         if (propina === "Nada") {
             setTotalPropina(total)
-        } else if (propina === "10%") {
+        }
+        if (propina === "10% 😊") {
             setTotalPropina(total + (total * 0.1))
-        } else if (propina === "15%") {
+        }
+        if (propina === "15% 🥰") {
             setTotalPropina(total + (total * 0.15))
-        } else if (propina === "20%") {
+        }
+        if (propina === "20% 😍") {
             setTotalPropina(total + (total * 0.2))
         }
     }
-    //para mostrar el total con propina
-    const [mostrarTotalPropina, setMostrarTotalPropina] = React.useState(false)
-    const mostrarTotal = () => {
-        setMostrarTotalPropina(true)
-    }
-    //para mostrar el total sin propina
-    const [mostrarTotalSinPropina, setMostrarTotalSinPropina] = React.useState(false)
-    const mostrarTotalSin = () => {
-        setMostrarTotalSinPropina(true)
-    }
-    //para mostrar el total con propina y el envio
-    const [mostrarTotalPropinaEnvio, setMostrarTotalPropinaEnvio] = React.useState(false)
-    const mostrarTotalEnvio = () => {
-        setMostrarTotalPropinaEnvio(true)
-    }
-    //para mostrar el total sin propina y el envio
-    const [mostrarTotalSinPropinaEnvio, setMostrarTotalSinPropinaEnvio] = React.useState(false)
-    const mostrarTotalSinEnvio = () => {
-        setMostrarTotalSinPropinaEnvio(true)
-    }
 
 
+    //total = totalpropina
+    React.useEffect(() => {
+        sumarPropina()
+    }, [propina])
+
+
+
+    //para mostrar el tipo de pedido
     const [Delivery, setDelivery] = React.useState(true)
     const [EnLocal, setEnLocal] = React.useState(false)
     const sumarDelivery = () => {
@@ -107,8 +98,8 @@ export const Pago = () => {
 
                 <center>
                     <ToggleButtonGroup type="radio" name="options" className='Boton2Elecciones' defaultValue={1}>
-                        <ToggleButton value={Delivery} onClick={sumarDelivery} className='Boton2Elecciones'>Delivery</ToggleButton>
-                        <ToggleButton value={EnLocal} onClick={mostrarEnLocal} className='Boton2Elecciones'>En local</ToggleButton>
+                        <ToggleButton value={Delivery} onClick={sumarDelivery} className='Boton2Elecciones'>Delivery 🛵</ToggleButton>
+                        <ToggleButton value={EnLocal} onClick={mostrarEnLocal} className='Boton2Elecciones'>En local 🍕</ToggleButton>
                     </ToggleButtonGroup>
                 </center>
                 
@@ -121,16 +112,16 @@ export const Pago = () => {
                             <Form.Group controlId="exampleForm.ControlSelect1">
                                 <Form.Label>Forma de pago</Form.Label>
                                 <Form.Control as="select" onChange={(e) => setPago(e.target.value)}>
-                                    <option>Tarjeta</option>
-                                    <option>Efectivo</option>
-                                    <option>WebPay</option>
+                                    <option>Tarjeta💳</option>
+                                    <option>Efectivo💵</option>
+                                    <option>WebPay📇</option>
                                 </Form.Control>
                             </Form.Group>
                         </Form>
                         <div className="row">
-                            {pago === "Tarjeta" && <Tarjeta />}
-                            {pago === "Efectivo" && <Efectivo />}
-                            {pago === "WebPay" && <WebPay />}
+                            {pago === "Tarjeta💳" && <Tarjeta />}
+                            {pago === "Efectivo💵" && <Efectivo />}
+                            {pago === "WebPay📇" && <WebPay />}
                         </div>
                     </div>
 
@@ -142,7 +133,7 @@ export const Pago = () => {
                                 <Form.Label>Dirección</Form.Label>  
                                 <Form.Control type="text" placeholder="Ingrese su dirección" />
                                 <Form.Text className="text-muted">
-                                    No compartiremos su dirección con nadie.
+                                    No compartiremos su dirección con nadie🤫.
                                 </Form.Text>
                             </Form.Group>
 
@@ -151,7 +142,7 @@ export const Pago = () => {
                                 <Form.Control type="text" placeholder="Ingrese su comuna" />
                             </Form.Group>
 
-                            <Form.Label>De quien es la pizza?</Form.Label>
+                            <Form.Label>De quien es la pizza❓</Form.Label>
                             <Form.Control type="text" placeholder="Ingrese su nombre" />
                         </Form>}
 
@@ -163,7 +154,7 @@ export const Pago = () => {
                                     <option>Sede Maipu</option>
                                     <option>Sede Estacion central </option>
                                 </Form.Control>
-                                <Form.Label>De quien es la pizza?</Form.Label>
+                                <Form.Label>De quien es la pizza❓</Form.Label>
                                 <Form.Control type="text" placeholder="Ingrese su nombre" />
 
                             </Form.Group>
@@ -178,8 +169,10 @@ export const Pago = () => {
                                 <Form.Label>Propina</Form.Label>
                                 <Form.Control as="select" onChange={(e) => setPropina(e.target.value)}>
                                     <option>Nada</option>
-                                    <option>10%</option>
-                                    <option>15%</option>
+                                    <option>10% 😊</option>
+                                    <option>15% 🥰</option>
+                                    <option>20% 😍</option>
+
                                 </Form.Control>
                             </Form.Group>
                         </Form>
@@ -189,9 +182,9 @@ export const Pago = () => {
                         <br></br>
                         {/* Total */}
                         <h3>Total: ${total}</h3>
-                        {/* Total con propina */}
                         <h3>Total con propina: ${totalPropina}</h3>
-                        <br></br>
+
+
 
 
 

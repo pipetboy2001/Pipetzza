@@ -32,7 +32,7 @@ function LocationMarker() {
             iconUrl: 'https://i.imgur.com/aiGgtdI.png',
             iconSize: [50, 50]
         })}>
-            <Popup>Tu estas aqui</Popup>
+            <Popup>Tú estas aquí</Popup>
         </Marker>
 
 
@@ -73,7 +73,7 @@ function RenderMap() {
                     <Marker position={positionMaipu} icon={icono}>
                         <Popup>
                             <div>
-                                <h3>Sede maípu</h3>
+                                <h3>Sede maipú</h3>
                                 <p>Provincias Unidas 1337, Maipú, Región Metropolitana</p>
                             </div>
                         </Popup>
@@ -110,7 +110,7 @@ export default function Locales() {
                     <div className='card'>
                             <img src="https://th.bing.com/th/id/OIP.EMesVAPaG5ji0vyUcXEfrwHaE7?pid=ImgDet&rs=1" class="card-img-top" alt="Fissure in Sandstone" />
                         <div class="card-body">
-                            <h5 class="card-title">Sede maípu</h5>
+                            <h5 class="card-title">Sede Maipú</h5>
                             <p class="card-text">Provincias Unidas 1337, Maipú, Región Metropolitana</p>
                                 <a href="#!" class="btn btn-primary">Ubicar <RiRoadMapLine /> </a>
                         </div>
