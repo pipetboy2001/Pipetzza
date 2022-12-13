@@ -97,7 +97,7 @@ export const Elecciones = () => {
         <div class="row">
           <center>
             <div class="col-9">
-              <h1 className='H1CREAR'><MdOutlineDeliveryDining />Crea tu pizza a tu gusto <MdLocalDining /></h1>
+              <h1 className='H1CREAR'>👨🏻‍🍳Crea tu pizza a tu gusto👩🏻‍🍳</h1>
               
             </div>
           </center>
