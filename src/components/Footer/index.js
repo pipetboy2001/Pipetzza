@@ -43,7 +43,7 @@ export const Footer = () => {
                         <FooterLink href="#">
                             <i className="fab fa-facebook-f">
                                 <span style={{ marginLeft: "10px" }}>
-                                    <BsFacebook /> PipetzzaPizzeria 
+                                    <BsFacebook /> PipetzzaPizzeria
                                 </span>
                             </i>
                         </FooterLink>
@@ -57,14 +57,14 @@ export const Footer = () => {
                         <FooterLink href="#">
                             <i className="fab fa-twitter">
                                 <span style={{ marginLeft: "10px" }}>
-                                    <BsTwitter /> PipetzzaPizzeria 
+                                    <BsTwitter /> PipetzzaPizzeria
                                 </span>
                             </i>
                         </FooterLink>
                         <FooterLink href="#">
                             <i className="fab fa-youtube">
                                 <span style={{ marginLeft: "10px" }}>
-                                    <FiPhoneCall  /> +569 79148614
+                                    <FiPhoneCall /> +569 79148614
                                 </span>
                             </i>
                         </FooterLink>

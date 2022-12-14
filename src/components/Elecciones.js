@@ -1,22 +1,13 @@
 import React, { useContext } from 'react'
 //css
 import { Container } from 'react-bootstrap'
-//react-router-dom
-import { Link } from 'react-router-dom'
-
 //datacontext
 import { DataContext } from 'context/DataProvider';
-
 //iconos
-import ToggleButtonGroup from 'react-bootstrap/ToggleButtonGroup';
-import ToggleButton from 'react-bootstrap/ToggleButton';
-import { MDBCheckbox } from 'mdb-react-ui-kit';
 import { GiMeat } from 'react-icons/gi';
 import { GiTomato } from 'react-icons/gi';
 import { GiDoughRoller } from 'react-icons/gi';
 import { TbCheese } from 'react-icons/tb';
-import { MdOutlineDeliveryDining } from 'react-icons/md'
-import { MdLocalDining } from 'react-icons/md'
 
 export const Elecciones = () => {
   const value = useContext(DataContext); // Ocupar las variables globales
@@ -50,7 +41,7 @@ export const Elecciones = () => {
   const cantidadQueso = ["Normal", "Extra", "Doble"];
   const tipoMasa = ["Normal", "Delgada"];
   const tamanoPizza = ["Familiar", "Mediana", "Personal"];
-  
+
   // Estados
   const [ingredientesCarnesEstado, setIngredientesCarnes] = React.useState(
     ""
@@ -89,8 +80,6 @@ export const Elecciones = () => {
     addCarrito(pizzaPersonalizada.id);
   };
 
-
-
   return (
     <Container>
       <div class="container" >
@@ -98,7 +87,7 @@ export const Elecciones = () => {
           <center>
             <div class="col-9">
               <h1 className='H1CREAR'>👨🏻‍🍳Crea tu pizza a tu gusto👩🏻‍🍳</h1>
-              
+
             </div>
           </center>
           {/*Menu de elecciones*/}
@@ -109,9 +98,9 @@ export const Elecciones = () => {
                 <div>
                   <label>{element}</label>
                   <input class="form-check-input" value={element} type={"radio"} name="masa" onChange={(e) => {
-                      setTipoMasaEstado(e.target.value);
-                      console.log("Estado tipo masa: " + e.target.value);
-                    }}
+                    setTipoMasaEstado(e.target.value);
+                    console.log("Estado tipo masa: " + e.target.value);
+                  }}
                   />
                 </div>
               ))}
@@ -143,9 +132,9 @@ export const Elecciones = () => {
                 <div>
                   <label>{element}</label>
                   <input class="form-check-input" value={element} type={"radio"} name="queso" onChange={(e) => {
-                      setTipoQuesoEstado(e.target.value);
-                      console.log("Estado tipo queso: " + e.target.value);
-                    }}
+                    setTipoQuesoEstado(e.target.value);
+                    console.log("Estado tipo queso: " + e.target.value);
+                  }}
                   />
                 </div>
               ))}
@@ -158,9 +147,9 @@ export const Elecciones = () => {
                 <div>
                   <label>{element}</label>
                   <input class="form-check-input" value={element} type={"radio"} name="cantidadQueso" onChange={(e) => {
-                      setCantidadQuesoEstado(e.target.value);
-                      console.log("Estado cantidad queso: " + e.target.value);
-                    }}
+                    setCantidadQuesoEstado(e.target.value);
+                    console.log("Estado cantidad queso: " + e.target.value);
+                  }}
                   />
                 </div>
               ))}
@@ -173,7 +162,7 @@ export const Elecciones = () => {
                 <div>
                   <label>{element}</label>
                   <input class="form-check-input"
-                    value={element} 
+                    value={element}
                     type={"radio"}
                     name="cantidadCarne"
                     onChange={(e) => {
@@ -202,14 +191,11 @@ export const Elecciones = () => {
                 </div>
               ))}
             </div></div>
-
           </div>
           <br></br>
-
           <button
             onClick={() => crearPizzaPersonalizada()}
-            type="button" class="btn btn-succes"
-          >
+            type="button" class="btn btn-succes">
             Crear pedido
           </button>
         </div>

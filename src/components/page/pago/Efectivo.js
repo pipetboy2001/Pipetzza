@@ -1,55 +1,55 @@
 import React from 'react'
 
 export const Efectivo = () => {
-  return (
-    <div className="container">
-        <div className="row">
-            <div >
-                <div className="panel panel-default">
-                    <div className="panel-heading">
-                        <div className="row">
-                            <h3 className="text-center">Pago con efectivo al entregar</h3>
+    return (
+        <div className="container">
+            <div className="row">
+                <div >
+                    <div className="panel panel-default">
+                        <div className="panel-heading">
+                            <div className="row">
+                                <h3 className="text-center">Pago con efectivo al entregar</h3>
+                            </div>
                         </div>
-                    </div>
-                    <div className="panel-body">
-                        <form role="form">
-                            <div className="row">
-                                <div className="col-xs-12">
-                                    <div className="form-group">
-                                        <label>Nombre Completo</label>
-                                        <div className="input-group">
-                                              <input type="text" className="form-control" name="cardName" placeholder="Nombre Completo" maxlength="40" required />
-                                            <span className="input-group-addon"><span className="fa fa-user"></span></span>
+                        <div className="panel-body">
+                            <form role="form">
+                                <div className="row">
+                                    <div className="col-xs-12">
+                                        <div className="form-group">
+                                            <label>Nombre Completo</label>
+                                            <div className="input-group">
+                                                <input type="text" className="form-control" name="cardName" placeholder="Nombre Completo" maxlength="40" required />
+                                                <span className="input-group-addon"><span className="fa fa-user"></span></span>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div className="row">   
+                                <div className="row">
 
-                                <div className="col-xs-12">
-                                    <div className="form-group">
-                                        <label>Correo Electrónico</label>
-                                        <div className="input-group">
-                                              <input type="text" className="form-control" name="cardNumber" placeholder="Correo Electrónico" maxlength="40" required />
-                                            <span className="input-group-addon"><span className="fa fa-envelope"></span></span>
+                                    <div className="col-xs-12">
+                                        <div className="form-group">
+                                            <label>Correo Electrónico</label>
+                                            <div className="input-group">
+                                                <input type="text" className="form-control" name="cardNumber" placeholder="Correo Electrónico" maxlength="40" required />
+                                                <span className="input-group-addon"><span className="fa fa-envelope"></span></span>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div className="row">
-                                <div className="col-xs-4 col-md-4">
-                                    <div className="form-group">
-                                        <label><span className="hidden-xs">Teléfono</span><br/></label>
-                                          <input type="text" className="form-control" name="cardExpiry" placeholder="Teléfono" maxlength="40" required />
+                                <div className="row">
+                                    <div className="col-xs-4 col-md-4">
+                                        <div className="form-group">
+                                            <label><span className="hidden-xs">Teléfono</span><br /></label>
+                                            <input type="text" className="form-control" name="cardExpiry" placeholder="Teléfono" maxlength="40" required />
+                                        </div>
                                     </div>
+
                                 </div>
-                                
-                            </div>
-                        </form>
+                            </form>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
     )
 }

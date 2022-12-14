@@ -18,7 +18,6 @@ export const ProductosList = () => {
 				<center>
 					<h1 className="produ">🍕Catálogo de pizzas🍕</h1>
 				</center>
-
 			</center>
 			<ProductosOnlyPizza />
 			<h2>Personaliza tu pizza 🍕</h2>

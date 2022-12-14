@@ -23,18 +23,18 @@ export const Pago = () => {
     const PagoProcesado = () => {
         // mostrar por pantalla pago listo
         alert("Pago procesado🤑 Comprobante enviado a su correo")
-        }
+    }
 
     //para vaciar el carrito completo
     const value = useContext(DataContext);
     const [carrito, setCarrito] = value.carrito;
     const vaciarCarrito = () => {
-            carrito.forEach((item, index) => {
-                item.cantidad = 1000;
-                carrito.splice(index, 1000)
-            })
-            setCarrito([...carrito])
-        }
+        carrito.forEach((item, index) => {
+            item.cantidad = 1000;
+            carrito.splice(index, 1000)
+        })
+        setCarrito([...carrito])
+    }
     //para realizar la funcion vaciarCarrito y PagoPorcesado
     const PagoProcesadoYvaciarCarrito = () => {
         vaciarCarrito()
@@ -59,13 +59,10 @@ export const Pago = () => {
         }
     }
 
-
     //total = totalpropina
     React.useEffect(() => {
         sumarPropina()
     }, [propina])
-
-
 
     //para mostrar el tipo de pedido
     const [Delivery, setDelivery] = React.useState(true)
@@ -82,11 +79,6 @@ export const Pago = () => {
         setEnLocal(true)
     }
 
-    
-
-
-    
-
     return (
         <>
             <div className="container">
@@ -102,8 +94,6 @@ export const Pago = () => {
                         <ToggleButton value={EnLocal} onClick={mostrarEnLocal} className='Boton2Elecciones'>En local 🍕</ToggleButton>
                     </ToggleButtonGroup>
                 </center>
-                
-                
 
                 <div class="angry-grid">
                     <div id="item-6">
@@ -130,7 +120,7 @@ export const Pago = () => {
                         {Delivery && <Form>
                             <Form.Group controlId="formBasicEmail">
 
-                                <Form.Label>Dirección</Form.Label>  
+                                <Form.Label>Dirección</Form.Label>
                                 <Form.Control type="text" placeholder="Ingrese su dirección" />
                                 <Form.Text className="text-muted">
                                     No compartiremos su dirección con nadie🤫.
@@ -160,9 +150,6 @@ export const Pago = () => {
                             </Form.Group>
                         </Form>}
 
-
-
-
                         {/* Propina */}
                         <Form>
                             <Form.Group controlId="exampleForm.ControlSelect1">
@@ -183,12 +170,6 @@ export const Pago = () => {
                         {/* Total */}
                         <h3>Total: ${total}</h3>
                         <h3>Total con propina: ${totalPropina}</h3>
-
-
-
-
-
-
                     </div>
                 </div>
 
@@ -199,9 +180,7 @@ export const Pago = () => {
                         </div>
                     </Link>
                 </center>
-                
             </div>
         </>
-
     )
 }

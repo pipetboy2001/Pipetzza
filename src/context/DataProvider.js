@@ -7,33 +7,31 @@ export const DataProvider = (props) => {
 	// Variables globales
 	const [productos, setProductos] = useState([]);
 	const [menu, setMenu] = useState(false)
-	const [carrito, setCarrito] =useState([])
+	const [carrito, setCarrito] = useState([])
 	const [total, setTotal] = useState(0)
 	//para la ubicacion
 	const [ubicacion, setUbicacion] = useState([]); // Aqui va la ubicación del domicilio // Lista de length = 4 (ciudad, comuna, calle, numero)
 	const [local, setLocal] = useState(""); // Aqui va el id del local
-
-
 	console.log(carrito)
 
-  useEffect(() => {
-		const producto = Data.items 
-		if(producto){
+	useEffect(() => {
+		const producto = Data.items
+		if (producto) {
 			setProductos(producto)
-		}else{
+		} else {
 			setProductos([])
 		}
 	}, []);
 	// Guardará datos al carro
-	const addCarrito = (id) =>{
+	const addCarrito = (id) => {
 		// Guarda datos a ese carrito
-		const check = carrito.every(item =>{
+		const check = carrito.every(item => {
 			return item.id !== id
-			
+
 		})
-		if(check){
+		if (check) {
 			// Filtrar por id
-			const data = productos.filter(producto =>{
+			const data = productos.filter(producto => {
 				return producto.id === id
 			}) // -> Retorna un elemento en data
 			setCarrito([...carrito, ...data])
@@ -41,30 +39,30 @@ export const DataProvider = (props) => {
 			alert("El producto se ha añadido al carrito")
 		}
 	}
-	useEffect(() =>{
+	useEffect(() => {
 		//leer
 		const dataCarrito = JSON.parse(localStorage.getItem('dataCarrito'))
-		if(dataCarrito){
+		if (dataCarrito) {
 			setCarrito(dataCarrito)// Si ya existe algo previamente, se guarda
 		}
-	},[])
+	}, [])
 
-	useEffect(() =>{
+	useEffect(() => {
 		// Escribir
-    	// localStorage.setItem() // Guarda dentro del local Store
+		// localStorage.setItem() // Guarda dentro del local Store
 		localStorage.setItem('dataCarrito', JSON.stringify(carrito))
 	}, [carrito]) // Se ejecuta cada vez que haya un cambio en el carrito
 
-	useEffect(() =>{
-		const getTotal = () =>{
+	useEffect(() => {
+		const getTotal = () => {
 			// Función para calcular el total
-			const res = carrito.reduce((prev, item) =>{
+			const res = carrito.reduce((prev, item) => {
 				return prev + (item.price * item.cantidad)
-			},0)
+			}, 0)
 			setTotal(res)// Asigno el total guardado en res
 		}
 		getTotal()// Llamo a la función que acabo de crear
-	},[carrito])
+	}, [carrito])
 
 	// Función que añade una pizza personalizada al carrito
 	const addCustomPizza = (object) => {
@@ -74,9 +72,9 @@ export const DataProvider = (props) => {
 		alert("La pizza ha sido añadida con exito");
 		// navigate("/comprar");
 	};
-	
+
 	const value = {
-		productos : [productos],
+		productos: [productos],
 		menu: [menu, setMenu],
 		carrito: [carrito, setCarrito],
 		addCarrito: addCarrito,

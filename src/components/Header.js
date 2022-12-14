@@ -8,17 +8,14 @@ import { BiFoodMenu } from "react-icons/bi";
 import { FaPizzaSlice } from "react-icons/fa"
 import { BsShop } from "react-icons/bs"
 
-
 export const Header = () => {
   const value = useContext(DataContext);
   const [carrito] = value.carrito;
   const [menu, setMenu] = value.menu;
 
-
   const toogleMenu = () => {
     setMenu(!menu)
   }
-
 
   return (
     <header>
@@ -40,7 +37,7 @@ export const Header = () => {
           <Navbar.Collapse id="navbarScroll">
             <Nav className="me-auto my-2 my-lg-0" style={{ maxHeight: '100px' }} navbarScroll>
               <center>
-                <Link to="/Menu" className="linked">Menu <BiFoodMenu /> 
+                <Link to="/Menu" className="linked">Menu <BiFoodMenu />
                 </Link>
                 <Link to="/Crear" className="linked">Crea tu pizza <FaPizzaSlice />  </Link>
                 <Link to="/locales" className="linked">Sucursales <BsShop /></Link>

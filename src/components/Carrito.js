@@ -1,9 +1,6 @@
 import React, { useContext } from "react";
 import { DataContext } from "context/DataProvider";
 import { Link } from 'react-router-dom';
-import { Avatar, Box, Button, Divider, Drawer, Paper, Typography } from "@mui/material";
-
-
 export const Carrito = ({ cart, show, closeCart }) => {
 	//importar variables globales
 	const value = useContext(DataContext);
@@ -58,18 +55,11 @@ export const Carrito = ({ cart, show, closeCart }) => {
 			setCarrito([...carrito])
 		}
 	}
-	
-
-
-
 
 	const show1 = menu ? "carritos show" : "carrito";
 	const show2 = menu ? "carrito show" : "carrito";
 
-
-
 	return (
-
 		<div className={show1}>
 			<div className={show2}>
 				<div onClick={tooglefalse} className="carrito__close">
@@ -87,8 +77,6 @@ export const Carrito = ({ cart, show, closeCart }) => {
 											<h4> {producto.title} </h4>
 											<h5>{producto.description}</h5>
 											<p className="price">${producto.price}</p>
-
-
 										</div>
 										<div>
 											<box-icon
@@ -104,31 +92,23 @@ export const Carrito = ({ cart, show, closeCart }) => {
 										</div>
 										<div
 											onClick={() => removeProducto(producto.id)}
-											className="remove__item"
-										>
+											className="remove__item">
 											<box-icon name="trash" />
 										</div>
 									</div>
 								))
 							};
-
 						</>
 					}
 				</div>
-
 				<div className="carrito__footer">
 					<h3>Total: ${total} </h3>
-
-
 					<Link to="/pago">
 						<div class="d-grid gap-2">
 							<button onClick={open = { show }} type="button" class="btn btn-lg btn-rounded" >Pagar</button>
 						</div>
 					</Link>
-
 				</div>
-
-
 			</div>
 		</div>
 	);

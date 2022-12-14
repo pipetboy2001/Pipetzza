@@ -6,7 +6,6 @@ import Button from 'react-bootstrap/Button';
 import { Container } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
-
 export const ProductosDestacados = () => {
   const value = useContext(DataContext);
   const [productos] = value.productos;
@@ -41,13 +40,11 @@ export const ProductosDestacados = () => {
 
   return (
     <>
-     
       <Link to="/menu">
         <div class="d-grid gap-2">
           <button type="button" class="btn btn-danger btn-lg btn-rounded">Ver Menu</button>
         </div>
       </Link>
-      
 
       <div className="productos">
         {
@@ -67,7 +64,6 @@ export const ProductosDestacados = () => {
           })
         }
       </div>
-
     </>
   )
 }
