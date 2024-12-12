@@ -6,7 +6,7 @@ import { Button, Image } from 'react-bootstrap';
 import { Alert } from 'react-bootstrap';
 
 
-import '../Styles/Carrito.css';
+import './../Styles/Carrito.css';
 
 
 const CarritoModal = ({ onClose }) => {
