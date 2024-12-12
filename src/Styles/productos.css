@@ -1,0 +1,156 @@
+/* Estilos responsive para botones de categoría */
+.categoria-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background-color: #dc3545;
+    padding: 15px;
+    gap: 10px;
+    /* Espaciado entre botones */
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.categoria-buttons .btn {
+    flex: 0 1 auto;
+    /* Permitir que los botones se ajusten */
+    color: white !important;
+    font-size: 1rem;
+    padding: 10px 20px;
+    margin: 5px;
+    background-color: #dc3545;
+    border: 2px solid white;
+    transition: all 0.3s ease;
+    border-radius: 6px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    white-space: nowrap;
+    /* Evitar salto de línea */
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.categoria-buttons .btn:hover {
+    background-color: white !important;
+    color: #dc3545 !important;
+    transform: scale(1.05);
+}
+
+/* Ajustes específicos para dispositivos móviles */
+@media screen and (max-width: 768px) {
+    .categoria-buttons {
+        flex-direction: column;
+        padding: 10px;
+        gap: 10px;
+    }
+
+    .categoria-buttons .btn {
+        width: 100%;
+        /* Botones de ancho completo en móviles */
+        font-size: 0.9rem;
+        padding: 12px 15px;
+        margin: 2px 0;
+    }
+}
+
+/* Ajustes para tablets */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    .categoria-buttons {
+        flex-wrap: wrap;
+        gap: 10px;
+        padding: 15px;
+    }
+
+    .categoria-buttons .btn {
+        flex: 0 1 calc(33.333% - 10px);
+        max-width: calc(33.333% - 10px);
+    }
+}
+
+/* Ajustes para pantallas grandes */
+@media screen and (min-width: 1025px) {
+    .categoria-buttons .btn {
+        flex: 0 1 auto;
+        min-width: 150px;
+    }
+}
+
+/* Estilo para las cards de productos */
+.producto-card {
+    border: 2px solid transparent;
+    /* Sin borde visible por defecto */
+    border-radius: 15px;
+    /* Bordes redondeados */
+    padding: 20px;
+    transition: all 0.3s ease;
+    /* Transición suave al pasar el ratón */
+    background-color: white;
+    /* Fondo blanco */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Sombra suave */
+}
+
+/* Efecto hover para agregar contorno verde claro */
+.producto-card:hover {
+    border-color: #c9e265;
+    /* Contorno verde claro solo al pasar el ratón */
+    transform: scale(1.05);
+    /* Efecto de aumento al pasar el ratón */
+}
+
+/* Estilo para la imagen de la card */
+.producto-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+    /* Asegura que la imagen se recorte correctamente */
+}
+
+/* Título, descripción y precio centrados */
+.producto-card .card-title,
+.producto-card .card-text {
+    text-align: center;
+}
+
+/* Estilo para el botón "Añadir al carrito" */
+.producto-card .btn {
+    background-color: #28a745;
+    /* Verde */
+    color: white;
+    /* Texto blanco */
+    border: none;
+    border-radius: 5px;
+    /* Bordes redondeados */
+    width: 100%;
+    /* Asegura que el botón ocupe todo el ancho */
+    padding: 10px;
+    /* Aumenta el tamaño del botón */
+    transition: background-color 0.3s ease;
+    /* Transición suave para el color */
+}
+
+.producto-card .btn:hover {
+    background-color: #218838;
+    /* Verde más oscuro en hover */
+}
+
+/* Hacer que las cards sean responsivas */
+.productos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    /* Grid responsive */
+    gap: 20px;
+    /* Espacio entre las cards */
+    margin-top: 20px;
+}
+
+/* Menos padding en pantallas pequeñas */
+@media (max-width: 768px) {
+    .producto-card {
+        padding: 15px;
+    }
+}

@@ -1,0 +1,197 @@
+{
+    "pizzas": [
+        {
+            "id": 1,
+            "title": "AMERICANA",
+            "price": 4690,
+            "description": "Jamón, Carne, Salchicha, Pepperoni",
+            "image": "https://i.imgur.com/0dIk4bV.png"
+        },
+        {
+            "id": 2,
+            "title": "BBQ CHICKEN",
+            "price": 7750,
+            "description": "Salsa BBQ, Pollo, Cebolla",
+            "image": "https://i.imgur.com/qTTQ8mB.png"
+        },
+        {
+            "id": 3,
+            "title": "CAMPESINA",
+            "price": 6050,
+            "description": "Pollo, Pimiento, Champiñón",
+            "image": "https://i.imgur.com/GT0RFGP.png"
+            
+        },
+        {
+            "id": 4,
+            "title": "HAWAIANA",
+            "price": 7750,
+            "description": "Pollo, Jamón, Piña",
+            "image": "https://i.imgur.com/T3r2dJ2.png"
+            
+        },
+        {
+            "id": 5,
+            "title": "MECHADA BBQ",
+            "price": 6405,
+            "description": "Carne Mechada, Tomate, Cebolla",
+            "image": "https://i.imgur.com/T0t7syS.png"
+            
+        },
+        {
+            "id": 6,
+            "title": "VEGAN QUEEN",
+            "price": 5670,
+            "description": "Champiñón, Pimiento, Cebolla, Choclo y Tomate",
+            "image": "https://i.imgur.com/OFNZECe.png"
+        }
+    ],
+    "bebidas": [
+        {
+            "id": 7,
+            "title": "Coca Cola",
+            "price": 1690,
+            "description": "600 ml",
+            "image": "https://i.imgur.com/GGDGMVI.png",
+            "cantidad": 1
+        },
+        {
+            "id": 8,
+            "title": "Fanta",
+            "price": 1690,
+            "description": "600 ml",
+            "image": "https://i.imgur.com/wzR8Awn.png",
+            "cantidad": 1
+        },
+        {
+            "id": 9,
+            "title": "Jugo Watts Durazno",
+            "price": 1200,
+            "description": "500 ml",
+            "image": "https://i.imgur.com/SqKP3KA.png",
+            "cantidad": 1
+        },
+        {
+            "id": 10,
+            "title": "Jugo Valle de Piña",
+            "price": 1200,
+            "description": "500 ml",
+            "image": "https://i.imgur.com/K2S4Ilf.png",
+            "cantidad": 1
+        },
+        {
+            "id": 11,
+            "title": "Canchantun con Gas",
+            "price": 1000,
+            "description": "600 ml",
+            "image": "https://i.imgur.com/5lsWwYd.png",
+            "cantidad": 1
+        },
+        {
+            "id": 12,
+            "title": "Canchantun sin Gas",
+            "price": 1000,
+            "description": "600 ml",
+            "image": "https://i.imgur.com/dMS36DJ.png",
+            "cantidad": 1
+        }
+    ],
+    "acompanamientos": [
+        {
+            "id": 1,
+            "title": "Palitos de Ajo",
+            "price": 2500,
+            "description": "Deliciosos palitos de pan con ajo y queso",
+            "image": "https://i.imgur.com/qdhBUQ1.png",
+            "cantidad": 1
+        },
+        {
+            "id": 2,
+            "title": "Cheesy Veggie",
+            "price": 3000,
+            "description": "Palitos de pan rellenos de queso y vegetales",
+            "image": "https://i.imgur.com/2VMxLSA.png",
+            "cantidad": 1
+        },
+        {
+            "id": 3,
+            "title": "Palitos de Queso",
+            "price": 3200,
+            "description": "Palitos de pan rellenos de queso fundido",
+            "image": "https://i.imgur.com/5lsWwYd.png",
+            "cantidad": 1
+        },
+        {
+            "id": 4,
+            "title": "Rolls de Jamón y Queso",
+            "price": 3500,
+            "description": "Deliciosos rolls con jamón y queso fundido",
+            "image": "https://i.imgur.com/SqKP3KA.png",
+            "cantidad": 1
+        }
+    ],
+    "extras": [
+        {
+            "id": 1,
+            "title": "Salsa BBQ",
+            "price": 600,
+            "description": "Puré de jitomate, salsa picante, azúcar, cebolla",
+            "image": "https://i.imgur.com/qdhBUQ1.png",
+            "cantidad": 1
+        },
+        {
+            "id": 2,
+            "title": "Salsa Garlic",
+            "price": 600,
+            "description": "Salsa de soja, ketchup, caldo vegetal",
+            "image": "https://i.imgur.com/f2kBprP.png",
+            "cantidad": 1
+        },
+        {
+            "id": 3,
+            "title": "Salsa Picante",
+            "price": 600,
+            "description": "Tomate, cebolla, ajo, sal",
+            "image": "https://i.imgur.com/2VMxLSA.png",
+            "cantidad": 1
+        },
+        {
+            "id": 4,
+            "title": "Salsa Tomate",
+            "price": 600,
+            "description": "Tomate, azúcar",
+            "image": "https://i.imgur.com/o6zPNEN.png",
+            "cantidad": 1
+        }
+    ],
+    "promociones": [
+        {
+            "id": 1,
+            "title": "4 Pizzas Mix",
+            "price": 19990,
+            "description": "Elige 4 pizzas de la carta",
+            "image": "https://i.imgur.com/0dIk4bV.png"
+        },
+        {
+            "id": 2,
+            "title": "Combo Familia",
+            "price": 24990,
+            "description": "2 Pizzas + 2 Refrescos",
+            "image": "https://i.imgur.com/GT0RFGP.png"
+        },
+        {
+            "id": 3,
+            "title": "Promo Vegetariana",
+            "price": 19990,
+            "description": "Elige 2 pizzas vegetarianas + 1 acompañamiento",
+            "image": "https://i.imgur.com/T3r2dJ2.png"
+        },
+        {
+            "id": 4,
+            "title": "Combo 2 Pizzas + Salsa",
+            "price": 17990,
+            "description": "Elige 2 pizzas + 1 Salsa a elección",
+            "image": "https://i.imgur.com/T0t7syS.png"
+        }
+    ]
+}

@@ -1,0 +1,48 @@
+.carrito__center .card {
+    border: 0;
+    color: #000000;
+    box-shadow: 0 7px 7px rgba(0, 0, 0, 0.18);
+    flex-direction: row;
+    max-width: 30em;
+}
+
+.carrito__center .card img {
+    max-width: 25%;
+    margin: auto;
+    padding: 0.5em;
+    border-radius: 0.7em;
+}
+
+.carrito__center .card-body {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.carrito__center .text-section {
+    max-width: 60%;
+}
+
+.carrito__center .cta-section {
+    max-width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+.carrito__center .cta-section .btn {
+    padding: 0.2em 0.5em;
+    font-size: 1em;
+    color: #fff;
+}
+
+.card-carrito {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em;
+    border-bottom: 1px solid #e0e0e0;
+    margin: 2px 0;
+}
