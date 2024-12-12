@@ -54,20 +54,21 @@ padding: 20px 0;
     padding: 0;
     gap: 35px;
     /* Aumentar espacio entre links */
+
+    
 }
 
 .nav-link {
     color: white !important;
-    /* Forzar color blanco para los links */
     text-decoration: none;
     display: flex;
     align-items: center;
     gap: 10px;
     font-size: 1.3rem;
     font-weight: 500;
-    /* Aumentar tamaño de fuente */
+    font-family: 'Lobster', cursive;
+    /* Añade esta línea */
     transition: color 0.3s ease;
-    /* Efecto de transición al pasar el mouse */
 }
 
 .nav-link:hover {
@@ -75,26 +76,37 @@ padding: 20px 0;
     transform: scale(1.05);
     text-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
 }
+
 .nav-link svg {
     font-size: 1.4rem;
     /* Aumento del tamaño de los íconos */
 }
 
+/* Estilo para el navbar con la nueva fuente */
+.custom-navbar-font {
+    font-family: 'Lobster', cursive;
+    font-size: 1.2rem;
+}
+
 .cart-container {
     position: relative;
+    
 }
 
 .cart-button {
     background: none;
     border: none;
     color: white !important;
-    /* Asegurar color blanco */
     cursor: pointer;
     position: relative;
-    font-size: 1.5rem;
-    /* Aumentar tamaño del ícono de carrito */
+    font-size: 2rem;
+    font-size: 36px;
     display: flex;
-        align-items: center;
+    align-items: center;
+}
+
+.cart-button:hover {
+    color: #000000 !important;
 }
 
 .cart-count {
@@ -111,14 +123,16 @@ padding: 20px 0;
     align-items: center;
     justify-content: center;
     font-size: 14px;
-        font-weight: bold;
+    font-weight: bold;
+    padding: 0.25rem 0.5rem;
+    font-size: 1rem;
 }
 
 /* Estilos Responsivos */
 @media screen and (max-width: 992px) {
     .header-container {
-            padding: 15px 0;
-        }
+        padding: 15px 0;
+    }
 
     .mobile-menu-toggle {
         display: block;

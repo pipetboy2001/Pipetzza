@@ -67,7 +67,7 @@ const Header = () => {
 
                 {/* Navegación */}
                 <nav className={`main-nav ${isMobileMenuOpen ? 'active' : ''}`}>
-                    <ul className="nav-links">
+                    <ul className="nav-links custom-navbar-font">
                         
                         <li>
                             <Link
@@ -106,7 +106,7 @@ const Header = () => {
                         className="cart-button"
                         aria-label="Abrir carrito de compras"
                     >
-                        <FaShoppingCart size={24} />
+                        <FaShoppingCart/>
                         {cantidadProductos > 0 && (
                             <span
                                 className="cart-count"
