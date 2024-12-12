@@ -1,0 +1,8 @@
+a:hover svg {
+    color: #ff4500;
+    /* o el color que prefieras */
+}
+
+.custom-title-font {
+    font-family: 'Lobster', cursive;
+}
