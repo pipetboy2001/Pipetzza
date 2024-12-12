@@ -12,7 +12,7 @@ import { FaShoppingCart } from 'react-icons/fa';
 import { FaBars, FaTimes } from 'react-icons/fa'; // Iconos para menú móvil
 
 // Estilos
-import '../styles/Header.css';
+import '../Styles/Header.css';
 
 const logoUrl = "https://i.imgur.com/D1GXxkt.png";
 
