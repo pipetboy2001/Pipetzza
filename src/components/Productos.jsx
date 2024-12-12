@@ -7,6 +7,7 @@ const Productos = () => {
     const [productos, setProductos] = useState({});
     const [categoriaSeleccionada, setCategoriaSeleccionada] = useState('promociones');
     const { carrito, setCarrito } = useContext(DataContext);
+    const [showNotification, setShowNotification] = useState(false); // Estado para controlar la visibilidad de la notificación
 
     // Crear un ref para cada categoría
     const categoryRefs = {
@@ -44,6 +45,16 @@ const Productos = () => {
         }
 
         setCarrito(newCarrito);
+        console.log('Producto añadido al carrito:', producto);
+        triggerNotification(); // Mostrar notificación al agregar un producto
+    };
+
+    const triggerNotification = () => {
+        console.log("Notificación activada"); // Verifica si aparece en la consola
+        setShowNotification(true);
+        setTimeout(() => {
+            setShowNotification(false);
+        }, 3000);
     };
 
     const handleCategoryChange = (categoria) => {
@@ -53,7 +64,7 @@ const Productos = () => {
         if (window.scrollY < 350) {
             // Mover el scroll unos píxeles hacia abajo solo si está cerca de la parte superior
             window.scrollBy({
-                top: 400, // Desplazar 400 píxeles hacia abajo
+                top: 200,
                 behavior: 'smooth' // Comportamiento suave
             });
         }
@@ -87,6 +98,12 @@ const Productos = () => {
 
     return (
         <div>
+            {/* Notificación de producto añadido */}
+            <div className={`notification ${showNotification ? 'show' : ''}`}>
+                Producto añadido al carrito
+            </div>
+
+
             <div className="categoria-buttons">
                 <button className="btn" onClick={() => handleCategoryChange('promociones')}>Promociones</button>
                 <button className="btn" onClick={() => handleCategoryChange('pizzas')}>Pizzas</button>

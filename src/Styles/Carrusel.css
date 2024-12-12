@@ -14,7 +14,7 @@
 /* Estilo de las imágenes y el carrusel en pantallas más pequeñas */
 @media (max-width: 768px) {
     .carousel {
-        height: 250px; /* Ajusta la altura del carrusel para pantallas pequeñas */
+        height: 230px; /* Ajusta la altura del carrusel para pantallas pequeñas */
     }
 }
 

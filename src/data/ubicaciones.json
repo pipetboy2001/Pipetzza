@@ -1,0 +1,152 @@
+[
+    {
+        "nombre": "Pipetzza Santiago - Providencia",
+        "lat": -33.4372,
+        "lng": -70.6346
+    },
+    {
+        "nombre": "Pipetzza Santiago - Las Condes",
+        "lat": -33.4088,
+        "lng": -70.5671
+    },
+    {
+        "nombre": "Pipetzza Santiago - La Florida",
+        "lat": -33.5145,
+        "lng": -70.5985
+    },
+    {
+        "nombre": "Pipetzza Santiago - Maipú",
+        "lat": -33.5018,
+        "lng": -70.7618
+    },
+    {
+        "nombre": "Pipetzza Santiago - Ñuñoa",
+        "lat": -33.4569,
+        "lng": -70.6011
+    },
+    {
+        "nombre": "Pipetzza Santiago - San Miguel",
+        "lat": -33.4888,
+        "lng": -70.6549
+    },
+    {
+        "nombre": "Pipetzza Santiago - Vitacura",
+        "lat": -33.4042,
+        "lng": -70.5860
+    },
+    {
+        "nombre": "Pipetzza Santiago - La Reina",
+        "lat": -33.4425,
+        "lng": -70.5341
+    },
+    {
+        "nombre": "Pipetzza Santiago - Puente Alto",
+        "lat": -33.6171,
+        "lng": -70.5781
+    },
+    {
+        "nombre": "Pipetzza Santiago - La Cisterna",
+        "lat": -33.5276,
+        "lng": -70.6413
+    },
+    {
+        "nombre": "Pipetzza Santiago - San Bernardo",
+        "lat": -33.5932,
+        "lng": -70.6854
+    },
+    {
+        "nombre": "Pipetzza Santiago - Quilicura",
+        "lat": -33.3548,
+        "lng": -70.7421
+    },
+    {
+        "nombre": "Pipetzza Santiago - Lo Barnechea",
+        "lat": -33.3574,
+        "lng": -70.5254
+    },
+    {
+        "nombre": "Pipetzza Santiago - Independencia",
+        "lat": -33.4260,
+        "lng": -70.6615
+    },
+    {
+        "nombre": "Pipetzza Santiago - Recoleta",
+        "lat": -33.4124,
+        "lng": -70.6244
+    },
+    {
+        "nombre": "Pipetzza Valparaíso",
+        "lat": -33.0472,
+        "lng": -71.6127
+    },
+    {
+        "nombre": "Pipetzza Concepción",
+        "lat": -36.8201,
+        "lng": -73.0444
+    },
+    {
+        "nombre": "Pipetzza La Serena",
+        "lat": -29.9045,
+        "lng": -71.2489
+    },
+    {
+        "nombre": "Pipetzza Antofagasta",
+        "lat": -23.6509,
+        "lng": -70.3975
+    },
+    {
+        "nombre": "Pipetzza Arica",
+        "lat": -18.4783,
+        "lng": -70.3126
+    },
+    {
+        "nombre": "Pipetzza Iquique",
+        "lat": -20.2141,
+        "lng": -70.1523
+    },
+    {
+        "nombre": "Pipetzza Rancagua",
+        "lat": -34.1701,
+        "lng": -70.7406
+    },
+    {
+        "nombre": "Pipetzza Talca",
+        "lat": -35.4264,
+        "lng": -71.6653
+    },
+    {
+        "nombre": "Pipetzza Chillán",
+        "lat": -36.6066,
+        "lng": -72.1027
+    },
+    {
+        "nombre": "Pipetzza Temuco",
+        "lat": -38.7359,
+        "lng": -72.5904
+    },
+    {
+        "nombre": "Pipetzza Puerto Montt",
+        "lat": -41.4717,
+        "lng": -72.9411
+    },
+    {
+        "nombre": "Pipetzza Punta Arenas",
+        "lat": -53.1625,
+        "lng": -70.9072
+    },
+    {
+        "nombre": "Pipetzza Coyhaique",
+        "lat": -45.5712,
+        "lng": -72.0683
+    },
+    {
+        "nombre": "Pipetzza Valdivia",
+        "lat": -39.8174,
+        "lng": -73.2425
+    },
+    {
+        "nombre": "Pipetzza Osorno",
+        "lat": -40.5739,
+        "lng": -73.1338
+    }
+]

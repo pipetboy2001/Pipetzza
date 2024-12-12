@@ -7,7 +7,6 @@
     background-color: #dc3545;
     padding: 15px;
     gap: 10px;
-    /* Espaciado entre botones */
     width: 100%;
     border-radius: 8px;
     margin-bottom: 20px;
@@ -19,8 +18,8 @@
     /* Permitir que los botones se ajusten */
     color: white !important;
     font-size: 1rem;
-    padding: 10px 20px;
-    margin: 5px;
+    /* padding: 10px 20px;
+    margin: 5px; */
     background-color: #dc3545;
     border: 2px solid white;
     transition: all 0.3s ease;
@@ -49,7 +48,6 @@
 
     .categoria-buttons .btn {
         width: 100%;
-        /* Botones de ancho completo en móviles */
         font-size: 0.9rem;
         padding: 12px 15px;
         margin: 2px 0;
@@ -153,4 +151,23 @@
     .producto-card {
         padding: 15px;
     }
+}
+
+
+.notification {
+    background-color: green;
+    color: white;
+    padding: 10px;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    z-index: 1000;
+    transition: opacity 0.5s ease-out;
+}
+
+.notification.show {
+    opacity: 1;
 }
