@@ -22,12 +22,20 @@ const priceData = {
     "carnes": [
         { "nombre": "Pepperoni", "precio": 800 },
         { "nombre": "Jamón", "precio": 700 },
-        { "nombre": "Tocino", "precio": 900 }
+        { "nombre": "Tocino", "precio": 900 },
+        { "nombre": "Pollo", "precio": 600 },
+        { "nombre": "Chorizo", "precio": 1100 },
+        { "nombre": "Salami", "precio": 950 },
+        { "nombre": "Jamon Serrano", "precio": 1600 },
     ],
     "vegetales": [
         { "nombre": "Tomate", "precio": 300 },
         { "nombre": "Champiñones", "precio": 400 },
-        { "nombre": "Cebolla", "precio": 250 }
+        { "nombre": "Cebolla", "precio": 250 },
+        { "nombre": "Pimiento", "precio": 350 },
+        { "nombre": "Aceitunas", "precio": 200 },
+        { "nombre": "Choclo", "precio": 150 },
+        { "nombre": "Piña", "precio": 600 },
     ]
 };
 
@@ -100,6 +108,20 @@ const PizzaCustomizer = () => {
 
     // Añadir pizza al carrito
     const añadirACarrito = () => {
+        // Verificar que se hayan seleccionado todas las opciones
+        if (!masa || !tamaño || !queso || carnes.length === 0 || vegetales.length === 0) {
+            //indicar cual le falta
+            if (!masa) {
+                alert('Debes seleccionar el tipo de masa');
+            } else if (!tamaño) {
+                alert('Debes seleccionar el tamaño');
+            }
+            else if (!queso) {
+                alert('Debes seleccionar el tipo de queso');
+            }
+            return;
+        }
+
         const pizzaPersonalizada = {
             id: Date.now(), // Generar un id único
             tipo: 'personalizada', // Indicar que es una pizza personalizada
@@ -138,7 +160,7 @@ const PizzaCustomizer = () => {
                 <div className="col-md-6">
                     {/* Tipo de Masa */}
                     <div className="mb-3">
-                        <label className="form-label">Tipo de Masa</label>
+                        <label className="form-label">Tipo de Masa <span style={{ color: 'red' }}>*</span></label>
                         <select
                             className="form-select"
                             value={masa}
@@ -155,7 +177,7 @@ const PizzaCustomizer = () => {
 
                     {/* Tamaño de Pizza */}
                     <div className="mb-3">
-                        <label className="form-label">Tamaño</label>
+                        <label className="form-label">Tamaño <span style={{ color: 'red' }}>*</span></label>
                         <select
                             className="form-select"
                             value={tamaño}
@@ -172,7 +194,7 @@ const PizzaCustomizer = () => {
 
                     {/* Tipo de Queso */}
                     <div className="mb-3">
-                        <label className="form-label">Tipo de Queso</label>
+                        <label className="form-label">Tipo de Queso <span style={{ color: 'red' }}>*</span></label>
                         <select
                             className="form-select"
                             value={queso}
