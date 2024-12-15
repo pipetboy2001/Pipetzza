@@ -1,13 +1,15 @@
 import React, { useContext, useState } from 'react';
 import { DataContext } from '../data/DataProvider.jsx';
 import { Modal, Button, Alert } from 'react-bootstrap';
+import { useNavigate } from 'react-router-dom';
 import { FaTrash } from 'react-icons/fa';
 import './../Styles/Carrito.css';
 
 const CarritoModal = ({ onClose }) => {
     const { carrito, setCarrito, total } = useContext(DataContext);
     const [show, setShow] = useState(true);
-
+    const navigate = useNavigate();
+    
     // Reducir cantidad
     const reduce = (id) => {
         const updatedCarrito = carrito.map(item => {
@@ -38,13 +40,22 @@ const CarritoModal = ({ onClose }) => {
         }
     };
 
-    // obtener productos del carrito mediante console.log del carrito.map 
 
-    console.log(carrito.map((producto) => (
-        producto
-    )));
-
-
+    const handleProceedToCheckout = () => {
+        // Verificar si navigate está disponible
+        if (typeof navigate === 'function') {
+            // Redirigir a la página de pago pasando el carrito y el total como estado
+            navigate('/pagar', {
+                state: {
+                    carrito: carrito,
+                    total: total
+                }
+            });
+            onClose(false); // Cerrar el modal
+        } else {
+            console.error('navigate no está definido');
+        }
+    };
 
 
 
@@ -117,7 +128,11 @@ const CarritoModal = ({ onClose }) => {
                 <Button variant="secondary" onClick={() => onClose(false)}>
                     Cerrar
                 </Button>
-                <Button  variant="primary" disabled={carrito.length === 0}>
+                <Button
+                    variant="primary"
+                    disabled={carrito.length === 0}
+                    onClick={handleProceedToCheckout}
+                >
                     Proceder al pago
                 </Button>
             </Modal.Footer>
