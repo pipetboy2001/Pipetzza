@@ -1,15 +1,22 @@
 import React, { useState } from 'react';
 import { Container, Row, Col, Card, Button, Form, Modal, ProgressBar, Alert } from 'react-bootstrap';
-import { GoogleLogin } from '@react-oauth/google';
 import { FaUser, FaEnvelope, FaLock, FaCreditCard, FaArrowLeft, FaArrowRight } from 'react-icons/fa';
 import { useLocation } from 'react-router-dom';
 import { Navigate } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { FaTruck, FaStore } from 'react-icons/fa';
 
 // Usuarios de prueba para el inicio de sesión
 const testUsers = [
     { email: 'usuario1@ejemplo.com', password: 'password123', name: 'Juan Pérez', phone: '1234567890' },
     { email: 'usuario2@ejemplo.com', password: 'test456', name: 'María Gómez', phone: '0987654321' }
+];
+
+// Lista de pizzerías para recoger
+const pizzerias = [
+    { id: 1, name: 'Pizzería Central', address: 'Av. Principal 123' },
+    { id: 2, name: 'Pizzería del Barrio', address: 'Calle Secundaria 456' },
+    { id: 3, name: 'Pizzería Gourmet', address: 'Plaza Mayor 789' }
 ];
 
 const CheckoutPage = () => {
@@ -30,6 +37,21 @@ const CheckoutPage = () => {
         loginEmail: '',
         loginPassword: ''
     });
+    const [deliveryMethod, setDeliveryMethod] = useState(null);
+    const [selectedStore, setSelectedStore] = useState(null);
+    const [deliveryAddress, setDeliveryAddress] = useState({
+        street: '',
+        number: '',
+        apartment: '',
+        city: '',
+        postalCode: ''
+    });
+    const [cardDetails, setCardDetails] = useState({
+        cardNumber: '',
+        cardName: '',
+        expiryDate: '',
+        cvv: ''
+    });
     
     const [loginError, setLoginError] = useState('');
     const location = useLocation();
@@ -37,14 +59,6 @@ const CheckoutPage = () => {
     if (carrito.length === 0) {
         return <Navigate to="/" replace />;
     }
-
-    const handleGuestInfoChange = (e) => {
-        const { name, value } = e.target;
-        setGuestInfo(prev => ({
-            ...prev,
-            [name]: value
-        }));
-    };
 
     const handleCheckoutMethodSelect = (method) => {
         setCheckoutMethod(method);
@@ -61,7 +75,10 @@ const CheckoutPage = () => {
         if (user) {
             setUserInfo(prev => ({
                 ...prev,
-                name: user.name
+                name: user.name,
+                email: user.email,
+                phone: user.phone
+
             }));
             setShowLoginModal(false);
             setCheckoutMethod('registered');
@@ -80,20 +97,247 @@ const CheckoutPage = () => {
         }));
     };
 
+    const handleDeliveryMethodSelect = (method) => {
+        setDeliveryMethod(method);
+        setSelectedStore(null);
+    };
+
+    const handleStoreSelection = (store) => {
+        setSelectedStore(store);
+    };
+
+    const handleDeliveryAddressChange = (e) => {
+        const { name, value } = e.target;
+        setDeliveryAddress(prev => ({
+            ...prev,
+            [name]: value
+        }));
+    };
+
+    const handleCardDetailsChange = (e) => {
+        const { name, value } = e.target;
+        setCardDetails(prev => ({
+            ...prev,
+            [name]: value
+        }));
+    };
+
+    const renderDeliveryMethod = () => (
+        <Card className="mb-4 shadow-sm">
+            <Card.Header as="h5" style={{ backgroundColor: 'orange', color: 'white' }}>
+                Método de Entrega
+            </Card.Header>
+            <Card.Body>
+                <Row className="g-3">
+                    <Col md={6}>
+                        <Button
+                            variant={deliveryMethod === 'delivery' ? 'primary' : 'outline-primary'}
+                            className="w-100 py-3"
+                            onClick={() => handleDeliveryMethodSelect('delivery')}
+                        >
+                            <FaTruck className="me-2" /> Entrega a Domicilio
+                        </Button>
+                    </Col>
+                    <Col md={6}>
+                        <Button
+                            variant={deliveryMethod === 'pickup' ? 'primary' : 'outline-primary'}
+                            className="w-100 py-3"
+                            onClick={() => handleDeliveryMethodSelect('pickup')}
+                        >
+                            <FaStore className="me-2" /> Recoger en Tienda
+                        </Button>
+                    </Col>
+                </Row>
+            </Card.Body>
+        </Card>
+    );
+
+    const renderDeliveryAddress = () => (
+        <Card className="mb-4 shadow-sm">
+            <Card.Header as="h5" style={{ backgroundColor: 'orange', color: 'white' }}>
+                Dirección de Entrega
+            </Card.Header>
+            <Card.Body>
+                <Form>
+                    <Row className="g-3">
+                        <Col md={8}>
+                            <Form.Group>
+                                <Form.Label>Calle</Form.Label>
+                                <Form.Control
+                                    type="text"
+                                    name="street"
+                                    value={deliveryAddress.street}
+                                    onChange={handleDeliveryAddressChange}
+                                    placeholder="Nombre de la calle"
+                                    required
+                                />
+                            </Form.Group>
+                        </Col>
+                        <Col md={4}>
+                            <Form.Group>
+                                <Form.Label>Número</Form.Label>
+                                <Form.Control
+                                    type="text"
+                                    name="number"
+                                    value={deliveryAddress.number}
+                                    onChange={handleDeliveryAddressChange}
+                                    placeholder="Número"
+                                    required
+                                />
+                            </Form.Group>
+                        </Col>
+                        <Col md={4}>
+                            <Form.Group>
+                                <Form.Label>Apartamento/Piso</Form.Label>
+                                <Form.Control
+                                    type="text"
+                                    name="apartment"
+                                    value={deliveryAddress.apartment}
+                                    onChange={handleDeliveryAddressChange}
+                                    placeholder="Opcional"
+                                />
+                            </Form.Group>
+                        </Col>
+                        <Col md={4}>
+                            <Form.Group>
+                                <Form.Label>Ciudad</Form.Label>
+                                <Form.Control
+                                    type="text"
+                                    name="city"
+                                    value={deliveryAddress.city}
+                                    onChange={handleDeliveryAddressChange}
+                                    placeholder="Ciudad"
+                                    required
+                                />
+                            </Form.Group>
+                        </Col>
+                        <Col md={4}>
+                            <Form.Group>
+                                <Form.Label>Código Postal</Form.Label>
+                                <Form.Control
+                                    type="text"
+                                    name="postalCode"
+                                    value={deliveryAddress.postalCode}
+                                    onChange={handleDeliveryAddressChange}
+                                    placeholder="Código Postal"
+                                    required
+                                />
+                            </Form.Group>
+                        </Col>
+                    </Row>
+                </Form>
+            </Card.Body>
+        </Card>
+    );
+
+    const renderStorePickup = () => (
+        <Card className="mb-4 shadow-sm">
+            <Card.Header as="h5" style={{ backgroundColor: 'orange', color: 'white' }}>
+                Selecciona una Pizzería para Recoger
+            </Card.Header>
+            <Card.Body>
+                <Row className="g-3">
+                    {pizzerias.map((store) => (
+                        <Col md={4} key={store.id}>
+                            <Button
+                                variant={selectedStore?.id === store.id ? 'primary' : 'outline-primary'}
+                                className="w-100 py-3"
+                                onClick={() => handleStoreSelection(store)}
+                            >
+                                <h6>{store.name}</h6>
+                                <small>{store.address}</small>
+                            </Button>
+                        </Col>
+                    ))}
+                </Row>
+            </Card.Body>
+        </Card>
+    );
+
+    const renderCardDetails = () => (
+        <Card className="mb-4 shadow-sm">
+            <Card.Header as="h5" style={{ backgroundColor: 'orange', color: 'white' }}>
+                Detalles de la Tarjeta
+            </Card.Header>
+            <Card.Body>
+                <Form>
+                    <Row className="g-3">
+                        <Col md={12}>
+                            <Form.Group>
+                                <Form.Label>Número de Tarjeta</Form.Label>
+                                <Form.Control
+                                    type="text"
+                                    name="cardNumber"
+                                    value={cardDetails.cardNumber}
+                                    onChange={handleCardDetailsChange}
+                                    placeholder="1234 5678 9012 3456"
+                                    required
+                                />
+                            </Form.Group>
+                        </Col>
+                        <Col md={6}>
+                            <Form.Group>
+                                <Form.Label>Nombre en la Tarjeta</Form.Label>
+                                <Form.Control
+                                    type="text"
+                                    name="cardName"
+                                    value={cardDetails.cardName}
+                                    onChange={handleCardDetailsChange}
+                                    placeholder="Nombre completo"
+                                    required
+                                />
+                            </Form.Group>
+                        </Col>
+                        <Col md={3}>
+                            <Form.Group>
+                                <Form.Label>Fecha de Expiración</Form.Label>
+                                <Form.Control
+                                    type="text"
+                                    name="expiryDate"
+                                    value={cardDetails.expiryDate}
+                                    onChange={handleCardDetailsChange}
+                                    placeholder="MM/AA"
+                                    required
+                                />
+                            </Form.Group>
+                        </Col>
+                        <Col md={3}>
+                            <Form.Group>
+                                <Form.Label>CVV</Form.Label>
+                                <Form.Control
+                                    type="text"
+                                    name="cvv"
+                                    value={cardDetails.cvv}
+                                    onChange={handleCardDetailsChange}
+                                    placeholder="123"
+                                    required
+                                />
+                            </Form.Group>
+                        </Col>
+                    </Row>
+                </Form>
+            </Card.Body>
+        </Card>
+    );
+
     const handleSubmitOrder = async () => {
         try {
             const orderData = {
                 total,
                 paymentMethod,
+                deliveryMethod,
                 userInfo: {
                     name: userInfo.name,
                     email: userInfo.email,
                     phone: userInfo.phone
-                }
+                },
+                ...(deliveryMethod === 'delivery' && { deliveryAddress }),
+                ...(deliveryMethod === 'pickup' && { selectedStore }),
+                ...(paymentMethod === 'tarjeta' && { cardDetails })
             };
 
             console.log('Enviando datos de la orden:', orderData);
-            
+
             const response = await fetch('https://pipetzza-backend.vercel.app/api/checkout', {
                 method: 'POST',
                 headers: {
@@ -283,8 +527,8 @@ const CheckoutPage = () => {
         <Container fluid="md" className="py-4">
             <ProgressBar
                 className="mb-4"
-                now={(currentStep / 4) * 100}
-                label={`Paso ${currentStep} de 4`}
+                now={(currentStep / 5) * 100}
+                label={`Paso ${currentStep} de 5`}
             />
 
             <Row>
@@ -312,7 +556,7 @@ const CheckoutPage = () => {
                     )}
                     {currentStep === 3 && (
                         <>
-                            {renderPaymentMethods()}
+                            {renderDeliveryMethod()}
                             <div className="d-flex justify-content-between">
                                 <Button
                                     variant="secondary"
@@ -323,7 +567,7 @@ const CheckoutPage = () => {
                                 <Button
                                     variant="primary"
                                     onClick={() => goToStep(4)}
-                                    disabled={!paymentMethod}
+                                    disabled={!deliveryMethod}
                                 >
                                     Siguiente <FaArrowRight />
                                 </Button>
@@ -332,18 +576,54 @@ const CheckoutPage = () => {
                     )}
                     {currentStep === 4 && (
                         <>
+                            {deliveryMethod === 'delivery' ? renderDeliveryAddress() : renderStorePickup()}
+                            <div className="d-flex justify-content-between">
+                                <Button
+                                    variant="secondary"
+                                    onClick={() => goToStep(3)}
+                                >
+                                    <FaArrowLeft /> Atrás
+                                </Button>
+                                <Button
+                                    variant="primary"
+                                    onClick={() => goToStep(5)}
+                                    disabled={
+                                        (deliveryMethod === 'delivery' &&
+                                            (!deliveryAddress.street || !deliveryAddress.number || !deliveryAddress.city || !deliveryAddress.postalCode)) ||
+                                        (deliveryMethod === 'pickup' && !selectedStore)
+                                    }
+                                >
+                                    Siguiente <FaArrowRight />
+                                </Button>
+                            </div>
+                        </>
+                    )}
+                    {currentStep === 5 && (
+                        <>
+                            {renderPaymentMethods()}
+                            {paymentMethod === 'tarjeta' && renderCardDetails()}
+
+                            {/* // Botón para enviar la orden */}
                             <Button
                                 variant="success"
                                 size="lg"
                                 className="w-100 mb-3"
                                 onClick={handleSubmitOrder}
+                                disabled={
+                                    (paymentMethod === 'tarjeta' &&
+                                        (!cardDetails.cardNumber || !cardDetails.cardName || !cardDetails.expiryDate || !cardDetails.cvv))
+                                }
                             >
                                 Confirmar Pedido
                             </Button>
+
+
+
+
                             <div className="d-flex justify-content-between">
                                 <Button
                                     variant="secondary"
-                                    onClick={() => goToStep(3)}
+                                    onClick={() => goToStep(4)}
                                 >
                                     <FaArrowLeft /> Atrás
                                 </Button>
