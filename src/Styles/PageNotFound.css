@@ -1,0 +1,29 @@
+/* Unique SVG text animation */
+.pageNotFound-text {
+    fill: none;
+    stroke-dasharray: 8% 29%;
+    stroke-width: 5px;
+    stroke-dashoffset: 1%;
+    animation: pageNotFound-stroke-offset 5.5s infinite linear;
+}
+
+/* Custom icon animation */
+.animated-icon {
+    animation: bounce 1s infinite alternate;
+}
+
+@keyframes pageNotFound-stroke-offset {
+    100% {
+        stroke-dashoffset: -35%;
+    }
+}
+
+@keyframes bounce {
+    from {
+        transform: translateY(0);
+    }
+
+    to {
+        transform: translateY(-20px);
+    }
+}

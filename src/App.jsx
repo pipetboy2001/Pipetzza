@@ -6,6 +6,7 @@ import Locales from './components/Locales'; // Importamos el componente Locales
 import Footer from './components/Footer'; // Importamos el Footer
 import Ingresar from './components/Ingresar'; // Importamos el componente Ingresar
 import Pago from './components/Pagar'; // Importamos el componente Pagar
+import Error from './components/PageNotFound'; // Importamos el componente 404
 import { DataProvider } from './data/DataProvider.jsx'; // Importamos el DataProvider
 import './App.css';
 
@@ -20,7 +21,7 @@ function App() {
           <Route path="/locales" element={<Locales />} />
           <Route path="/ingresar" element={<Ingresar/>} />
           <Route path="/pagar" element={<Pago />} />
-          <Route path="*" element={<h1>404: Not Found</h1>} />
+          <Route path="*" element={<Error/>} />
         </Routes>
         <Footer />
       </div>
