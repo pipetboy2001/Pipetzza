@@ -41,9 +41,9 @@ const priceData = {
 
 const PizzaCustomizer = () => {
     // Estados para cada opción de la pizza
-    const [masa, setMasa] = useState('');
-    const [tamaño, setTamaño] = useState('');
-    const [queso, setQueso] = useState('');
+    const [masa, setMasa] = useState('Delgada');
+    const [tamaño, setTamaño] = useState('Pequeña');
+    const [queso, setQueso] = useState('Mozzarella');
     const [cantidadQueso, setCantidadQueso] = useState(50);
     const [carnes, setCarnes] = useState([]);
     const [vegetales, setVegetales] = useState([]);
@@ -108,40 +108,36 @@ const PizzaCustomizer = () => {
 
     // Añadir pizza al carrito
     const añadirACarrito = () => {
+        console.log('Añadir al carrito');  // Verificar en la consola
         // Verificar que se hayan seleccionado todas las opciones
-        if (!masa || !tamaño || !queso || carnes.length === 0 || vegetales.length === 0) {
-            //indicar cual le falta
-            if (!masa) {
-                alert('Debes seleccionar el tipo de masa');
-            } else if (!tamaño) {
-                alert('Debes seleccionar el tamaño');
-            }
-            else if (!queso) {
-                alert('Debes seleccionar el tipo de queso');
-            }
-            return;
-        }
+        
 
-        const pizzaPersonalizada = {
-            id: Date.now(), // Generar un id único
-            tipo: 'personalizada', // Indicar que es una pizza personalizada
-            masa,
-            tamaño,
-            queso,
-            cantidadQueso,
-            carnes,
-            vegetales,
-            cantidad: 1, // Cantidad predeterminada
-            price: precio, // Guardar el precio total
-            description: `Pizza ${masa} ${tamaño} ${queso} con ${carnes.join(', ')} y ${vegetales.join(', ')}`, // Descripción basada en la selección
-            image: "https://i.imgur.com/qTTQ8mB.png", // Imagen predeterminada para pizza personalizada
-            title: `Pizza ${masa} ${tamaño} ${queso}`, // Título basado en la selección
-        };
+            const pizzaPersonalizada = {
+                id: Date.now(), // Generar un id único
+                tipo: 'personalizada', // Indicar que es una pizza personalizada
+                masa,
+                tamaño,
+                queso,
+                cantidadQueso,
+                carnes,
+                vegetales,
+                cantidad: 1, // Cantidad predeterminada
+                price: precio, // Guardar el precio total
+                description: `Pizza ${masa} ${tamaño} ${queso} con ${carnes.join(', ')} y ${vegetales.join(', ')}`, // Descripción basada en la selección
+                image: "https://i.imgur.com/qTTQ8mB.png", // Imagen predeterminada para pizza personalizada
+                title: `Pizza ${masa} ${tamaño} ${queso}`, // Título basado en la selección
+            };
 
-        const newCarrito = [...carrito];
-        newCarrito.push(pizzaPersonalizada);
-        setCarrito(newCarrito);
-        triggerNotification(); // Mostrar notificación al agregar un producto
+            console.log('Pizza personalizada:', pizzaPersonalizada);  // Verificar en la consola
+
+            const newCarrito = [...carrito];
+            newCarrito.push(pizzaPersonalizada);
+            setCarrito(newCarrito);
+            triggerNotification(); // Mostrar notificación al agregar un producto
+            
+        
+
+        
     };
 
     const triggerNotification = () => {
@@ -153,7 +149,16 @@ const PizzaCustomizer = () => {
     };
 
     return (
+
+        
+
         <div className="container mt-5">
+
+            <div className={`notification ${showNotification ? 'show' : ''}`}>
+                Producto añadido al carrito
+            </div>
+
+            
             <h1 className="mb-4 text-center">👨🏻‍🍳Crea tu pizza a tu gusto👩🏻‍🍳</h1>
 
             <div className="row">
@@ -277,6 +282,8 @@ const PizzaCustomizer = () => {
                     Añadir al Carrito
                 </button>
             </div>
+
+
         </div>
     );
 };
