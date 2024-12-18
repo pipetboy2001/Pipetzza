@@ -341,7 +341,16 @@ const CheckoutPage = () => {
                 },
                 ...(deliveryMethod === 'delivery' && { deliveryAddress }),
                 ...(deliveryMethod === 'pickup' && { selectedStore }),
-                ...(paymentMethod === 'tarjeta' && { cardDetails })
+                ...(paymentMethod === 'tarjeta' && { cardDetails }),
+                //añadir los productos del carrito
+                products: carrito.map((item) => ({
+                    id: item.id,
+                    title: item.title,
+                    price: item.price,
+                    quantity: item.cantidad
+                }))
+                
+
             };
 
             console.log('Enviando datos de la orden:', orderData);
