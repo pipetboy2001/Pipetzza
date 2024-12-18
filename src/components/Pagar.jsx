@@ -1,10 +1,12 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import { Container, Row, Col, Card, Button, Form, Modal, ProgressBar, Alert } from 'react-bootstrap';
 import { FaUser, FaEnvelope, FaLock, FaCreditCard, FaArrowLeft, FaArrowRight } from 'react-icons/fa';
 import { useLocation } from 'react-router-dom';
-import { Navigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { FaTruck, FaStore } from 'react-icons/fa';
+import { DataContext } from '../data/DataProvider';
+
 
 // Usuarios de prueba para el inicio de sesión
 const testUsers = [
@@ -54,8 +56,14 @@ const CheckoutPage = () => {
     });
     
     const [loginError, setLoginError] = useState('');
+
+    const { carrito: carritoContext, total: totalContext, vaciarCarrito } = useContext(DataContext);
     const location = useLocation();
-    const { carrito = [], total = 0 } = location.state || {};
+    const navigate = useNavigate();
+    // Usa los valores del contexto, con fallback a location.state
+    const carrito = carritoContext.length > 0 ? carritoContext : (location.state?.carrito || []);
+    const total = totalContext || location.state?.total || 0;
+
     if (carrito.length === 0) {
         return <Navigate to="/" replace />;
     }
@@ -348,8 +356,17 @@ const CheckoutPage = () => {
 
             if (response.ok) {
                 const data = await response.json();
-                alert('Pedido confirmado exitosamente');
-                // Aquí podrías redirigir a una página de confirmación
+                console.log('Respuesta del servidor:', data);
+                alert('Pedido confirmado exitosamente. Se ha enviado un recibo a su correo electrónico.');
+                // vaciar el carrito de dataContext
+                vaciarCarrito();
+                // Redirigir a la página de inicio
+                navigate('/', {
+                    state: {
+                        message: 'Tu pedido ha sido procesado. Revisa tu correo para el recibo.'
+                    }
+                });
+
             } else {
                 const errorData = await response.json();
                 alert('Error al procesar el pedido');
@@ -616,9 +633,6 @@ const CheckoutPage = () => {
                             >
                                 Confirmar Pedido
                             </Button>
-
-
-
 
                             <div className="d-flex justify-content-between">
                                 <Button
