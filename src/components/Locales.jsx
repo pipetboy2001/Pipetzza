@@ -269,54 +269,63 @@ const PizzeriasMap = () => {
 
                 {/* Columna del Mapa */}
                 <Col md={8} lg={9} className="p-0">
-                    <MapContainer
-                        center={[-33.4489, -70.6693]}
-                        zoom={5}
-                        className="custom-map-height"
+                    <div
                         style={{
-                            height: '80vh',
-                            maxHeight: '1000px',  // Optional: set a maximum height
-                            minHeight: '400px'   // Optional: set a minimum height
+                            backgroundColor: 'orange', // Color naranja como marco
+                            padding: '10px',           // Espacio entre el mapa y el marco
+                            borderRadius: '8px'        // Bordes redondeados opcionales
                         }}
-                        ref={mapRef}
                     >
-                        <TileLayer
-                            url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-                            attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-                        />
+                        <MapContainer
+                            center={[-33.4489, -70.6693]}
+                            zoom={5}
+                            style={{
+                                height: '80vh',
+                                maxHeight: '100%',
+                                minHeight: '400px',
+                                borderRadius: '8px' 
+                            }}
+                            ref={mapRef}
+                        >
+                            <TileLayer
+                                url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+                                attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+                            />
 
-                        {ubicaciones.map((ubicacion, idx) => (
-                            <Marker
-                                key={idx}
-                                position={[ubicacion.lat, ubicacion.lng]}
-                                icon={new L.Icon({
-                                    iconUrl: pizzaIconImg,
-                                    iconSize: [60, 60]
-                                })}
-                            >
-                                <Popup>{ubicacion.nombre}</Popup>
-                            </Marker>
-                        ))}
+                            {ubicaciones.map((ubicacion, idx) => (
+                                <Marker
+                                    key={idx}
+                                    position={[ubicacion.lat, ubicacion.lng]}
+                                    icon={new L.Icon({
+                                        iconUrl: pizzaIconImg,
+                                        iconSize: [60, 60]
+                                    })}
+                                >
+                                    <Popup>{ubicacion.nombre}</Popup>
+                                </Marker>
+                            ))}
 
-                        {location[0] !== 0 && (
-                            <Marker position={location}>
-                                <Popup>Tu ubicación</Popup>
-                            </Marker>
-                        )}
+                            {location[0] !== 0 && (
+                                <Marker position={location}>
+                                    <Popup>Tu ubicación</Popup>
+                                </Marker>
+                            )}
 
-                        {closestPizzeria && (
-                            <Marker
-                                position={[closestPizzeria.lat, closestPizzeria.lng]}
-                                icon={new L.Icon({
-                                    iconUrl: pizzaIconImg,
-                                    iconSize: [60, 60]
-                                })}
-                            >
-                                <Popup>{closestPizzeria.nombre}</Popup>
-                            </Marker>
-                        )}
-                    </MapContainer>
+                            {closestPizzeria && (
+                                <Marker
+                                    position={[closestPizzeria.lat, closestPizzeria.lng]}
+                                    icon={new L.Icon({
+                                        iconUrl: pizzaIconImg,
+                                        iconSize: [60, 60]
+                                    })}
+                                >
+                                    <Popup>{closestPizzeria.nombre}</Popup>
+                                </Marker>
+                            )}
+                        </MapContainer>
+                    </div>
                 </Col>
+
             </Row>
         </Container>
     );
