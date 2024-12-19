@@ -148,5 +148,60 @@
         "nombre": "Pipetzza Osorno",
         "lat": -40.5739,
         "lng": -73.1338
+    },
+    {
+        "nombre": "Pipetzza Curacaví",
+        "lat": -33.3987,
+        "lng": -71.1395
+    },
+    {
+        "nombre": "Pipetzza Melipilla",
+        "lat": -33.6891,
+        "lng": -71.2165
+    },
+    {
+        "nombre": "Pipetzza Talagante",
+        "lat": -33.6658,
+        "lng": -70.9279
+    },
+    {
+        "nombre": "Pipetzza Buin",
+        "lat": -33.7325,
+        "lng": -70.7439
+    },
+    {
+        "nombre": "Pipetzza Paine",
+        "lat": -33.8106,
+        "lng": -70.7416
+    },
+    {
+        "nombre": "Pipetzza Lampa",
+        "lat": -33.2866,
+        "lng": -70.8755
+    },
+    {
+        "nombre": "Pipetzza Colina",
+        "lat": -33.1989,
+        "lng": -70.6798
+    },
+    {
+        "nombre": "Pipetzza Peñaflor",
+        "lat": -33.6105,
+        "lng": -70.8764
+    },
+    {
+        "nombre": "Pipetzza Isla de Maipo",
+        "lat": -33.7432,
+        "lng": -70.9124
+    },
+    {
+        "nombre": "Pipetzza Pirque",
+        "lat": -33.6621,
+        "lng": -70.5711
+    },
+    {
+        "nombre": "Pipetzza San José de Maipo",
+        "lat": -33.6151,
+        "lng": -70.3546
     }
 ]
