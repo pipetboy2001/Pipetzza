@@ -46,3 +46,42 @@
     border-bottom: 1px solid #e0e0e0;
     margin: 2px 0;
 }
+
+/* Carrito.css */
+/* Carrito.css */
+.button-cantidad {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    cursor: pointer;
+}
+
+.button-up {
+    border-bottom: 15px solid #28a745;
+    /* Color para el triángulo hacia arriba */
+}
+
+.button-down {
+    border-top: 15px solid #dc3545;
+    /* Color para el triángulo hacia abajo */
+}
+
+.button-cantidad:hover {
+    opacity: 0.8;
+}
+
+/* Asegurar buen espaciado en móviles */
+.cantidad-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    /* Espacio entre botones */
+}
+
+.cantidad-text {
+    font-size: 1.2rem;
+    font-weight: bold;
+}

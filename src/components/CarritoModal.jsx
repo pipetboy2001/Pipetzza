@@ -93,17 +93,15 @@ const CarritoModal = ({ onClose }) => {
 
                                         {/* Cantidad no aplicable en personalizadas*/}
                                         {producto.tipo !== 'personalizada' && (
-
-                                            <p>Cantidad:
-                                                <Button variant="link" size="sm" onClick={() => reduce(producto.id)}>
-                                                    -
-                                                </Button>
-                                                {producto.cantidad || 1}
-                                                <Button variant="link" size="sm" onClick={() => increase(producto.id)}>
-                                                    +
-                                                </Button>
-                                            </p>
-                                        )
+                                            <>
+                                            <p>Cantidad:</p>
+                                                <div className="cantidad-container">
+                                                    <div className="button-cantidad button-down" onClick={() => reduce(producto.id)}></div>
+                                                    <span className="cantidad-text">{producto.cantidad || 1}</span>
+                                                    <div className="button-cantidad button-up" onClick={() => increase(producto.id)}></div>
+                                                </div>
+                                            </>
+                                            )
                                         }
                                     </div>
                                     <div className="cta-section">
