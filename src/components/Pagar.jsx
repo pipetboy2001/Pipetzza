@@ -280,6 +280,8 @@ const CheckoutPage = () => {
                                     onChange={handleCardDetailsChange}
                                     placeholder="1234 5678 9012 3456"
                                     required
+                                    maxLength={14} // 12 dígitos + 2 espacios
+                                    pattern="\d{4} \d{4} \d{4}"
                                 />
                             </Form.Group>
                         </Col>
@@ -306,6 +308,7 @@ const CheckoutPage = () => {
                                     onChange={handleCardDetailsChange}
                                     placeholder="MM/AA"
                                     required
+                                    maxLength={5}
                                 />
                             </Form.Group>
                         </Col>
@@ -319,6 +322,8 @@ const CheckoutPage = () => {
                                     onChange={handleCardDetailsChange}
                                     placeholder="123"
                                     required
+                                    maxLength={3}
+                                    pattern="\d{3}"
                                 />
                             </Form.Group>
                         </Col>
@@ -549,6 +554,12 @@ const CheckoutPage = () => {
         </Card>
     );
 
+    const isUserFormValid = () => {
+        return userInfo.name.trim() !== '' &&
+            userInfo.email.trim() !== '' &&
+            userInfo.phone.trim() !== '';
+    };
+    
     return (
         <Container fluid="md" className="py-4">
             <ProgressBar
@@ -573,6 +584,7 @@ const CheckoutPage = () => {
                                 <Button
                                     variant="primary"
                                     onClick={() => goToStep(3)}
+                                    disabled={!isUserFormValid()}
                                 >
                                     Siguiente <FaArrowRight />
                                 </Button>
@@ -636,6 +648,7 @@ const CheckoutPage = () => {
                                 className="w-100 mb-3"
                                 onClick={handleSubmitOrder}
                                 disabled={
+                                    !paymentMethod || // Se deshabilita si no hay método de pago seleccionado
                                     (paymentMethod === 'tarjeta' &&
                                         (!cardDetails.cardNumber || !cardDetails.cardName || !cardDetails.expiryDate || !cardDetails.cvv))
                                 }
