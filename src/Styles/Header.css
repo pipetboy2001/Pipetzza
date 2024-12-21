@@ -44,6 +44,7 @@
     display: flex;
     align-items: center;
     flex: 2;
+    justify-content: center;
 }
 
 .custom-navbar-font {
