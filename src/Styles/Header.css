@@ -1,15 +1,12 @@
 .header-container {
     width: 100%;
     background-color: #ff8624;
-    /* Fondo rojo */
-padding: 20px 0;
-    /* Aumentar padding para hacer el navbar más grande */
+    padding: 20px 0;
     position: sticky;
     top: 0;
     z-index: 1000;
-    box-shadow: 0 4px 6px rgba(0, 255, 0, 0.3);
+    box-shadow: 0 4px 6px #006400;
     transition: all 0.3s ease;
-    /* Sombra verde */
 }
 
 .header-content {
@@ -18,17 +15,19 @@ padding: 20px 0;
     justify-content: space-between;
     max-width: 1300px;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 40px;
+    position: relative;
 }
 
 .logo-link {
     display: flex;
     align-items: center;
+    flex: 1;
+    /* Toma una parte del espacio */
 }
 
 .logo-img {
     max-height: 80px;
-    /* Aumentar tamaño del logo */
 }
 
 .mobile-menu-toggle {
@@ -36,39 +35,36 @@ padding: 20px 0;
     background: none;
     border: none;
     color: white;
-    /* Asegurar que el icono sea blanco */
     font-size: 32px;
-    /* Aumentar tamaño del ícono de menú */
     cursor: pointer;
+    margin: 0 auto;
 }
 
 .main-nav {
     display: flex;
     align-items: center;
+    flex: 2;
 }
 
+.custom-navbar-font {
+    font-family: 'Lobster', cursive;
+    font-size: 1.2rem;
+}
+
+/* Texto del NavBar */
 .nav-links {
+    color: white;
     display: flex;
     list-style: none;
     margin: 0;
     padding: 0;
     gap: 35px;
-    /* Aumentar espacio entre links */
 
-    
+    transition: color 0.3s ease;
 }
 
 .nav-link {
-    color: white !important;
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    font-size: 1.3rem;
-    font-weight: 500;
     font-family: 'Lobster', cursive;
-    /* Añade esta línea */
-    transition: color 0.3s ease;
 }
 
 .nav-link:hover {
@@ -77,29 +73,26 @@ padding: 20px 0;
     text-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
 }
 
-.nav-link svg {
-    font-size: 1.4rem;
-    /* Aumento del tamaño de los íconos */
+.nav-link:hover svg {
+    color: #006400;
 }
 
-/* Estilo para el navbar con la nueva fuente */
-.custom-navbar-font {
-    font-family: 'Lobster', cursive;
-    font-size: 1.2rem;
-}
 
 .cart-container {
     position: relative;
-    
+    flex: 1;
+    /* Toma una parte del espacio */
+    display: flex;
+    justify-content: flex-end;
 }
 
+/* Colores del carrito */
 .cart-button {
     background: none;
     border: none;
     color: white !important;
     cursor: pointer;
     position: relative;
-    font-size: 2rem;
     font-size: 36px;
     display: flex;
     align-items: center;
@@ -113,8 +106,7 @@ padding: 20px 0;
     position: absolute;
     top: -12px;
     right: -12px;
-    background-color: #c10909;
-    /* Fondo verde para el contador */
+    background-color: #006400;
     color: white;
     border-radius: 50%;
     width: 25px;
@@ -128,20 +120,35 @@ padding: 20px 0;
     font-size: 1rem;
 }
 
-/* Estilos Responsivos */
-@media screen and (max-width: 992px) {
+/* Media queries */
+@media screen and (max-width: 1109px) {
     .header-container {
         padding: 15px 0;
     }
 
+    .header-content {
+        justify-content: space-between;
+    }
+
     .mobile-menu-toggle {
         display: block;
+        order: 2;
+        /* Coloca el toggle en el medio */
+    }
+
+    .logo-link {
+        order: 1;
+        /* Coloca el logo a la izquierda */
+    }
+
+    .cart-container {
+        order: 3;
+        /* Coloca el carrito a la derecha */
     }
 
     .main-nav {
         position: fixed;
         top: 90px;
-        /* Aumentar altura del header en móvil */
         left: -100%;
         width: 100%;
         height: calc(100vh - 90px);
@@ -160,26 +167,5 @@ padding: 20px 0;
         flex-direction: column;
         align-items: center;
         gap: 40px;
-        /* Aumentar espacio entre links en móvil */
     }
-
-    .nav-link {
-        font-size: 1.3rem;
-        /* Aumentar tamaño de fuente en móvil */
-    }
-}
-
-/* Animaciones sutiles */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-
-    to {
-        opacity: 1;
-    }
-}
-
-.main-nav.active .nav-link {
-    animation: fadeIn 0.5s ease;
 }
