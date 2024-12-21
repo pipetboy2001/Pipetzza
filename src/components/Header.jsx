@@ -1,5 +1,5 @@
-import React, { useState, useContext, useMemo } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState, useContext, useMemo, useEffect } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import { DataContext } from '../data/DataProvider.jsx';
 import CarritoModal from './CarritoModal';
 
@@ -9,7 +9,8 @@ import { FaPizzaSlice } from "react-icons/fa";
 import { BsShop } from "react-icons/bs";
 import { FaUserAlt } from 'react-icons/fa';
 import { FaShoppingCart } from 'react-icons/fa';
-import { FaBars, FaTimes } from 'react-icons/fa'; // Iconos para menú móvil
+import { FaBars, FaTimes } from 'react-icons/fa';
+import { AiOutlineHome } from 'react-icons/ai';
 
 // Estilos
 import './../Styles/Header.css';
@@ -19,8 +20,8 @@ const logoUrl = "https://i.imgur.com/D1GXxkt.png";
 const Header = () => {
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+    const location = useLocation(); // Hook para detectar cambios en la ruta
 
-    // Obtener el valor del DataContext con valores por defecto
     const value = useContext(DataContext) || {
         carrito: [],
         menu: [false, () => { }]
@@ -29,7 +30,15 @@ const Header = () => {
     const carrito = value.carrito;
     const menu = value.menu;
 
-    // Memoizar cálculo de cantidad de productos
+    // Efecto para hacer scroll al top cuando cambia la ruta
+    useEffect(() => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth' // Hace el scroll suave
+        });
+        setIsMobileMenuOpen(false); // Cierra el menú móvil al cambiar de página
+    }, [location.pathname]);
+
     const cantidadProductos = useMemo(() =>
         carrito.reduce((total, item) => total + item.cantidad, 0),
         [carrito]);
@@ -40,7 +49,6 @@ const Header = () => {
 
     const abrirModal = () => {
         setIsModalOpen(true);
-        // Cerrar menú móvil al abrir el carrito
         setIsMobileMenuOpen(false);
     };
 
@@ -48,11 +56,16 @@ const Header = () => {
         setIsModalOpen(false);
     };
 
+    // Función para manejar el click en los enlaces
+    const handleLinkClick = () => {
+        setIsMobileMenuOpen(false);
+    };
+
     return (
         <header className="header-container">
             <div className="header-content">
                 {/* Logo */}
-                <Link to="/" className="logo-link">
+                <Link to="/" className="logo-link" onClick={handleLinkClick}>
                     <img src={logoUrl} alt="Pipetzza" className="logo-img" />
                 </Link>
 
@@ -68,12 +81,20 @@ const Header = () => {
                 {/* Navegación */}
                 <nav className={`main-nav ${isMobileMenuOpen ? 'active' : ''}`}>
                     <ul className="nav-links custom-navbar-font">
-                        
+                        <li>
+                            <Link
+                                to="/"
+                                className="nav-link"
+                                onClick={handleLinkClick}
+                            >
+                                Inicio <AiOutlineHome />
+                            </Link>
+                        </li>
                         <li>
                             <Link
                                 to="/Crear"
                                 className="nav-link"
-                                onClick={() => setIsMobileMenuOpen(false)}
+                                onClick={handleLinkClick}
                             >
                                 Crea tu pizza <FaPizzaSlice />
                             </Link>
@@ -82,7 +103,7 @@ const Header = () => {
                             <Link
                                 to="/locales"
                                 className="nav-link"
-                                onClick={() => setIsMobileMenuOpen(false)}
+                                onClick={handleLinkClick}
                             >
                                 Sucursales <BsShop />
                             </Link>
@@ -91,7 +112,7 @@ const Header = () => {
                             <Link
                                 to="/ingresar"
                                 className="nav-link"
-                                onClick={() => setIsMobileMenuOpen(false)}
+                                onClick={handleLinkClick}
                             >
                                 Ingresar <FaUserAlt />
                             </Link>
@@ -106,7 +127,7 @@ const Header = () => {
                         className="cart-button"
                         aria-label="Abrir carrito de compras"
                     >
-                        <FaShoppingCart/>
+                        <FaShoppingCart />
                         {cantidadProductos > 0 && (
                             <span
                                 className="cart-count"
