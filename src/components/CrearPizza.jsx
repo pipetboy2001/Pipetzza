@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useContext } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { DataContext } from '../data/DataProvider.jsx';
-
+import '../Styles/Crear.css';
 
 // Datos de precios (normalmente se cargarían desde un archivo externo)
 const priceData = {
@@ -133,11 +133,7 @@ const PizzaCustomizer = () => {
             const newCarrito = [...carrito];
             newCarrito.push(pizzaPersonalizada);
             setCarrito(newCarrito);
-            triggerNotification(); // Mostrar notificación al agregar un producto
-            
-        
-
-        
+            triggerNotification(); // Mostrar notificación al agregar un producto        
     };
 
     const triggerNotification = () => {
@@ -158,9 +154,7 @@ const PizzaCustomizer = () => {
                 Producto añadido al carrito
             </div>
 
-            
             <h1 className="mb-4 text-center">👨🏻‍🍳Crea tu pizza a tu gusto👩🏻‍🍳</h1>
-
             <div className="row">
                 <div className="col-md-6">
                     {/* Tipo de Masa */}
@@ -276,8 +270,10 @@ const PizzaCustomizer = () => {
             </div>
 
             {/* Mostrar precio total */}
-            <div className="text-center mt-4">
-                <h4>Total: ${precio}</h4>
+            <div className="text-center mt-4 precioCarrito">
+                <h4 className="totalPrecio">
+                    <span>Total:</span> ${precio}
+                </h4>
                 <button className="btn btn-primary" onClick={añadirACarrito}>
                     Añadir al Carrito
                 </button>

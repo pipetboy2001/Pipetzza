@@ -1,0 +1,10 @@
+.precioCarrito{
+    margin: 0 0 15px 0;
+}
+.totalPrecio {
+    font-weight: normal;
+}
+
+.totalPrecio span {
+    font-weight: bold;
+}
