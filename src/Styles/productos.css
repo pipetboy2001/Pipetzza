@@ -1,4 +1,4 @@
-/* Estilos responsive para botones de categoría */
+/* Botones de categorías */
 .categoria-buttons {
     display: flex;
     flex-wrap: wrap;
@@ -15,21 +15,17 @@
 
 .categoria-buttons .btn {
     flex: 0 1 auto;
-    /* Permitir que los botones se ajusten */
     color: white !important;
     font-size: 1rem;
-    /* padding: 10px 20px;
-    margin: 5px; */
     background-color: #dc3545;
     border: 2px solid white;
-    transition: all 0.3s ease;
     border-radius: 6px;
     text-transform: uppercase;
     letter-spacing: 1px;
     white-space: nowrap;
-    /* Evitar salto de línea */
     overflow: hidden;
     text-overflow: ellipsis;
+    transition: all 0.3s ease;
 }
 
 .categoria-buttons .btn:hover {
@@ -38,12 +34,11 @@
     transform: scale(1.05);
 }
 
-/* Ajustes específicos para dispositivos móviles */
+/* Responsive: móviles */
 @media screen and (max-width: 768px) {
     .categoria-buttons {
         flex-direction: column;
         padding: 10px;
-        gap: 10px;
     }
 
     .categoria-buttons .btn {
@@ -54,11 +49,9 @@
     }
 }
 
-/* Ajustes para tablets */
+/* Responsive: tablets */
 @media screen and (min-width: 769px) and (max-width: 1024px) {
     .categoria-buttons {
-        flex-wrap: wrap;
-        gap: 10px;
         padding: 15px;
     }
 
@@ -68,92 +61,89 @@
     }
 }
 
-/* Ajustes para pantallas grandes */
+/* Responsive: pantallas grandes */
 @media screen and (min-width: 1025px) {
     .categoria-buttons .btn {
-        flex: 0 1 auto;
         min-width: 150px;
     }
 }
 
-/* Estilo para las cards de productos */
+/* Cards de productos */
 .producto-card {
     border: 2px solid transparent;
-    /* Sin borde visible por defecto */
     border-radius: 15px;
-    /* Bordes redondeados */
     padding: 20px;
-    transition: all 0.3s ease;
-    /* Transición suave al pasar el ratón */
     background-color: white;
-    /* Fondo blanco */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    /* Sombra suave */
+    transition: all 0.3s ease;
 }
 
-/* Efecto hover para agregar contorno verde claro */
 .producto-card:hover {
     border-color: #c9e265;
-    /* Contorno verde claro solo al pasar el ratón */
     transform: scale(1.05);
-    /* Efecto de aumento al pasar el ratón */
 }
 
-/* Estilo para la imagen de la card */
+/* Imagen de la card */
 .producto-card img {
     width: 100%;
     height: auto;
     border-radius: 10px;
     object-fit: cover;
-    /* Asegura que la imagen se recorte correctamente */
 }
 
-/* Título, descripción y precio centrados */
+/* Centrado de contenido */
 .producto-card .card-title,
 .producto-card .card-text {
     text-align: center;
 }
 
-/* Estilo para el botón "Añadir al carrito" */
+/* Botón "Añadir al carrito" */
 .producto-card .btn {
     background-color: #28a745;
-    /* Verde */
     color: white;
-    /* Texto blanco */
     border: none;
     border-radius: 5px;
-    /* Bordes redondeados */
     width: 100%;
-    /* Asegura que el botón ocupe todo el ancho */
     padding: 10px;
-    /* Aumenta el tamaño del botón */
     transition: background-color 0.3s ease;
-    /* Transición suave para el color */
 }
 
 .producto-card .btn:hover {
     background-color: #218838;
-    /* Verde más oscuro en hover */
 }
 
-/* Hacer que las cards sean responsivas */
+/* Grid de productos */
 .productos-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    /* Grid responsive */
     gap: 20px;
-    /* Espacio entre las cards */
-    margin-top: 20px;
+    padding: 20px;
 }
 
-/* Menos padding en pantallas pequeñas */
+/* Responsive: móviles */
 @media (max-width: 768px) {
+    .productos-grid {
+        gap: 15px;
+        padding: 15px;
+    }
+
     .producto-card {
         padding: 15px;
     }
+
+    .producto-card img {
+        height: 180px;
+    }
 }
 
+/* Responsive: pantallas grandes */
+@media screen and (min-width: 1200px) {
+    .productos-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
 
+/* Notificaciones */
 .notification {
     background-color: green;
     color: white;

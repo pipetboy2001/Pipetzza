@@ -74,21 +74,18 @@ const Productos = () => {
         if (!category || category.length === 0) {
             return <p>No hay productos disponibles en esta categoría.</p>;
         }
-
         return (
-            <div className="row" ref={categoryRef}>
+            <div className="productos-grid" ref={categoryRef}>
                 {category.map((producto) => (
-                    <div key={producto.id} className="col-md-4 mb-4">
-                        <div className="card producto-card" style={{ height: '100%' }}>
-                            <img src={producto.image} className="card-img-top" alt={producto.title} />
-                            <div className="card-body">
-                                <h5 className="card-title">{producto.title}</h5>
-                                <p className="card-text">{producto.description}</p>
-                                <p className="card-text"><strong>${producto.price}</strong></p>
-                                <button className="btn btn-success" onClick={() => handleAddToCart(producto)}>
-                                    Agregar al carrito
-                                </button>
-                            </div>
+                    <div key={producto.id} className="producto-card">
+                        <img src={producto.image} className="card-img-top" alt={producto.title} />
+                        <div className="card-body">
+                            <h5 className="card-title">{producto.title}</h5>
+                            <p className="card-text">{producto.description}</p>
+                            <p className="card-text"><strong>${producto.price}</strong></p>
+                            <button className="btn btn-success" onClick={() => handleAddToCart(producto)}>
+                                Agregar al carrito
+                            </button>
                         </div>
                     </div>
                 ))}

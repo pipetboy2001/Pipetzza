@@ -42,7 +42,7 @@
             "id": 6,
             "title": "VEGAN QUEEN",
             "price": 5670,
-            "description": "Champiñón, Pimiento, Cebolla, Choclo y Tomate",
+            "description": "Champiñón, Pimiento, Choclo y Tomate",
             "image": "https://i.imgur.com/OFNZECe.png"
         }
     ],
@@ -102,7 +102,7 @@
             "title": "Palitos de Ajo",
             "price": 2500,
             "description": "Deliciosos palitos de pan con ajo y queso",
-            "image": "https://i.imgur.com/qdhBUQ1.png",
+            "image": "https://th.bing.com/th/id/OIP.Zb0W9ztj0sSnuDV8r7GpNAHaE5?rs=1&pid=ImgDetMain",
             "cantidad": 1
         },
         {
@@ -118,7 +118,7 @@
             "title": "Palitos de Queso",
             "price": 3200,
             "description": "Palitos de pan rellenos de queso fundido",
-            "image": "https://i.imgur.com/5lsWwYd.png",
+            "image": "https://th.bing.com/th/id/OIP.uSUcBfKgjVbAlBjqXr8yiAHaEv?rs=1&pid=ImgDetMain",
             "cantidad": 1
         },
         {
@@ -126,7 +126,7 @@
             "title": "Rolls de Jamón y Queso",
             "price": 3500,
             "description": "Deliciosos rolls con jamón y queso fundido",
-            "image": "https://i.imgur.com/SqKP3KA.png",
+            "image": "https://cdn2.cocinadelirante.com/sites/default/files/styles/gallerie/public/rollitosdejamonyqueso_1_0.jpg",
             "cantidad": 1
         }
     ],
@@ -167,31 +167,31 @@
     "promociones": [
         {
             "id": 1,
-            "title": "4 Pizzas Mix",
+            "title": "3 Pizzas Mix",
             "price": 19990,
-            "description": "Elige 4 pizzas de la carta",
-            "image": "https://i.imgur.com/0dIk4bV.png"
+            "description": "Mechada BBQ + Americana + Hawaiiana",
+            "image": "https://i.imgur.com/T0t7syS.png"
         },
         {
             "id": 2,
             "title": "Combo Familia",
             "price": 24990,
-            "description": "2 Pizzas + 2 Refrescos",
-            "image": "https://i.imgur.com/GT0RFGP.png"
+            "description": "MECHADA BBQ + AMERICANA",
+            "image": "https://i.imgur.com/0dIk4bV.png"
         },
         {
             "id": 3,
             "title": "Promo Vegetariana",
             "price": 19990,
-            "description": "Elige 2 pizzas vegetarianas + 1 acompañamiento",
-            "image": "https://i.imgur.com/T3r2dJ2.png"
+            "description": "2 VEGAN QUEEN",
+            "image": "https://i.imgur.com/OFNZECe.png"
         },
         {
             "id": 4,
             "title": "Combo 2 Pizzas + Salsa",
             "price": 17990,
-            "description": "Elige 2 pizzas + 1 Salsa a elección",
-            "image": "https://i.imgur.com/T0t7syS.png"
+            "description": "AMERICANA + HAWAIANA + Salsa BBQ",
+            "image": "https://i.imgur.com/T3r2dJ2.png"
         }
     ]
 }
