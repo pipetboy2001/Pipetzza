@@ -105,7 +105,7 @@ const CarritoModal = ({ onClose }) => {
                                         }
                                     </div>
                                     <div className="cta-section">
-                                        <div>${(producto.price * (producto.cantidad || 1)).toLocaleString()}</div>
+                                        <div>${Math.floor(producto.price * (producto.cantidad || 1))}</div>
                                         <Button variant="danger" size="sm" onClick={() => removeProducto(producto.id)}>
                                             
                                             <FaTrash /> Eliminar
@@ -117,7 +117,7 @@ const CarritoModal = ({ onClose }) => {
                         <hr />
                         <Alert variant="success" className="text-center">
                             <strong style={{ fontSize: '1.5rem' }}>Total:</strong>
-                            <span style={{ fontSize: '1.5rem' }}>${total.toLocaleString()}</span>
+                                <span style={{ fontSize: '1.5rem' }}>${Math.floor(total)}</span>
                         </Alert>
                     </div>
                 )}

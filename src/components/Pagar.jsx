@@ -493,14 +493,15 @@ const CheckoutPage = () => {
                     <Row key={item.id} className="mb-2">
                         <Col>{item.title}</Col>
                         <Col className="text-end">
-                            ${(item.price * item.cantidad).toLocaleString()}
+                            ${Math.floor(item.price * item.cantidad)}
                         </Col>
+
                     </Row>
                 ))}
                 <hr />
                 <Row className="fw-bold">
                     <Col>Total:</Col>
-                    <Col className="text-end">${total.toLocaleString()}</Col>
+                    <Col className="text-end">${Math.floor(total)}</Col>
                 </Row>
             </Card.Body>
         </Card>
