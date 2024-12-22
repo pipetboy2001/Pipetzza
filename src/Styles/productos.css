@@ -89,12 +89,45 @@
     height: auto;
     border-radius: 10px;
     object-fit: cover;
+    margin-bottom: 15px;
 }
 
 /* Centrado de contenido */
 .producto-card .card-title,
 .producto-card .card-text {
     text-align: center;
+}
+
+.producto-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.producto-card .card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-grow: 1;
+}
+
+
+.producto-card .card-text {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    /* Limita a 2 líneas */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.producto-card .card-text {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    /* Limita a 2 líneas */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 /* Botón "Añadir al carrito" */
@@ -121,18 +154,50 @@
 }
 
 /* Responsive: móviles */
+
 @media (max-width: 768px) {
     .productos-grid {
+        gap: 10px;
+        /* Disminuir el espacio entre tarjetas */
+        padding: 10px;
+        /* Reducir padding alrededor */
+    }
+
+    .producto-card {
+        padding: 10px;
+    }
+
+    .producto-card img {
+        height: 160px;
+        /* Asegura que las imágenes no ocupen demasiado espacio */
+    }
+}
+
+@media screen and (min-width: 769px) and (max-width: 991px) {
+    .productos-grid {
+        grid-template-columns: repeat(2, 1fr);
+        /* Distribuye dos tarjetas por fila */
         gap: 15px;
-        padding: 15px;
+        /* Ajusta el espacio entre las tarjetas */
     }
 
     .producto-card {
         padding: 15px;
+        /* Ajusta el padding para adaptarse a las pantallas intermedias */
     }
 
-    .producto-card img {
-        height: 180px;
+    .producto-card .card-body {
+        min-height: 120px;
+        /* Ajusta la altura mínima del cuerpo de la tarjeta */
+    }
+
+    .producto-card .card-text {
+        -webkit-line-clamp: 2;
+        /* Limita las descripciones largas */
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
     }
 }
 
