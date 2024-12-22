@@ -1,0 +1,23 @@
+.siguienteAtras {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0;
+    margin: 15px 0;
+}
+
+.siguienteAtras button {
+    padding: 10px 25px;
+    border-radius: 8px;
+    min-width: 120px;
+    margin: 0 15px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Ajustes para móvil */
+@media (max-width: 576px) {
+    .siguienteAtras button {
+        padding: 15px 20px;
+    }
+}

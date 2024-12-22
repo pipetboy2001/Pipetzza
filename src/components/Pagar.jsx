@@ -7,6 +7,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { FaTruck, FaStore } from 'react-icons/fa';
 import { DataContext } from '../data/DataProvider';
 
+import '../Styles/Pagar.css';
 
 // Usuarios de prueba para el inicio de sesión
 const testUsers = [
@@ -575,7 +576,7 @@ const CheckoutPage = () => {
                     {currentStep === 2 && (
                         <>
                             {renderUserForm()}
-                            <div className="d-flex justify-content-between">
+                            <div className="d-flex justify-content-between siguienteAtras">
                                 <Button
                                     variant="secondary"
                                     onClick={() => goToStep(1)}
@@ -596,7 +597,7 @@ const CheckoutPage = () => {
                     {currentStep === 3 && (
                         <>
                             {renderDeliveryMethod()}
-                            <div className="d-flex justify-content-between">
+                            <div className="d-flex justify-content-between siguienteAtras">
                                 <Button
                                     variant="secondary"
                                     onClick={() => goToStep(2)}
@@ -616,7 +617,7 @@ const CheckoutPage = () => {
                     {currentStep === 4 && (
                         <>
                             {deliveryMethod === 'delivery' ? renderDeliveryAddress() : renderStorePickup()}
-                            <div className="d-flex justify-content-between">
+                            <div className="d-flex justify-content-between siguienteAtras">
                                 <Button
                                     variant="secondary"
                                     onClick={() => goToStep(3)}
@@ -657,7 +658,7 @@ const CheckoutPage = () => {
                                 Confirmar Pedido
                             </Button>
 
-                            <div className="d-flex justify-content-between">
+                            <div className="d-flex justify-content-between siguienteAtras">
                                 <Button
                                     variant="secondary"
                                     onClick={() => goToStep(4)}
